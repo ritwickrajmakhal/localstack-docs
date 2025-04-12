@@ -1,5 +1,5 @@
 ---
-title: Capabilities 
+title: 
 description: 
 template: 
 hero:
@@ -7,7 +7,5 @@ hero:
   image:
     file: 
   actions:
-nav: 1
+nav: 
 ---
-
-# Capabilities 
