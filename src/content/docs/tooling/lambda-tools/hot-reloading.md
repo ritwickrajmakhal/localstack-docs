@@ -79,7 +79,7 @@ then mounted to LocalStack.
 We are using `Gradle` build tool to unpack the
 `FatJar` into the `build/hot` folder:
 
-```gradle
+```groovy
 // We assume you are using something like `Shadow` plugin that comes with `shadowJar` task
 task buildHot(type: Copy) {
     from zipTree("${project.buildDir}/libs/${project.name}-all.jar")

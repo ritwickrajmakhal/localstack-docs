@@ -23,7 +23,7 @@ $ pip install localstack-utils
 
 ### Usage
 
-```python3
+```python
 import time
 import boto3
 import unittest

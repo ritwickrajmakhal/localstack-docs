@@ -11,7 +11,7 @@ nav:
 You can easily create a `boto3` client that interacts with your LocalStack instance.
 The example below creates a `boto3` client that lists all available Lambda functions:
 
-```python3
+```python
 import boto3
 
 endpoint_url = "http://localhost.localstack.cloud:4566"
@@ -31,14 +31,14 @@ if __name__ == "__main__":
 If you're connecting from within a Python **Lambda function** handler in LocalStack, you can create a default client without configuring the `endpoint_url` - LocalStack will automatically forward the invocations to the local API endpoints (available in Pro, see [here]({{< ref "user-guide/tools/transparent-endpoint-injection" >}}) for more details).
 {{< /callout >}}
 
-```python3
+```python
 client = boto3.client("lambda")
 ...
 ```
 
 Alternatively, if you prefer to (or need to) set the endpoints directly, you can use the environment variable `AWS_ENDPOINT_URL`,  which is available when executing user code (e.g., Lambda functions) in LocalStack:
 
-```python3
+```python
 import os
 client = boto3.client("lambda", endpoint_url=os.getenv("AWS_ENDPOINT_URL"))
 ...

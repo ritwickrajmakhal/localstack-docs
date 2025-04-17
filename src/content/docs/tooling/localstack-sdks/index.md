@@ -1,6 +1,6 @@
 ---
 title: LocalStack SDKs
-description: 
+description: This is a dummy description
 template: doc
 
 nav: 
