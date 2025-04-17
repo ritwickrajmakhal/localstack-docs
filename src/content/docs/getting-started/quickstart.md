@@ -1,12 +1,8 @@
 ---
 title: Quickstart
 description: How to run an AWS application on your local machine and test local cloud development with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 4
 ---
 

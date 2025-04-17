@@ -1,6 +1,7 @@
 ---
 title: Configuration
 description: Overview of configuration options in LocalStack.
+template: doc
 ---
 
 LocalStack exposes various configuration options to control its behaviour.

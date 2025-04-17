@@ -1,6 +1,7 @@
 ---
 title: Workspace
 description: A Workspace is the base organizational unit in the LocalStack Web Application.
+template: doc
 ---
 
 ## Introduction

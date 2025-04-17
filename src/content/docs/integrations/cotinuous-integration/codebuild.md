@@ -1,12 +1,8 @@
 ---
 title: CodeBuild
 description: Use LocalStack in CodeBuild.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

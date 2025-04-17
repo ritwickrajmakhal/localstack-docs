@@ -1,12 +1,8 @@
 ---
 title: LocalStack Tools
 description: Increase your development efficiency with LocalStack Cloud Developer Tools.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 1
 ---
 

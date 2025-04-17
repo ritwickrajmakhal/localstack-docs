@@ -1,12 +1,8 @@
 ---
 title: Rancher Desktop
 description: Use Rancher Desktop with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

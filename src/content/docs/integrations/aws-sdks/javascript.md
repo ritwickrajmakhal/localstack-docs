@@ -1,12 +1,8 @@
 ---
 title: AWS JavaScript
 description: How to use the JavaScript AWS SDK with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

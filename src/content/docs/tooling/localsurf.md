@@ -1,12 +1,8 @@
 ---
 title: LocalSurf
 description: Browser plugin to redirect AWS service calls to LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

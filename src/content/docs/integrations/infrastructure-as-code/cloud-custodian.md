@@ -1,12 +1,8 @@
 ---
 title: Cloud Custodian
 description: Use Cloud Custodian with LocalStack
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

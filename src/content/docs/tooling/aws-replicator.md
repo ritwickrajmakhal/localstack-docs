@@ -1,12 +1,8 @@
 ---
 title: AWS Replicator
 description: AWS Replicator makes it easier to use LocalStack in shared AWS environments by copying resources into LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

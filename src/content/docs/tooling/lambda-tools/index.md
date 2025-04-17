@@ -1,12 +1,8 @@
 ---
 title: Lambda Tools
 description: Develop your Lambdas more efficiently.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: Help & Support
 description: Get help and support with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 6
 ---
 

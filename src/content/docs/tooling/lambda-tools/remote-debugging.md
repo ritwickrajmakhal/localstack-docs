@@ -1,12 +1,8 @@
 ---
 title: Remote Debugging
 description: Attach a debugger to your Lambda functions from within your IDE.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

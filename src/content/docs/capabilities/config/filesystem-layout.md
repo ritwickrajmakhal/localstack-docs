@@ -1,6 +1,7 @@
 ---
 title: Filesystem Layout
 description: Overview of runtime directory structure
+template: doc
 ---
 
 This page describes the filesystem directory layout used internally by LocalStack.

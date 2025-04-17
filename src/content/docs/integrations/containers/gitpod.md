@@ -1,12 +1,8 @@
 ---
 title: Gitpod
 description: Use Gitpod's fully automated, ephemeral workspaces to develop and test your cloud applications with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

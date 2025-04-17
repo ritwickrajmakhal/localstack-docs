@@ -1,12 +1,8 @@
 ---
 title: AWS Chalice
 description: Use AWS Chalice with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

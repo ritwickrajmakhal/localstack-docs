@@ -1,12 +1,7 @@
 ---
 title: Auth Token
 description: Configure your Auth Token to access and activate LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
 nav: 3
 ---
 

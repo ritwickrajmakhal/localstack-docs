@@ -1,12 +1,8 @@
 ---
 title: Travis CI
 description: Use LocalStack in Travis CI.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

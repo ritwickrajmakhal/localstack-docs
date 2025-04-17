@@ -1,6 +1,7 @@
 ---
 title: Stack Overview
 description: Stack Overview reflects the current state of your LocalStack environment.
+template: doc
 ---
 
 ## Introduction

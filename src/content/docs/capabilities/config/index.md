@@ -1,6 +1,7 @@
 ---
 title: Config
-description:
+description: This is a dummy description.
+template: doc
 ---
 
 # Config 

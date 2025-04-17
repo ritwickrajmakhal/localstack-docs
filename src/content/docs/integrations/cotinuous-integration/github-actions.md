@@ -1,12 +1,8 @@
 ---
 title: GitHub Actions
 description: Use LocalStack in GitHub Actions.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

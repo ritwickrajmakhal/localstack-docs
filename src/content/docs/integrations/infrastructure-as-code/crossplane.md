@@ -1,12 +1,8 @@
 ---
 title: Crossplane
 description: Use the Crossplane cloud-native control plane framework with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Capabilities 
 description: 
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
 nav: 1
 ---
 

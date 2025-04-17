@@ -1,12 +1,8 @@
 ---
 title: BitBucket
 description: Use LocalStack in BitBucket Pipelines.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

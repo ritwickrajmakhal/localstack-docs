@@ -1,12 +1,8 @@
 ---
 title: LocalStack Docker Extension
 description: Getting started with LocalStack Extension for Docker Desktop.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

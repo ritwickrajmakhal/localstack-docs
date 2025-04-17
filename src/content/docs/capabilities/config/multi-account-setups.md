@@ -1,6 +1,7 @@
 ---
 title: Multi-Account Setups
 description: Using LocalStack in multi-tenant setups
+template: doc
 ---
 
 {{< callout >}}

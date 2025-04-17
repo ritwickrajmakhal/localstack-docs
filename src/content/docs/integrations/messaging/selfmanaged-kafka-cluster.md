@@ -1,12 +1,8 @@
 ---
 title: Self-managed Kafka cluster
 description:   Using LocalStack Lambda with a self-managed Kafka cluster.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

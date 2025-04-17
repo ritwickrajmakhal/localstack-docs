@@ -1,12 +1,8 @@
 ---
 title: GitLab CI
 description: Use LocalStack in GitLab CI.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

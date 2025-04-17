@@ -1,12 +1,8 @@
 ---
 title: Testing Utils
 description: Tools to simplify application testing on LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

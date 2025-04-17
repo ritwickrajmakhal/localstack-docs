@@ -1,12 +1,8 @@
 ---
 title: Continuous Integration
 description: Run LocalStack in your CI environment to test your application against a high-fidelity cloud emulator.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

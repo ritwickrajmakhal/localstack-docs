@@ -1,12 +1,8 @@
 ---
 title: Pulumi
 description: Use the Pulumi Infrastructure as Code framework with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: LocalStack Extensions
 description: Use LocalStack Extensions to customize and extend your local development experience.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Export & Import State
 description: Export and import the state of the current infrastructure state into a file or a LocalStack instance respectively.
+template: doc
 ---
 
 ## Introduction

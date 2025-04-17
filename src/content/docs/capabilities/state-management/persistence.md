@@ -1,6 +1,7 @@
 ---
 title: Persistence
 description: Internals of LocalStack persistence mechanism.
+template: doc
 ---
 
 ## Introduction

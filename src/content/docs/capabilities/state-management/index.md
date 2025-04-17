@@ -1,6 +1,7 @@
 ---
 title: State Management
 description: Cloud Pods provides a new way of collaborating in cloud application development workflows.
+template: doc
 ---
 
 State Management in LocalStack allows you to save and load the state of your LocalStack instance.

@@ -1,12 +1,8 @@
 ---
 title: Single-Sign On
 description: Configuring Custom Single-Sign On (SSO) Providers in LocalStack Web Application.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

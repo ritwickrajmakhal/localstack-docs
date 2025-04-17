@@ -1,12 +1,8 @@
 ---
 title: DNS Server
 description: Use LocalStack as DNS server to resolve AWS queries to LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: Enterprise Support
 description: 
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

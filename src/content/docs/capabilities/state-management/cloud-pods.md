@@ -1,6 +1,7 @@
 ---
 title: Cloud Pods
 description: Get started with Cloud Pods to manage the state of your LocalStack instance state.
+template: doc
 ---
 
 ## Introduction

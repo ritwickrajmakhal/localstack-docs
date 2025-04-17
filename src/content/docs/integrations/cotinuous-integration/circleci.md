@@ -1,12 +1,8 @@
 ---
 title: CircleCI
 description: Use LocalStack in CircleCI.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

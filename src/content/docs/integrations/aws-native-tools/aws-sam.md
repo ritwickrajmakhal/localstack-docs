@@ -1,12 +1,8 @@
 ---
 title: AWS SAM
 description: Use the AWS SAM (Serverless Application Model) with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

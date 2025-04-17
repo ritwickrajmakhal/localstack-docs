@@ -1,12 +1,8 @@
 ---
 title: FAQ
 description: Frequently asked questions about LocalStack Pro, Enterprise, and Community Editions.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 5
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Credentials
 description: Credentials for accessing LocalStack AWS API
+template: doc
 ---
 
 Like AWS, LocalStack requires AWS credentials to be supplied in all API operations.

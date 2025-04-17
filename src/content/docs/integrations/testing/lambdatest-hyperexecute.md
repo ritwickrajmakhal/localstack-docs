@@ -1,12 +1,8 @@
 ---
 title: LambdaTest HyperExecute
 description: Executing LocalStack tests on LambdaTest's HyperExecute.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

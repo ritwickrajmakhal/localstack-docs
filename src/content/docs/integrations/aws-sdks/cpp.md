@@ -1,12 +1,8 @@
 ---
 title: AWS C++
 description: How to use the C++ AWS SDK with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

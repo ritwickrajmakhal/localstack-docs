@@ -1,6 +1,7 @@
 ---
 title: Initialization Hooks
 description: Writing shell or Python scripts to customize or initialize your LocalStack instance.
+template: doc
 ---
 
 ## Lifecycle Stages and Hooks

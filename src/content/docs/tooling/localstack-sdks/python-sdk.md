@@ -1,12 +1,8 @@
 ---
 title: Python
 description: Use the LocalStack SDK for Python.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

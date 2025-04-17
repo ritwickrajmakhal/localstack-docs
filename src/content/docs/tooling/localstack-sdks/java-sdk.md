@@ -1,12 +1,8 @@
 ---
 title: Java
 description: Use the LocalStack SDK for Java.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

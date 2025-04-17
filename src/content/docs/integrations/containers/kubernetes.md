@@ -1,12 +1,8 @@
 ---
 title: Kubernetes
 description: Running LocalStack on Kubernetes.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

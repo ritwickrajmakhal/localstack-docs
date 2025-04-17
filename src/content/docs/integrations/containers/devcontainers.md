@@ -1,12 +1,8 @@
 ---
 title: DevContainers
 description: Use DevContainers with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

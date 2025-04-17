@@ -1,12 +1,8 @@
 ---
 title: Enterprise Image
 description: Custom LocalStack Enterprise image for offline or air-gapped environments with preferred configurations and packages.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

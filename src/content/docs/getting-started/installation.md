@@ -1,12 +1,8 @@
 ---
 title: "Installation"
 description: Basic installation guide to get started with LocalStack on your local machine.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 2
 ---
 

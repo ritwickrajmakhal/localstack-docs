@@ -1,6 +1,7 @@
 ---
 title: Users and Licenses
 description: Invite new users and manage a user's license and legacy API key.
+template: doc
 ---
 
 ## Introduction

@@ -1,12 +1,7 @@
 ---
 title: AWS Services
-description: 
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+description: This is a dummy description
+template: doc
 nav: 3
 ---
 

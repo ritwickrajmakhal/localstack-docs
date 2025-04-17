@@ -1,6 +1,7 @@
 ---
 title: Resource Browser
 description: The Resource Browser allows you to view and manage your local AWS resources through the LocalStack Web Application.
+template: doc
 ---
 
 ## Introduction

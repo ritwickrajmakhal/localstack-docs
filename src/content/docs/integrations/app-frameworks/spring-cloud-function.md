@@ -1,12 +1,8 @@
 ---
 title: Spring Cloud Function
 description: Use the Spring Cloud Function framework with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

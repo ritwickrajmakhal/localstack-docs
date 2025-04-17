@@ -1,12 +1,8 @@
 ---
 title: LocalStack Enterprise
 description: 
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 1 
 ---
 

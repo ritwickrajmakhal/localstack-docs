@@ -1,12 +1,8 @@
 ---
 title: eksctl
 description: Running `eksctl` on LocalStack to create EKS clusters.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

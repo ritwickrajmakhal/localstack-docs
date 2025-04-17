@@ -1,6 +1,7 @@
 ---
 title: Docker Images
 description: Overview of LocalStack Docker images and their purpose
+template: doc
 ---
 
 LocalStack functions as a local “mini-cloud” operating system that runs inside a Docker container.

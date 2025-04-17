@@ -1,6 +1,7 @@
 ---
 title: Logging
 description: Overview of LocalStack logging and error reporting
+template: doc
 ---
 
 LocalStack supports logging output and error reporting through the `localstack` CLI or a Docker/Docker Compose based setup.

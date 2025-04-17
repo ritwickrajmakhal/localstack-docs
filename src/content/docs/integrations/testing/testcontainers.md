@@ -1,12 +1,8 @@
 ---
 title: Testcontainers
 description: Use Testcontainers with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

@@ -1,12 +1,8 @@
 ---
 title: Serverless Framework
 description: Use the Serverless Framework with LocalStack.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

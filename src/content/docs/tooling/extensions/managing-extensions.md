@@ -1,12 +1,8 @@
 ---
 title: Managing extensions
 description: How to manage LocalStack extensions in your LocalStack environment.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

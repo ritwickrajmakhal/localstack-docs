@@ -1,12 +1,7 @@
 ---
 title: Welcome to LocalStack Docs
 description: Get started with LocalStack Docs.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
 nav: 1
 ---
 

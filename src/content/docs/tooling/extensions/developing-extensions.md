@@ -1,12 +1,8 @@
 ---
 title: Developing extensions
 description: How to develop your own extensions.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

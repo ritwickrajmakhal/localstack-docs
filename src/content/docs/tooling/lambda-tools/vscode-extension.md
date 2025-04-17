@@ -1,12 +1,8 @@
 ---
 title: VSCode Extension
 description: Deploy and invoke Lambda functions in LocalStack directly from VSCode.
-template: 
-hero:
-  tagline: 
-  image:
-    file: 
-  actions:
+template: doc
+
 nav: 
 ---
 

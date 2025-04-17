@@ -1,6 +1,7 @@
 ---
 title: Stack Insights
 description: Stack Insights enable users to report AWS API usage telemetry of LocalStack runs to their LocalStack account.
+template: doc
 ---
 
 ## Introduction

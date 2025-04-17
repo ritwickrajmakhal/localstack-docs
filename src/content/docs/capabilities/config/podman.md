@@ -1,6 +1,7 @@
 ---
 title: Podman
 description: Running LocalStack inside Podman
+template: doc
 ---
 
 ## Introduction
