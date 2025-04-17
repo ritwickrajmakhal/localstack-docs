@@ -116,7 +116,7 @@ Make sure to set a breakpoint in the Lambda handler code first, which can then l
 
 The screenshot below shows the triggered breakpoint with our `'Hello from LocalStack!'` in the variable inspection view:
 
-![Visual Studio Code debugging](vscode-debugging-py-1.png)
+<!-- ![Visual Studio Code debugging](vscode-debugging-py-1.png) -->
 
 #### Current Limitations
 
@@ -137,7 +137,7 @@ You can [follow the steps in the official docs](https://www.jetbrains.com/help/p
 * Add path mapping with your project files on the host and map it to the remote directory `/var/task`.
 * Copy the `pip install` command, and make sure to install the correct `pydevd-pycharm` version for your PyCharm IDE.
 
-![PyCharm Professional Remote Debugging Configuration](pycharm_remote_debugging.png)
+<!-- ![PyCharm Professional Remote Debugging Configuration](pycharm_remote_debugging.png) -->
 
 #### Preparing your code
 
@@ -171,7 +171,7 @@ def wait_for_debug_client():
 In the next step we create our function.
 In order to debug the function in PyCharm set a breakpoint in your function, run the Remote Debug configuration and then invoke the function.
 
-![PyCharm Professional debugging](pycharm_lambda_debugging.png)
+<!-- ![PyCharm Professional debugging](pycharm_lambda_debugging.png) -->
 
 ### Creating the Lambda function
 
@@ -256,13 +256,13 @@ the following content:
 while [[ -z $(docker ps | grep :5050) ]]; do sleep 1; done
 ```
 
-![Run/Debug Configurations](inteliji-debugging-jvm-1.png)
+<!-- ![Run/Debug Configurations](inteliji-debugging-jvm-1.png) -->
 
 This shell script should simplify the process a bit since the debugger server is not immediately available (only once Lambda container is up).
 
 Then create a new `Remote JVM Debug` configuration and use the script from above as a `Before launch` target:
 
-![Run/Debug Configurations](inteliji-debugging-jvm-2.png)
+<!-- ![Run/Debug Configurations](inteliji-debugging-jvm-2.png) -->
 
 Now to debug your Lambda function, simply click on the `Debug` icon with `Remote JVM on LS Debug` configuration selected, and then invoke your Lambda function.
 

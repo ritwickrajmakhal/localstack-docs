@@ -10,7 +10,7 @@ The LocalStack Cloud Pods Launchpad enables you to easily share and inject Cloud
 
 You can visit [Cloud Pods launchpad](https://app.localstack.cloud/launchpad) to generate a shareable link for your pods.
 
-![Cloud Pods Launchpad Link Generator](link-generator.png)
+<!-- ![Cloud Pods Launchpad Link Generator](link-generator.png) -->
 
 Enter a public URL to your pod Cloud Pod the first input field, then click **Generate Link**.
 You can copy the resulting link and share it with others.
@@ -31,7 +31,7 @@ To add a badge to your README that links to the Cloud Pod Launchpad, you can inc
 [![Launch LocalStack Cloudpod](https://localstack.cloud/gh/launch-pod-badge.svg)](https://app.localstack.cloud/launchpad?url=url_of_your_pod)
 ```
 
-![Cloud Pods Badge Demonstration](badge-demo.png)
+<!-- ![Cloud Pods Badge Demonstration](badge-demo.png) -->
 
 You need to include the `url_of_your_pod` as the `url` query parameter in the URL.
 For instance, if your Cloud Pod is hosted within the same repository, simply use the URL that directs to the raw Cloud Pod file.
@@ -47,7 +47,7 @@ In this section we present an overview of common problems and how to solve them.
 
 If your LocalStack instance is not running, you will encounter the following error message:
 
-![Cloud Pods Launchpad Error LocalStack not running](ls-not-running.png)
+<!-- ![Cloud Pods Launchpad Error LocalStack not running](ls-not-running.png) -->
 
 Start your LocalStack instance and attempt the operation once more.
 For detailed instructions on starting LocalStack, refer to the [Getting Started]({{< ref "getting-started" >}}) section.
@@ -56,7 +56,7 @@ For detailed instructions on starting LocalStack, refer to the [Getting Started]
 
 If the launchpad encounters difficulties while loading the metadata of your pod, you will receive the following error message:
 
-![Cloud Pods Launchpad Error failed to load metadata](metadata-load-failed.png)
+<!-- ![Cloud Pods Launchpad Error failed to load metadata](metadata-load-failed.png) -->
 
 This can occur when the pod is no longer accessible or if the URL provided is invalid.
 Review the URL and attempt the operation once more.

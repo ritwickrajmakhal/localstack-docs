@@ -6,7 +6,7 @@ template: doc
 nav: 4
 ---
 
-![AWS CDK](aws-cdk-logo.svg)
+<!-- ![AWS CDK](aws-cdk-logo.svg) -->
 
 ## Overview
 
