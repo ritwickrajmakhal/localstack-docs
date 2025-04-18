@@ -3,6 +3,7 @@ title: Welcome to LocalStack Docs
 description: Get started with LocalStack Docs.
 template: doc
 nav: 1
+label: Welcome
 ---
 
 # Welcome to LocalStack Docs! 
