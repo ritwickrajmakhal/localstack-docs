@@ -2,7 +2,8 @@
 title: Tutorials
 description: This is a dummy description
 template: doc
-nav: 5
+sidebar:
+    order: 9
 ---
 
 # Tutorials

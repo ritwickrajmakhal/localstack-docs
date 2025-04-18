@@ -2,7 +2,8 @@
 title: Sample apps
 description: This is a dummy description
 template: doc
-nav: 4
+sidebar:
+    order: 4
 ---
 
 # Applications

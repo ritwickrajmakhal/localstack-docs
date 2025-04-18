@@ -2,8 +2,9 @@
 title: Welcome to LocalStack Docs
 description: Get started with LocalStack Docs.
 template: doc
-nav: 1
-label: Welcome
+sidebar:
+    label: Welcome
+    order: 1
 ---
 
 # Welcome to LocalStack Docs! 

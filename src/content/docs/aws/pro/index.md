@@ -2,8 +2,8 @@
 title: LocalStack Enterprise
 description: This is a dummy description
 template: doc
-
-nav: 1 
+sidebar:
+    order: 8
 ---
 
 # LocalStack Enterprise

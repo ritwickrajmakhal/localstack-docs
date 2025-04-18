@@ -1,8 +1,9 @@
 ---
-title: AWS Services
+title: Local AWS Services
 description: This is a dummy description
 template: doc
-nav: 3
+sidebar:
+    order: 3
 ---
 
 # AWS Services

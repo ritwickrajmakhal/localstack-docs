@@ -25,11 +25,54 @@ export default defineConfig({
       sidebar: [
         {
           label: 'AWS',
-          autogenerate: { directory: '/aws' },
+          collapsed: true,
+          items: [
+            {
+              label: 'Welcome',
+              slug: 'aws',
+            },
+            {
+              label: 'Getting Started',
+              autogenerate: { directory: '/aws/getting-started' },
+              collapsed: true,
+            },
+            {
+              label: 'Local AWS Services',
+              slug: 'aws/aws-services',
+            },
+            {
+              label: 'Sample Apps',
+              slug: 'aws/sample-apps',
+            },
+            {
+              label: 'Capabilities',
+              autogenerate: { directory: '/aws/capabilities' },
+              collapsed: true,
+            },
+            {
+              label: 'Tooling',
+              slug: 'aws/tooling',
+            },
+            {
+              label: 'Integrations',
+              autogenerate: { directory: '/aws/integrations' },
+              collapsed: true,
+            },
+            {
+              label: 'Enterprise',
+              autogenerate: { directory: '/aws/pro' },
+              collapsed: true,
+            },
+            {
+              label: 'Tutorials',
+              slug: 'aws/tutorials',
+            },
+          ],
         },
         {
           label: 'Snowflake',
           autogenerate: { directory: '/snowflake' },
+          collapsed: true,
         },
       ],
     }),
