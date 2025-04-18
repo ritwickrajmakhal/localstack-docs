@@ -51,7 +51,8 @@ export default defineConfig({
             },
             {
               label: 'Tooling',
-              slug: 'aws/tooling',
+              autogenerate: { directory: '/aws/tooling' },
+              collapsed: true,
             },
             {
               label: 'Integrations',
