@@ -1,9 +1,9 @@
 ---
-title: Getting Started
+title: Overview
 description: This is a dummy description
 template: doc
 sidebar:
-    order: 2
+    order: 1
 ---
 
 [LocalStack](https://localstack.cloud) is a cloud service emulator that runs in a single container on your laptop or in your CI environment.

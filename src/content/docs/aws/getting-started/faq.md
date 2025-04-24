@@ -2,8 +2,8 @@
 title: FAQ
 description: Frequently asked questions about LocalStack Pro, Enterprise, and Community Editions.
 template: doc
-
-nav: 5
+sidebar:
+  order: 5
 ---
 
 ## LocalStack Core FAQs

@@ -46,8 +46,62 @@ export default defineConfig({
             },
             {
               label: 'Capabilities',
-              autogenerate: { directory: '/aws/capabilities' },
               collapsed: true,
+              items: [
+                {
+                  label: 'Overview',
+                  slug: 'aws/capabilities',
+                },
+                {
+                  label: 'LocalStack Web App',
+                  autogenerate: {
+                    directory: '/aws/capabilities/web-app',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Config',
+                  autogenerate: {
+                    directory: '/aws/capabilities/config',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Cloud Sandbox',
+                  autogenerate: {
+                    directory: '/aws/capabilities/cloud-sandbox',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Networking',
+                  autogenerate: {
+                    directory: '/aws/capabilities/networking',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'State Management',
+                  autogenerate: {
+                    directory: '/aws/capabilities/state-management',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Chaos Engineering',
+                  autogenerate: {
+                    directory: '/aws/capabilities/chaos-engineering',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Security Testing',
+                  autogenerate: {
+                    directory: '/aws/capabilities/security-testing',
+                  },
+                  collapsed: true,
+                },
+              ],
             },
             {
               label: 'Tooling',

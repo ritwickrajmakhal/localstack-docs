@@ -2,8 +2,8 @@
 title: Help & Support
 description: Get help and support with LocalStack.
 template: doc
-
-nav: 6
+sidebar:
+  order: 6
 ---
 
 ## Introduction

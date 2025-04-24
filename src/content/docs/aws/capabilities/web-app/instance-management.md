@@ -2,6 +2,8 @@
 title: Instance Management
 description: Instance Management allows you to view and manage your LocalStack instances through the LocalStack Web Application alongside other auxiliary features.
 template: doc
+sidebar:
+    order: 6
 ---
 
 ## Introduction

@@ -1,9 +1,7 @@
 ---
-title: Integrations
+title: Overview
 description: Use your favorite cloud development tools with LocalStack.
 template: doc
-sidebar:
-    order: 7
 ---
 
 LocalStack supports a wide range of tools from the cloud development ecosystem.

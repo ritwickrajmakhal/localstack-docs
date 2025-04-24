@@ -1,9 +1,9 @@
 ---
-title: "Installation"
+title: Installation
 description: Basic installation guide to get started with LocalStack on your local machine.
 template: doc
-
-nav: 2
+sidebar:
+  order: 2
 ---
 
 ## LocalStack CLI

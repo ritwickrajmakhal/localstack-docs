@@ -2,6 +2,8 @@
 title: LocalStack Desktop
 description: Getting started with the LocalStack Desktop application.
 template: doc
+sidebar:
+    order: 9
 ---
 
 LocalStack Desktop is a desktop client that allows users to easily control and interact with their LocalStack instance.
