@@ -2,8 +2,8 @@
 title: AWS JavaScript
 description: How to use the JavaScript AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 5
 ---
 
 ## Overview

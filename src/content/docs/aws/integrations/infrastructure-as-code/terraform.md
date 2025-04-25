@@ -2,8 +2,8 @@
 title: Terraform
 description:   Use the Terraform Infrastructure as Code framework with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 ## Introduction

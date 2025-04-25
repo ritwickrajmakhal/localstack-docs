@@ -2,8 +2,8 @@
 title: Cloud Custodian
 description: Use Cloud Custodian with LocalStack
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 ## Introduction

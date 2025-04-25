@@ -2,8 +2,8 @@
 title: AWS Go
 description: How to use the Go AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 3
 ---
 
 ## Overview

@@ -1,9 +1,9 @@
 ---
-title: Continuous Integration
+title: Overview
 description: Run LocalStack in your CI environment to test your application against a high-fidelity cloud emulator.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 LocalStack enables organizations to automate their application testing and integration process through DevOps practices, such as continuous integration (CI).

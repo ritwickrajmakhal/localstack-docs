@@ -2,8 +2,8 @@
 title: CircleCI
 description: Use LocalStack in CircleCI.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 ## Introduction

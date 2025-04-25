@@ -2,8 +2,8 @@
 title: AWS .NET
 description: How to use the .NET AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 ## Overview

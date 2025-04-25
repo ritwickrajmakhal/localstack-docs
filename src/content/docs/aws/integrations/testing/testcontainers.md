@@ -2,8 +2,8 @@
 title: Testcontainers
 description: Use Testcontainers with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 ## Overview
@@ -16,11 +16,13 @@ with LocalStack.
 
 ## Covered Topics
 
-* [Installing the Localstack module](#installing-the-localstack-module)
-* [Obtaining a LocalStack container](#obtaining-a-localstack-container)
-* [Configuring the AWS client](#configuring-the-aws-client)
-* [Special Setup for using RDS](#special-setup-for-using-rds)
-* [Useful Links](#useful-links)
+- [Overview](#overview)
+- [Covered Topics](#covered-topics)
+  - [Installing the Localstack module](#installing-the-localstack-module)
+  - [Obtaining a LocalStack container](#obtaining-a-localstack-container)
+- [Configuring the AWS client](#configuring-the-aws-client)
+- [Special Setup for using RDS](#special-setup-for-using-rds)
+- [Useful Links](#useful-links)
 
 ### Installing the Localstack module
 

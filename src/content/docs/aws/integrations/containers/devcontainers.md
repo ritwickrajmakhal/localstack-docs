@@ -2,8 +2,8 @@
 title: DevContainers
 description: Use DevContainers with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 ## Overview

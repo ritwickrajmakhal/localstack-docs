@@ -2,8 +2,8 @@
 title: Rancher Desktop
 description: Use Rancher Desktop with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 6
 ---
 
 ## Introduction
@@ -24,10 +24,10 @@ To run LocalStack using Rancher Desktop, simply aliasing Docker commands to Ranc
 
 Depending on your operating system, you may need to make additional configurations to ensure LocalStack runs smoothly with Rancher Desktop.
 
-- [Linux/macOS](#linuxmacos)
-  - [Rancher Desktop with dockerd](#rancher-desktop-with-dockerd)
-  - [Rancher Desktop with containerd](#rancher-desktop-with-containerd)
-- [Windows](#windows)
+- [1. Make sure there is no existing socket at /var/run/docker.sock](#1-make-sure-there-is-no-existing-socket-at-varrundockersock)
+- [2. Adjust the path if your Rancher Desktop socket is in a different location](#2-adjust-the-path-if-your-rancher-desktop-socket-is-in-a-different-location)
+      - [Rancher Desktop with containerd](#rancher-desktop-with-containerd)
+    - [Windows](#windows)
 
 These setups enable LocalStack to run smoothly with Rancher Desktop across various operating systems, ensuring compatibility with Docker-based workflows.
 

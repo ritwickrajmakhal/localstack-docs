@@ -2,8 +2,8 @@
 title: LambdaTest HyperExecute
 description: Executing LocalStack tests on LambdaTest's HyperExecute.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 [HyperExecute](https://www.lambdatest.com/hyperexecute) is a test orchestration platform designed to optimize the execution of automated tests in the cloud.

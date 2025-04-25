@@ -160,8 +160,69 @@ export default defineConfig({
             },
             {
               label: 'Integrations',
-              autogenerate: { directory: '/aws/integrations' },
               collapsed: true,
+              items: [
+                {
+                  label: 'Overview',
+                  slug: 'aws/integrations',
+                },
+                {
+                  label: 'Continuous Integration',
+                  autogenerate: {
+                    directory: '/aws/integrations/continuous-integration',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'AWS SDKs',
+                  autogenerate: {
+                    directory: '/aws/integrations/aws-sdks',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'AWS Native Tools',
+                  autogenerate: {
+                    directory: '/aws/integrations/aws-native-tools',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Infrastructure as Code',
+                  autogenerate: {
+                    directory: '/aws/integrations/infrastructure-as-code',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Containers',
+                  autogenerate: {
+                    directory: '/aws/integrations/containers',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'App Frameworks',
+                  autogenerate: {
+                    directory: '/aws/integrations/app-frameworks',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Messaging',
+                  autogenerate: {
+                    directory: '/aws/integrations/messaging',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Testing',
+                  autogenerate: {
+                    directory: '/aws/integrations/testing',
+                  },
+                  collapsed: true,
+                },
+              ],
             },
             {
               label: 'Enterprise',

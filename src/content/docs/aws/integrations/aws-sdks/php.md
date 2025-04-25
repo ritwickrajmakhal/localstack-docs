@@ -2,8 +2,8 @@
 title: AWS PHP
 description: How to use the PHP AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 6
 ---
 
 ## Overview

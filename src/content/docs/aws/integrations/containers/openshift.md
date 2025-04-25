@@ -2,8 +2,8 @@
 title: OpenShift
 description: Use the OpenShift managed Kubernetes cluster to deploy LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 ## Introduction

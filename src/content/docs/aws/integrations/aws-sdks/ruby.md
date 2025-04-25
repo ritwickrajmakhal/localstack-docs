@@ -2,8 +2,8 @@
 title: AWS Ruby
 description: How to use the Ruby AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 8
 ---
 
 ## Overview

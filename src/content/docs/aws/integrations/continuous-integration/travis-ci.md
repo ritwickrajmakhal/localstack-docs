@@ -2,8 +2,8 @@
 title: Travis CI
 description: Use LocalStack in Travis CI.
 template: doc
-
-nav: 
+sidebar:
+    order: 7
 ---
 
 This guide shows how to start and use LocalStack in your Travis CI jobs.

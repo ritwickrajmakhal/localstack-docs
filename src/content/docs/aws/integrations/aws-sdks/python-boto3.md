@@ -2,8 +2,8 @@
 title: AWS Python Boto3
 description: How to use the Python Boto3 AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 7
 ---
 
 [Boto3](https://github.com/boto/boto3) is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows Python developers to write software that makes use of AWS services.

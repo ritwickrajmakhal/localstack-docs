@@ -2,8 +2,8 @@
 title: CodeBuild
 description: Use LocalStack in CodeBuild.
 template: doc
-
-nav: 
+sidebar:
+    order: 6
 ---
 
 ## Introduction

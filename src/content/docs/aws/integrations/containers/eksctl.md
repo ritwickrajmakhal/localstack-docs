@@ -2,8 +2,8 @@
 title: eksctl
 description: Running `eksctl` on LocalStack to create EKS clusters.
 template: doc
-
-nav: 
+sidebar:
+    order: 5
 ---
 
 ## Introduction

@@ -2,8 +2,8 @@
 title: AWS Chalice
 description: Use AWS Chalice with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 [AWS Chalice](https://aws.github.io/chalice/) is a serverless micro framework used to develop and deploy your serverless applications on AWS resources.

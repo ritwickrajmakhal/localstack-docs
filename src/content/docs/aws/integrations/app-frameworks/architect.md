@@ -2,6 +2,8 @@
 title: Architect
 description: Use the Architect Infrastructure as Code framework with LocalStack.
 template: doc
+sidebar:
+    order: 2
 ---
 
 ## Overview

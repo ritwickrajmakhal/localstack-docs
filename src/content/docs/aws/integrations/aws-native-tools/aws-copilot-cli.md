@@ -2,8 +2,8 @@
 title: AWS Copilot CLI
 description: Build, release, and operate containerized applications on AWS with AWS Copilot CLI.
 template: doc
-
-nav: 
+sidebar:
+    order: 5
 ---
 
 ## Overview

@@ -2,8 +2,8 @@
 title: AWS Java
 description: How to use the Java AWS SDK with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 ## Overview

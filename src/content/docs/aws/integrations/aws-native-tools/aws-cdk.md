@@ -2,8 +2,8 @@
 title: AWS CDK
 description: Use the AWS CDK (Cloud Development Kit) with LocalStack.
 template: doc
-
-nav: 4
+sidebar:
+    order: 2
 ---
 
 <!-- ![AWS CDK](aws-cdk-logo.svg) -->

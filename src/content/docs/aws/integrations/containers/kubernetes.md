@@ -2,8 +2,8 @@
 title: Kubernetes
 description: Running LocalStack on Kubernetes.
 template: doc
-
-nav: 
+sidebar:
+    order: 3
 ---
 
 ## Introduction

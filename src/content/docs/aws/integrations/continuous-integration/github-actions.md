@@ -2,8 +2,8 @@
 title: GitHub Actions
 description: Use LocalStack in GitHub Actions.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 This page contains easily customisable snippets to show you how to manage LocalStack in a GitHub Actions pipeline.

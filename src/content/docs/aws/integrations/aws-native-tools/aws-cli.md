@@ -2,8 +2,8 @@
 title: AWS CLI
 description: Use AWS Command Line Interface (CLI)  to create local AWS resources with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 ## Introduction

@@ -2,8 +2,8 @@
 title: Pulumi
 description: Use the Pulumi Infrastructure as Code framework with LocalStack.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 ## Introduction
