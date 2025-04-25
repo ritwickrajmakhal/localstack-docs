@@ -2,8 +2,8 @@
 title: Kubernetes Executor
 description: Configuring Kubernetes Executor for compute services in LocalStack Enterprise.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 ## Introduction

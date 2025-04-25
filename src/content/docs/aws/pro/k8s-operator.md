@@ -2,8 +2,8 @@
 title: K8s Operator
 description: Custom K8s operator that offers LocalStack emulator as a native resource in Kubernetes environments.
 template: doc
-
-nav: 
+sidebar:
+    order: 5
 ---
 
 ## Introduction

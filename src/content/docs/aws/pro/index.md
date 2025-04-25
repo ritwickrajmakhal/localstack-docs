@@ -1,9 +1,9 @@
 ---
-title: LocalStack Enterprise
+title: Overview
 description: This is a dummy description
 template: doc
 sidebar:
-    order: 8
+    order: 1
 ---
 
 # LocalStack Enterprise

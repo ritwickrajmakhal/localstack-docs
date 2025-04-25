@@ -2,8 +2,8 @@
 title: Enterprise Support
 description: This is a dummy description
 template: doc
-
-nav: 
+sidebar:
+    order: 6
 ---
 
 ## Introduction
