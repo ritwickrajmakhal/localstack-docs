@@ -2,8 +2,8 @@
 title: Hot Reloading
 description: Hot code reloading continuously applies code changes to Lambda functions.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 ## Introduction

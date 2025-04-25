@@ -2,8 +2,8 @@
 title: Getting started
 description: Get started with LocalStack extensions by installing and using the official MailHog extension.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 ## Introduction

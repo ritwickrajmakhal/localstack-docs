@@ -1,9 +1,9 @@
 ---
-title: LocalStack SDKs
+title: Overview
 description: This is a dummy description
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 # LocalStack SDKs

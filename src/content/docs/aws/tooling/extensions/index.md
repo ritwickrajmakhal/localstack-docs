@@ -1,9 +1,9 @@
 ---
-title: LocalStack Extensions
+title: Overview
 description: Use LocalStack Extensions to customize and extend your local development experience.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 {{< figure src="https://user-images.githubusercontent.com/3996682/184503940-c30bfcac-e049-4ee4-b905-207b340111d1.png" >}}

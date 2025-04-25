@@ -1,9 +1,9 @@
 ---
-title: Lambda Tools
+title: Overview
 description: Develop your Lambdas more efficiently.
 template: doc
-
-nav: 
+sidebar:
+    order: 1
 ---
 
 Lambda Tools by LocalStack offers a suite of utilities to streamline the development of Lambda functions on your local machine.

@@ -2,8 +2,8 @@
 title: Python
 description: Use the LocalStack SDK for Python.
 template: doc
-
-nav: 
+sidebar:
+    order: 3
 ---
 
 ## Introduction

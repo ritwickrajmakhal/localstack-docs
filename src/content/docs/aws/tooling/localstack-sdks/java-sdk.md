@@ -2,8 +2,8 @@
 title: Java
 description: Use the LocalStack SDK for Java.
 template: doc
-
-nav: 
+sidebar:
+    order: 2
 ---
 
 ## Introduction

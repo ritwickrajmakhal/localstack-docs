@@ -2,8 +2,8 @@
 title: Developing extensions
 description: How to develop your own extensions.
 template: doc
-
-nav: 
+sidebar:
+    order: 4
 ---
 
 ## Introduction

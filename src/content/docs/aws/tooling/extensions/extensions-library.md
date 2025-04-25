@@ -2,8 +2,8 @@
 title: Extensions Library
 description: Extend LocalStack by adding new services and features as extensions.
 template: doc
-
-nav: 
+sidebar:
+    order: 5
 ---
 
 ## Introduction
