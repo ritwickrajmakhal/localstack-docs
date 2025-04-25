@@ -2,8 +2,6 @@
 title: DNS Server
 description: Use LocalStack as DNS server to resolve AWS queries to LocalStack.
 template: doc
-
-nav: 
 ---
 
 LocalStack includes a DNS server that enables seamless connectivity to LocalStack from different environments using `localhost.localstack.cloud`.

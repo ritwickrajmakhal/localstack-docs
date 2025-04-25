@@ -105,8 +105,58 @@ export default defineConfig({
             },
             {
               label: 'Tooling',
-              autogenerate: { directory: '/aws/tooling' },
               collapsed: true,
+              items: [
+                {
+                  label: 'Overview',
+                  slug: 'aws/tooling',
+                },
+                {
+                  label: 'LocalStack SDKs',
+                  autogenerate: {
+                    directory: '/aws/tooling/localstack-sdks',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Extensions',
+                  autogenerate: {
+                    directory: '/aws/tooling/extensions',
+                  },
+                  collapsed: true,
+                },
+                {
+                  label: 'Testing Utils',
+                  slug: 'aws/tooling/testing-utils',
+                },
+                {
+                  label: 'LocalSurf',
+                  slug: 'aws/tooling/localsurf',
+                },
+                {
+                  label: 'AWS Replicator',
+                  slug: 'aws/tooling/aws-replicator',
+                },
+                {
+                  label: 'Event Studio',
+                  slug: 'aws/tooling/event-studio',
+                },
+                {
+                  label: 'Transparent Endpoint Injection',
+                  slug: 'aws/tooling/transparent-endpoint-injection',
+                },
+                {
+                  label: 'DNS Server',
+                  slug: 'aws/tooling/dns-server',
+                },
+                {
+                  label: 'Lambda Tools',
+                  autogenerate: {
+                    directory: '/aws/tooling/lambda-tools',
+                  },
+                  collapsed: true,
+                },
+              ],
             },
             {
               label: 'Integrations',
