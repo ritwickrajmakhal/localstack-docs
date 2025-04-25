@@ -2,6 +2,8 @@
 title: Transparent endpoint injection
 description: This is a dummy description
 template: doc
+sidebar:
+    order: 4
 ---
 
 Suppose you're attempting to access LocalStack, but you're relying on transparent endpoint injection to redirect AWS (`*.amazonaws.com`) requests.

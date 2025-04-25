@@ -1,7 +1,9 @@
 ---
-title: Chaos Engineering
+title: Overview
 description: Chaos Engineering with LocalStack enables you to build resilient systems early on in the development phase.
 template: doc
+sidebar:
+    order: 1
 ---
 
 ## Introduction

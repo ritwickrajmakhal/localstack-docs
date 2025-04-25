@@ -2,6 +2,8 @@
 title: IAM Policy Stream
 description: Generate a stream of IAM policies as requests are coming into LocalStack using IAM Policy Stream.
 template: doc
+sidebar:
+    order: 4
 ---
 
 ## Introduction

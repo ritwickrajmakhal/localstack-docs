@@ -2,6 +2,8 @@
 title: Custom TLS certificates
 description: Using custom TLS certificates with LocalStack
 template: doc
+sidebar:
+    order: 5
 ---
 
 ## Background

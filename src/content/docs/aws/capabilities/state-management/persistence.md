@@ -2,6 +2,8 @@
 title: Persistence
 description: Internals of LocalStack persistence mechanism.
 template: doc
+sidebar:
+    order: 3
 ---
 
 ## Introduction

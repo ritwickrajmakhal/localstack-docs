@@ -2,6 +2,8 @@
 title: Chaos API
 description: Simulate outages and network failures to test the resiliency of your infrastructure
 template: doc
+sidebar:
+    order: 3
 ---
 
 ## Introduction

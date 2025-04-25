@@ -2,6 +2,8 @@
 title: IAM Policy Enforcement
 description: Enforce IAM policies in LocalStack to test your policies.
 template: doc
+sidebar:
+    order: 3
 ---
 
 ## Introduction

@@ -1,7 +1,9 @@
 ---
-title: Cloud Sandbox
+title: Overview
 description: You can run a LocalStack instance as a Cloud Sandbox and access it from your local machine.
 template: doc
+sidebar:
+    order: 1
 ---
 
 ## Introduction

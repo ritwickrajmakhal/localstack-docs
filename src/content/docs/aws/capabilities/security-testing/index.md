@@ -1,5 +1,5 @@
 ---
-title: Security Testing
+title: Overview
 description: Security Testing in LocalStack allows you to test your IAM policies and permissions locally resembling the AWS environment.
 template: doc
 ---

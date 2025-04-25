@@ -2,6 +2,8 @@
 title: Accessing a resource created by LocalStack
 description: This is a dummy description
 template: doc
+sidebar:
+    order: 6
 ---
 
 If you have created a resource using LocalStack, such as an OpenSearch cluster or RDS database, you may need to access it from your application.

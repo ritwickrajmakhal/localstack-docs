@@ -2,6 +2,8 @@
 title: Internal Endpoints
 description: Overview of LocalStack and AWS specific internal endpoints for local development and testing
 template: doc
+sidebar:
+    order: 2
 ---
 
 LocalStack provides several internal endpoints for various local AWS services and LocalStack-specific features.

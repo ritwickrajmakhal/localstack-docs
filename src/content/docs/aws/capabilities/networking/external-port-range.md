@@ -2,6 +2,8 @@
 title: External Service Port Range
 description: The range of ports used by services not directly provided by LocalStack
 template: doc
+sidebar:
+    order: 3
 ---
 
 ## Introduction

@@ -2,6 +2,8 @@
 title: Ephemeral Instances
 description: Create an Ephemeral Instance in the cloud using the LocalStack Web Application
 template: doc
+sidebar:
+    order: 2
 ---
 
 ## Introduction

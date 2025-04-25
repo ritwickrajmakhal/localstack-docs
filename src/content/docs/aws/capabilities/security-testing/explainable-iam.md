@@ -2,6 +2,8 @@
 title: Explainable IAM
 description: Discover IAM Policy Engine logs related to failed policy evaluation.
 template: doc
+sidebar:
+    order: 2
 ---
 
 ## Introduction

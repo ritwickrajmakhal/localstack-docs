@@ -2,6 +2,8 @@
 title: Application Preview
 description: Create an Application Preview to deploy your application changes in an Ephemeral Instance.
 template: doc
+sidebar:
+    order: 3
 ---
 
 ## Introduction

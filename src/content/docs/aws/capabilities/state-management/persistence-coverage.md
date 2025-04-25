@@ -2,6 +2,8 @@
 title: Persistence Coverage for AWS Services
 description: Overview of the persistence coverage across the implemented AWS services.
 template: doc
+sidebar:
+    order: 7
 ---
 
 ## Persistence Coverage Overview

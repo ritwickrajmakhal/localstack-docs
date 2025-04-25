@@ -2,6 +2,8 @@
 title: Accessing LocalStack via the endpoint URL
 description: This is a dummy description
 template: doc
+sidebar:
+    order: 5
 ---
 
 This documentation provides step-by-step guidance on how to access LocalStack services via the endpoint URL and troubleshoot common issues.
