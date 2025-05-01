@@ -1,6 +1,6 @@
 ---
 title: Iceberg Tables
-description: 
+description: This is a dummy description.
 ---
 
 {{< preview-notice >}}

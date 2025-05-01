@@ -1,6 +1,6 @@
 ---
 title: Integrations
-description: 
+description: This is a dummy description.
 ---
 
 # Integrations

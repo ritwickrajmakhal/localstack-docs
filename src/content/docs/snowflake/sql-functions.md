@@ -2,7 +2,6 @@
 title: SQL Functions Coverage
 description: This is a dummy description
 template: doc
-sidebar:
 ---
 
 # SQL Functions Coverage

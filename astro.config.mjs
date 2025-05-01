@@ -237,8 +237,47 @@ export default defineConfig({
         },
         {
           label: 'Snowflake',
-          autogenerate: { directory: '/snowflake' },
           collapsed: true,
+          items: [
+            {
+              label: 'Welcome',
+              slug: 'snowflake',
+            },
+            {
+              label: 'Getting Started',
+              autogenerate: { directory: '/snowflake/getting-started' },
+              collapsed: true,
+            },
+            {
+              label: 'Capabilities',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/capabilities' },
+            },
+            {
+              label: 'Services',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/services' },
+            },
+            {
+              label: 'Tooling',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/tooling' },
+            },
+            {
+              label: 'Integrations',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/integrations' },
+            },
+            {
+              label: 'Tutorials',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/tutorials' },
+            },
+            {
+              label: 'SQL Functions',
+              slug: 'snowflake/sql-functions',
+            },
+          ],
         },
       ],
     }),
