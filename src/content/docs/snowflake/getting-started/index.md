@@ -113,4 +113,4 @@ If you are encountering network issues and your Snowflake client drivers are una
 
 ## Next steps
 
-Now that the Snowflake emulator is installed, you can use it for developing and testing your Snowflake data pipelines. Refer to our [Quickstart]({{< ref "quickstart" >}}) guide to get started.
+Now that the Snowflake emulator is installed, you can use it for developing and testing your Snowflake data pipelines. Refer to our [Quickstart](/aws/getting-started/quickstart) guide to get started.

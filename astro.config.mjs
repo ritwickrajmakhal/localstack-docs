@@ -1,10 +1,32 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
 
+import markdoc from '@astrojs/markdoc';
+
+// Fetch the latest release version from GitHub
+const response = await fetch(
+  'https://api.github.com/repos/localstack/localstack/releases/latest',
+  {
+    headers: { Accept: 'application/vnd.github+json' },
+  }
+);
+const data = await response.json();
+const latestVersion = data.tag_name.replace('v', '');
+
 // https://astro.build/config
 export default defineConfig({
+  env: {
+    schema: {
+      LOCALSTACK_VERSION: envField.string({
+        context: 'server',
+        access: 'public',
+        default: latestVersion,
+        optional: true,
+      }),
+    },
+  },
   integrations: [
     starlight({
       title: 'LocalStack Docs',
@@ -249,14 +271,14 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: 'Capabilities',
-              collapsed: true,
-              autogenerate: { directory: '/snowflake/capabilities' },
-            },
-            {
               label: 'Services',
               collapsed: true,
               autogenerate: { directory: '/snowflake/services' },
+            },
+            {
+              label: 'Capabilities',
+              collapsed: true,
+              autogenerate: { directory: '/snowflake/capabilities' },
             },
             {
               label: 'Tooling',
@@ -281,5 +303,6 @@ export default defineConfig({
         },
       ],
     }),
+    markdoc(),
   ],
 });

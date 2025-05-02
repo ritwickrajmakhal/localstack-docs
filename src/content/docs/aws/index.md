@@ -7,8 +7,6 @@ sidebar:
     order: 1
 ---
 
-# Welcome to LocalStack Docs! 
-
 ## What do you want to do today?
 
 ## Build & Test Your AWS App Locally
