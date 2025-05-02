@@ -33,15 +33,15 @@ or use the curl commands below:
 
 For x86-64:
 
-<Code code={`$ curl --output localstack-cli-${LOCALSTACK_VERSION}-linux-amd64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-linux-amd64-onefile.tar.gz`} lang="bash" />
+<Code code={`curl --output localstack-cli-${LOCALSTACK_VERSION}-linux-amd64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-linux-amd64-onefile.tar.gz`} lang="bash" />
 
 For ARM64:
 
-<Code code={`$ curl --output localstack-cli-${LOCALSTACK_VERSION}-linux-arm64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-linux-arm64-onefile.tar.gz`} lang="bash" />
+<Code code={`curl --output localstack-cli-${LOCALSTACK_VERSION}-linux-arm64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-linux-arm64-onefile.tar.gz`} lang="bash" />
 
 Then extract the LocalStack CLI from the terminal:
 
-<Code code={`$ sudo tar xvzf localstack-cli-${LOCALSTACK_VERSION}-linux-*-onefile.tar.gz -C /usr/local/bin`} lang="bash" />
+<Code code={`sudo tar xvzf localstack-cli-${LOCALSTACK_VERSION}-linux-*-onefile.tar.gz -C /usr/local/bin`} lang="bash" />
 
 <details>
 <summary>Alternative: Homebrew on Linux</summary>
@@ -49,7 +49,7 @@ Then extract the LocalStack CLI from the terminal:
 If you are using [Homebrew for Linux](https://docs.brew.sh/Homebrew-on-Linux), you can install the LocalStack CLI directly from our official LocalStack tap:
 
 ```bash
-$ brew install localstack/tap/localstack-cli
+brew install localstack/tap/localstack-cli
 ```
 </details>
 
@@ -60,7 +60,7 @@ $ brew install localstack/tap/localstack-cli
 You can install the LocalStack CLI using Brew directly from our official LocalStack tap:
 
 ```bash
-$ brew install localstack/tap/localstack-cli
+brew install localstack/tap/localstack-cli
 ```
 
 <details>
@@ -72,11 +72,11 @@ You may download the binary for your architecture using the link below:
 
 or use the following curl command:
 
-<Code code={`$ curl --output localstack-cli-${LOCALSTACK_VERSION}-darwin-amd64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-darwin-amd64-onefile.tar.gz`} lang="bash" />
+<Code code={`curl --output localstack-cli-${LOCALSTACK_VERSION}-darwin-amd64-onefile.tar.gz \n    --location https://github.com/localstack/localstack-cli/releases/download/v${LOCALSTACK_VERSION}/localstack-cli-${LOCALSTACK_VERSION}-darwin-amd64-onefile.tar.gz`} lang="bash" />
 
 Then extract the LocalStack CLI from the terminal:
 
-<Code code={`$ sudo tar xvzf localstack-cli-${LOCALSTACK_VERSION}-darwin-*-onefile.tar.gz -C /usr/local/bin`} lang="bash" />
+<Code code={`sudo tar xvzf localstack-cli-${LOCALSTACK_VERSION}-darwin-*-onefile.tar.gz -C /usr/local/bin`} lang="bash" />
 
 </details>
 </TabItem>
@@ -102,14 +102,14 @@ Please make sure to install the following before moving ahead:
 Next install the LocalStack CLI in your Python environment by running:
 
 ```bash
-$ python3 -m pip install --upgrade localstack
+python3 -m pip install --upgrade localstack
 ```
 
 :::note
 To download a specific version of LocalStack, replace `<version>` with the required version from [release page](https://github.com/localstack/localstack/releases).
 
 ```bash
-$ python3 -m pip install localstack==<version>
+python3 -m pip install localstack==<version>
 ```
 :::
 
@@ -118,7 +118,7 @@ $ python3 -m pip install localstack==<version>
 If you have problems with permissions in MacOS X Sierra, install with:
 
 ```bash
-$ python3 -m pip install --user localstack
+python3 -m pip install --user localstack
 ```
 :::
 
@@ -133,12 +133,11 @@ It should be installed and started entirely under a local non-root user.
 ### Starting LocalStack
 
 To verify that the LocalStack CLI was installed correctly, you can check the version in your terminal:
-```bash
-$ localstack --version
-${LOCALSTACK_VERSION}
-```
+
+<Code code={`$ localstack --version\n${LOCALSTACK_VERSION}`} lang="bash" />
 
 You are all set!
+
 You can now start LocalStack with the following command:
 
 ```bash
@@ -170,6 +169,7 @@ Afterwards, check out our [Quickstart guide](/aws/getting-started/quickstart) to
 
 The LocalStack CLI allows you to easily update the different components of LocalStack.
 To check the various options available for updating, run:
+
 ```bash
 $ localstack update --help
 Usage: localstack update [OPTIONS] COMMAND [ARGS]...
@@ -286,7 +286,7 @@ services:
 Start the container by running the following command:
 
 ```bash
-$ docker compose up
+docker compose up
 ```
 
 :::note
@@ -314,8 +314,7 @@ Please note that there are a few pitfalls when configuring your stack manually v
 We recommend using the LocalStack CLI to validate your configuration, which will print warning messages in case it detects any potential misconfigurations:
 
 ```bash
-$ localstack config validate
-...
+localstack config validate
 ```
 
 ### Docker
@@ -337,7 +336,7 @@ You can start the Docker container simply by executing the following `docker run
 
 <TabItem label="Community" >
 ```bash
-$ docker run \
+docker run \
   --rm -it \
   -p 127.0.0.1:4566:4566 \
   -p 127.0.0.1:4510-4559:4510-4559 \
@@ -348,7 +347,7 @@ $ docker run \
 
 <TabItem label="Pro" >
 ```bash
-$ docker run \
+docker run \
   --rm -it \
   -p 127.0.0.1:4566:4566 \
   -p 127.0.0.1:4510-4559:4510-4559 \
@@ -397,8 +396,8 @@ If you want to deploy LocalStack in your [Kubernetes](https://kubernetes.io) clu
 
 You can deploy LocalStack in a Kubernetes cluster by running these commands:
 ```bash
-$ helm repo add localstack-repo https://helm.localstack.cloud
-$ helm upgrade --install localstack localstack-repo/localstack
+helm repo add localstack-repo https://helm.localstack.cloud
+helm upgrade --install localstack localstack-repo/localstack
 ```
 
 The Helm charts are not maintained in the main repository, but in a [separate one](https://github.com/localstack/helm-charts).
@@ -426,7 +425,7 @@ If you can successfully install LocalStack using `pip` but you cannot use it in 
 
 As a workaround you can call the LocalStack CLI python module directly:
 ```bash
-$ python3 -m localstack.cli.main
+python3 -m localstack.cli.main
 ```
 
 #### The `localstack` CLI does not start the LocalStack container
@@ -435,7 +434,7 @@ If you are using the `localstack` CLI to start LocalStack, but the container is 
 - Uncheck the **Use kernel networking for UDP** option in Docker Desktop (**Settings** → **Resources** → **Network**) or follow the steps in our [documentation](https://docs.localstack.cloud/user-guide/tools/dns-server/#system-dns-configuration) to disable it.
 - Start LocalStack with a specific DNS address:
 ```bash
-$ DNS_ADDRESS=0 localstack start
+DNS_ADDRESS=0 localstack start
 ```
 - Remove port 53 as indicated in our [standard `docker-compose.yml`  file](https://github.com/localstack/localstack/blob/master/docker-compose-pro.yml).
 
@@ -445,7 +444,7 @@ You can now avail logging output and error reporting using LocalStack logs.
 To access the logs, run the following command:
 
 ```bash
-$ localstack logs
+localstack logs
 ```
 
 AWS requests are now logged uniformly in the INFO log level (set by default or when `DEBUG=0`).
@@ -470,7 +469,7 @@ You can share the LocalStack logs with us to help us identify issues.
 To share the logs, call the diagnostic endpoint:
 
 ```bash
-$ curl -s localhost:4566/_localstack/diagnose | gzip -cf > diagnose.json.gz
+curl -s localhost:4566/_localstack/diagnose | gzip -cf > diagnose.json.gz
 ```
 
 Ensure that the diagnostic endpoint is run after you have tried reproducing the affected task.
