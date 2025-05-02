@@ -17,19 +17,19 @@ Some resources may be referred to by ARN, for example Secrets Manager secrets, b
 LocalStack AWS Replicator creates identical copies of AWS resources in a running LocalStack instance.
 This means that external resources can easily be replicated before deploying the main application, and removes the need to change existing stacks or create custom infrastructure, making LocalStack setup easier.
 
-{{< callout "note">}}
+:::note
 The AWS Replicator is in a preview state, supporting only [selected resources](#supported-resources).
 It is only available as part of the **LocalStack Teams** plan and higher.
-{{< /callout >}}
+:::
 
 ## Getting started
 
 A valid `LOCALSTACK_AUTH_TOKEN` must be configured to start the LocalStack Pro image.
 
-{{< callout "note" >}}
+:::note
 The Replicator is in limited preview and is available from LocalStack CLI version 4.2.0.
 If you encounter issues, update your [LocalStack CLI](https://docs.localstack.cloud/getting-started/installation/#updating).
-{{< /callout >}}
+:::
 
 ### Retrieve credentials to access AWS
 
@@ -97,13 +97,13 @@ localstack replicator start \
  [--target-region-name <region-name>]
 {{< /command >}}
 
-{{< callout "note" >}}
+:::note
 Resources that supports replicating with arn can be replicated by providing `--resource-arn` instead of `--resource-type` and `--resource-identifier`.
 
 {{< command >}}
 <disable-copy>$ </disable-copy>localstack replicator start --resource-arn <resource-arn>
 {{< /command >}}
-{{< /callout >}}
+:::
 
 This triggers the replication job.
 The output will look similar to:
@@ -121,12 +121,12 @@ The output will look similar to:
 }
 ```
 
-{{< callout "note" >}}
+:::note
 - `--target-account-id` specifies the destination AWS account for replication.
   If not set, the resource is replicated into account `000000000000`.
 - `--target-region-name` specifies the destination AWS region.
   If not set, the resource is replicated into the default region from the provided credentials.
-{{< /callout >}}
+:::
 
 #### Using the HTTP API
 
@@ -187,9 +187,9 @@ To wait for the job to finish, use the `--follow` flag.
 
 To check the status of a replication job via the HTTP API, send a `GET` request to `http://localhost.localstack.cloud:4566/_localstack/replicator/jobs/<job-id>`.
 
-{{< callout "tip" >}}
+:::tip
 If the replication state is `SUCCEEDED` but the resource is missing, check in account `000000000000`.
-{{< /callout >}}
+:::
 
 ## Quickstart
 
@@ -320,8 +320,8 @@ The project is still in preview state and we welcome feedback and bug reports.
 We have opened a [github issue where you can request and upvote](https://github.com/localstack/localstack/issues/12439) to help us prioritize our efforts and support the resources with the most impact.
 For any other requests or reports, please open a [new github issue](https://github.com/localstack/localstack/issues/new/choose).
 
-{{< callout "tip" >}}
+:::tip
 To ensure support for all resources, use the latest LocalStack Docker image.
-{{< /callout >}}
+:::
 
 {{< localstack_replicator_table >}}

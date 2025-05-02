@@ -21,12 +21,12 @@ Auth tokens come in two types: a **Developer Auth Token** and a **CI Auth Token*
 
 Both the **Developer Auth Token** and **CI Auth Token** can be managed on the [Auth Tokens page](https://app.localstack.cloud/workspace/auth-tokens).
 
-{{< callout "warning">}}
+:::warning
 - It's crucial to keep your Auth Token confidential.
   Do not include it in source code management systems, such as Git repositories.
 - Be aware that if an Auth Token is committed to a public repository, it is at risk of exposure, and could remain in the repository's history, even if attempts are made to rewrite it.
 - In case your Auth Token is accidentally published, immediately rotate it on the [Auth Token page](https://app.localstack.cloud/workspace/auth-tokens).
-{{< /callout >}}
+:::
 
 ## Managing your License
 
@@ -52,9 +52,9 @@ After initiating your trial or acquiring a license, proceed to assign it to a us
 If you have joined a workspace, you need to be assigned a license by the workspace administrator.
 In case of switching workspaces or licenses, you need to make sure that you are assigned to the correct license.
 
-{{< callout "note" >}}
+:::note
 If you do not assign a license, you will not be able to use LocalStack even if you have a valid Auth token.
-{{< /callout >}}
+:::
 
 To view your own assigned license, visit the [My License page](https://app.localstack.cloud/workspace/my-license).
 You can further navigate to the [Auth Token page](https://app.localstack.cloud/workspace/auth-tokens) to view your **Developer Auth Token** and **CI Auth Token**.
@@ -65,12 +65,12 @@ LocalStack requires the `LOCALSTACK_AUTH_TOKEN` environment variable to contain 
 You can configure your Auth Token in several ways, depending on your use case.
 The following sections describe the various methods of setting your Auth Token.
 
-{{< callout "warning">}}
+:::warning
 - It's crucial to keep your Auth Token confidential.
   Do not include it in source code management systems, such as Git repositories.
 - Be aware that if an Auth Token is committed to a public repository, it's at risk of exposure, and could remain in the repository's history, even if attempts are made to rewrite it.
 - In case your Auth Token is accidentally published, immediately rotate it on the [Auth Token page](https://app.localstack.cloud/workspace/auth-tokens).
-{{< /callout >}}
+:::
 
 ### LocalStack CLI
 
@@ -87,19 +87,19 @@ localstack start
 {{< /tab >}}
 {{< /tabpane >}}
 
-{{< callout "note" >}}
+:::note
 1. You can alternatively set the `LOCALSTACK_AUTH_TOKEN` environment variable in your shell session.
   This ensures the Auth Token is transmitted to your LocalStack container, enabling key activation.
 2. The `localstack auth set-token` command is only available for `localstack` CLI and cannot be used with a Docker/Docker Compose setup.
-{{< /callout >}}
+:::
 
 You have the option to run your LocalStack container in the background by appending the `-d` flag to the `localstack start` command.
 
 The `localstack` CLI automatically detects the Auth Token and appropriately conveys it to the LocalStack container.
 
-{{< callout "note" >}}
+:::note
 If you are using LocalStack with an Auth Token, it's necessary to download the [LocalStack Pro image](https://docs.localstack.cloud/references/docker-images/#localstack-pro-image), which includes Pro services and several advanced features.
-{{< /callout >}}
+:::
 
 ### Docker
 

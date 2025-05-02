@@ -22,10 +22,10 @@ For non-technical issues, such as billing or account inquiries, please contact s
 
 We welcome any feedback as we continue to improve LocalStack for all users.
 
-{{< callout >}}
+:::
 At the moment, we only provide support in `English`, as we are an international team with members from various regions.
  This allows us to maintain clear and consistent internal communication across all our locations.
-{{< /callout >}}
+:::
 
 ## Support Coverage
 
@@ -207,7 +207,7 @@ In case you encounter any issues with LocalStack, follow these troubleshooting g
 - Consult the error logs for any relevant error messages or warnings.
 - Seek guidance from the community through the user forum.
 
-{{< callout "note" >}}
+:::note
 In many scenarios, we ask our customers to use the diagnostics endpoint to provide additional information.
 
 To use LocalStack's diagnostics endpoint:
@@ -219,4 +219,4 @@ To use LocalStack's diagnostics endpoint:
 - Send the output file to our Slack chat
 
 <span style="color: darkred;">**Ensure that you avoid sending the diagnostic output to public channels or forums, as it may contain sensitive information.**</span>
-{{< /callout >}}
+:::

@@ -13,12 +13,12 @@ Stack Insights let users report AWS API usage telemetry to their LocalStack acco
 
 Stack Insights show which APIs are used, which clients or integrations use specific services and API operations, and which services cause the most API errors.
 
-{{< callout "note" >}}
+:::note
 Your privacy matters to us!
 We only collect anonymized and sanitized data.
 No sensitive information about your application is ever collected or exposed.
 The data is only used to provide you with insights into the usage of LocalStack and to help us improve the product.
-{{< /callout >}}
+:::
 
 ## Getting started
 
@@ -57,7 +57,7 @@ View the list of events during the entire Stack lifetime, including:
 
 You can disable event reporting on your LocalStack client by setting the environment variable `DISABLE_EVENTS=1`.
 
-{{< callout "tip" >}}
+:::tip
 Brave blocks `localhost` requests due to security by default via shields.
 While some sites need access to `localhost` / `127.0.0.1` to work correctly, an easy option to allow a user to enable this is manually enabling via the site via `brave://settings/content/insecureContent`.
-{{< /callout >}}
+:::

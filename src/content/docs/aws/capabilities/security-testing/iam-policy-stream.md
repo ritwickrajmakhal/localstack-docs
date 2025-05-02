@@ -14,9 +14,9 @@ This is typically a service resource for resource-based policies, or an IAM prin
 Subsequently, it displays the suggested policy.
 This feature aids in identifying the correct permissions for cloud applications and can help spot logical errors, such as unexpected actions in a policy.
 
-{{< callout "note" >}}
+:::note
 IAM Policy Stream is offered as a **preview** feature and is under active development.
-{{< /callout >}}
+:::
 
 ## Getting started
 
@@ -84,10 +84,10 @@ The Web Application provides the following features:
 3. Includes a feature to activate or deactivate this functionality on-the-fly for performance tuning.
 4. Presents an option to reset the stream, facilitating a clean slate to generate new policies.
 
-{{< callout "tip" >}}
+:::tip
 You don't need to set additional configuration variables, such as `DEBUG=1` or `IAM_SOFT_MODE=1`, when using the IAM Policy Stream with Web Application.
 However, it won't enforce policies or print IAM-related logs in the LocalStack container.
-{{< /callout >}}
+:::
 
 To use this feature, open the LocalStack Web Application in your browser, go to the IAM Policy Stream section, and click on **Enable** to view the **Summary Policy** and **Output**.
 
