@@ -6,6 +6,8 @@ sidebar:
   order: 5
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 ## LocalStack Core FAQs
 
 ### How do I resolve SSL issues due to revoked local certificate for `localhost.localstack.cloud`?
@@ -17,7 +19,7 @@ To resolve the issue follow the steps:
   The exact path may differ depending on your operating system and how you’ve started LocalStack.
   Please refer to our [documentation](https://docs.localstack.cloud/references/filesystem/#localstack-volume) for specific instructions.
 
-**Workarounds for older (<v3.7.0) LocalStack versions:**
+**Workarounds for older (&lt;v3.7.0) LocalStack versions:**
 
 1. **Disable Certificate Download**: To prevent downloading a revoked certificate, set the environment variable  `SKIP_SSL_CERT_DOWNLOAD=1`.
   This will cause LocalStack to use a self-signed SSL certificate.
@@ -34,15 +36,15 @@ To resolve the issue follow the steps:
 If the LocalStack CLI version is heavily outdated, it might lead to issues with container startup and debug commands.
 If you are using an older version of LocalStack, you can update it by running the following command:
 
-{{< command >}}
-$ pip install --upgrade localstack localstack-ext
-{{< / command >}}
+```bash
+pip install --upgrade localstack localstack-ext
+```
 
 If you are running a newer version of LocalStack, you can check the version by running the following command:
 
-{{< command >}}
+```bash
 $ localstack update localstack-cli
-{{< / command >}}
+```
 
 ### Is using `localhost.localstack.cloud:4566` to set as the endpoint for AWS services recommended?
 
@@ -105,19 +107,22 @@ To prevent this, you can temporarily set the `MSYS_NO_PATHCONV` environment vari
 Another workaround is to double the first slash in your command to prevent the POSIX-to-Windows path conversion.
 
 This will lead to issues with Git Bash
-{{< command >}}
+
+```bash
 $ aws ssm get-parameter --name "/test/parameter/new"
-{{< / command >}}
+```
 
 Option 1: Set the environment variable
-{{< command >}}
+
+```bash
 $ MSYS_NO_PATHCONV=1 aws ssm put-parameter --name "/test/parameter/new" --type String --value "test"
-{{< / command >}}
+```
 
 Option 2: Double the first slash
-{{< command >}}
+
+```bash
 $ aws ssm put-parameter --name "//test/parameter/new" --type String --value "test"
-{{< / command >}}
+```
 
 For additional known issues related to Git Bash, you can refer to the following link: [Git Bash Known Issues](https://github.com/git-for-windows/build-extra/blob/main/ReleaseNotes.md#known-issues)
 
@@ -177,7 +182,7 @@ sudo sysctl -w net.ipv4.ip_forward=1
 Using LocalStack inside a Docker network with multiple other containers can lead to connectivity issues from/to those containers.
 For example, a container which attempts to deploy a stack and interact with the services directly, from within the same Docker network.
 
-Refer to our [network troubleshooting guide]({{< ref "references/network-troubleshooting" >}}) covering several scenarios.
+Refer to our [network troubleshooting guide](/aws/capabilities/networking/) covering several scenarios.
 
 ### How to resolve the pull rate limit issue for LocalStack's Docker image?
 
@@ -203,29 +208,32 @@ You can add in the volume `~/.docker/config.json:/config.json` where the `config
 If you have an active AWS account, you can use the public AWS ECR image.
 You can use the following command to pull the image:
 
-{{< tabpane >}}
-{{< tab header="Community" lang="shell" >}}
+<Tabs>
+<TabItem label="Community">
+```shell
 docker pull public.ecr.aws/localstack/localstack:latest
-{{< /tab >}}
-{{< tab header="Pro" lang="powershell" >}}
+```
+</TabItem>
+<TabItem label="Pro">
+```shell
 docker pull public.ecr.aws/localstack/localstack-pro:latest
-{{< /tab >}}
-{{< /tabpane >}}
+```
+</TabItem>
+</Tabs>
 
 ### How to increase IO performance for LocalStack's Docker image under Windows?
 
-{{< callout "note">}}
+:::note
 Some options that are not part of the standard configuration may have unintended consequences for AWS services that operate within LocalStack.
 For example, these options may interfere with the functionality of AppSync function executor, RDS MySQL persistence and SageMaker.
 We advise you to exercise caution.
-{{< /callout >}}
+:::
 
 You can change the LocalStack `volume` folder to use the WSL Linux file system instead of the Windows host folder.
 To do so, you need to change the [`docker-compose.yml`](https://github.com/localstack/localstack/blob/master/docker-compose-pro.yml) file and add the following lines:
 
-{{< tabpane text=true >}}
-{{< tab header="WSL Linux File System" >}}
-{{% markdown %}}
+<Tabs>
+<TabItem label="WSL Linux File System">
 
 ```yaml
     volumes:
@@ -236,12 +244,8 @@ To do so, you need to change the [`docker-compose.yml`](https://github.com/local
 ---
 
 As an alternative, you can set the volume as `- "~/volume:/var/lib/localstack"` then start Docker using command `wsl docker compose -f docker-compose.yml up`.
-
-{{% /markdown %}}
-{{< /tab >}}
-{{< tab header="Docker Volumes" >}}
-{{% markdown %}}
-
+</TabItem>
+<TabItem label="Docker Volumes">
 ```yaml
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
@@ -249,10 +253,8 @@ As an alternative, you can set the volume as `- "~/volume:/var/lib/localstack"` 
 volumes:
   localstack_data:
 ```
-
-{{% /markdown %}}
-{{< /tab >}}
-{{< /tabpane >}}
+</TabItem>
+</Tabs>
 
 For more details visit [Docker WSL documentation](https://docs.docker.com/desktop/wsl), [Docker WSL best practices](https://docs.docker.com/desktop/wsl/best-practices) and [Docker Volumes documentation](https://docs.docker.com/storage/volumes/).
 
@@ -272,11 +274,11 @@ Pushing and pulling a Cloud Pod from our Web Application is facilitated by using
 
 The easiest way to check if LocalStack Pro or Enterprise is activated is to check the health endpoint of LocalStack for a list of the running services:
 
-{{< command >}}
+```bash
 $ curl localhost:4566/_localstack/health | jq
-{{< / command >}}
+```
 
-If a Pro-only [service]({{< ref "aws" >}}) -- like [XRay]({{< ref "xray" >}}) -- is running, LocalStack Pro or Enterprise has started successfully.
+If a Pro-only service -- like [XRay](/aws/services/x-ray) -- is running, LocalStack Pro or Enterprise has started successfully.
 If your Auth Token is invalid, you will see an error message like this in the logs of LocalStack:
 
 ```bash
@@ -292,7 +294,7 @@ If the Auth Token still does not work, please [contact us](https://localstack.cl
 A CI Auth Token allows you to use LocalStack in your CI environment.
 Every activation with a CI Auth Token consumes one CI credit.
 This means that with every build triggered through the LocalStack container you will consume one credit.
-To understand the CI pricing across our product tiers, follow up with our [LocalStack in CI]({{<ref "user-guide/ci">}}) documentation.
+To understand the CI pricing across our product tiers, follow up with our [LocalStack in CI](/aws/integrations/continuous-integration/) documentation.
 
 ### What should I do if I cannot connect to LocalStack API?
 
@@ -319,9 +321,9 @@ socket.gaierror: [Errno -3] Temporary failure in name resolution
 
 Confirm this by using a tool like `dig`:
 
-{{< command >}}
+```bash
 $ dig api.localstack.cloud
-{{< / command >}}
+```
 
 If the result has some other status than `status: NOERROR,` your machine cannot resolve this domain.
 
