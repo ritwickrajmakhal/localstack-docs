@@ -22,7 +22,7 @@ For non-technical issues, such as billing or account inquiries, please contact s
 
 We welcome any feedback as we continue to improve LocalStack for all users.
 
-:::
+:::note
 At the moment, we only provide support in `English`, as we are an international team with members from various regions.
  This allows us to maintain clear and consistent internal communication across all our locations.
 :::
@@ -185,7 +185,7 @@ During these sessions, our support engineers can directly observe and diagnose t
 
 ### Enterprise support
 
-To learn more about the support available to **Enterprise** plan users, refer to the [Enterprise Support]({{<ref "enterprise-support" >}}) page.
+To learn more about the support available to **Enterprise** plan users, refer to the [Enterprise Support](/aws/pro/enterprise-support/) page.
 
 ## Support Business Hours
 
@@ -217,6 +217,8 @@ To use LocalStack's diagnostics endpoint:
 - Run the affected task(s)
 - Call the diagnostic endpoint `curl -s localhost:4566/_localstack/diagnose | gzip -cf > diagnose.json.gz` (Endpoint URL depends on your configuration)
 - Send the output file to our Slack chat
+:::
 
-<span style="color: darkred;">**Ensure that you avoid sending the diagnostic output to public channels or forums, as it may contain sensitive information.**</span>
+:::danger
+Ensure that you avoid sending the diagnostic output to public channels or forums, as it may contain sensitive information.
 :::

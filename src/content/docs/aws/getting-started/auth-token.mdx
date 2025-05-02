@@ -23,7 +23,7 @@ Auth tokens come in two types: a **Developer Auth Token** and a **CI Auth Token*
 
 Both the **Developer Auth Token** and **CI Auth Token** can be managed on the [Auth Tokens page](https://app.localstack.cloud/workspace/auth-tokens).
 
-:::warning
+:::danger
 - It's crucial to keep your Auth Token confidential.
   Do not include it in source code management systems, such as Git repositories.
 - Be aware that if an Auth Token is committed to a public repository, it is at risk of exposure, and could remain in the repository's history, even if attempts are made to rewrite it.
@@ -66,7 +66,7 @@ LocalStack requires the `LOCALSTACK_AUTH_TOKEN` environment variable to contain 
 You can configure your Auth Token in several ways, depending on your use case.
 The following sections describe the various methods of setting your Auth Token.
 
-:::warning
+:::danger
 - It's crucial to keep your Auth Token confidential.
   Do not include it in source code management systems, such as Git repositories.
 - Be aware that if an Auth Token is committed to a public repository, it's at risk of exposure, and could remain in the repository's history, even if attempts are made to rewrite it.

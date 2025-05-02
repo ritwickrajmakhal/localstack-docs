@@ -79,7 +79,7 @@ You can shut down the instance by navigating to the [Ephemeral Instances page](h
 
 <img src="shutdown-ephemeral-instance.png" alt="Shutdown the LocalStack Ephemeral Instance" title="Shutdown the LocalStack Ephemeral Instance" width="800" />
 
-:::warning
+:::danger
 Ephemeral Instances, by default, are created with the latest version of LocalStack.
 If you have created a Cloud Pod from an older version of LocalStack, you need to update the Cloud Pod to the latest version before loading it into an Ephemeral Instance.
 :::
