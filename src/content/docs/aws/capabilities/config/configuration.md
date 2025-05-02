@@ -31,7 +31,7 @@ Options that affect the core LocalStack system.
 | `GATEWAY_LISTEN`| `0.0.0.0:4566` (default in Docker mode) `127.0.0.1:4566` (default in host mode) | Configures the bind addresses of LocalStack. It has the form `<ip address>:<port>(,<ip address>:<port>)*`. LocalStack Pro adds port `443`. |
 | `LOCALSTACK_HOST`| `localhost.localstack.cloud:4566` (default) | This is interpolated into URLs and addresses that are returned by LocalStack. It has the form `<hostname>:<port>`. |
 | `USE_SSL` | `0` (default) | Whether to return URLs using HTTP (`0`) or HTTPS (`1`). Changed with 3.0.0. In earlier versions this was toggling SSL support on or off. |
-| `PERSISTENCE` | `0` (default) | Enable persistence. See [Persistence Mechanism]({{< ref "user-guide/state-management/persistence" >}}) and [Filesystem Layout]({{< ref "filesystem" >}}). |
+| `PERSISTENCE` | `0` (default) | Enable persistence. See [Persistence Mechanism](/aws/capabilities/state-management/persistence) and [Filesystem Layout]({{< ref "filesystem" >}}). |
 | `MAIN_CONTAINER_NAME` | `localstack-main` (default) | Specify the main docker container name |
 | `LS_LOG` | `trace`, `trace-internal`, `debug`, `info`, `warn`, `error`, `warning`| Specify the log level. Currently overrides the `DEBUG` configuration. `trace` for detailed request/response, `trace-internal` for internal calls, too. |
 | `EXTERNAL_SERVICE_PORTS_START` | `4510` (default) | Start of the [External Service Port Range]({{< ref "external-ports" >}}) (inclusive). |
@@ -364,17 +364,17 @@ Please check with your SMTP email service provider for the following settings.
 
 ## Persistence
 
-To learn more about these configuration options, see [Persistence]({{< ref "user-guide/state-management/persistence" >}}).
+To learn more about these configuration options, see [Persistence](/aws/capabilities/state-management/persistence).
 
 | Variable | Valid options | Description |
 | - | - | - |
 | `SNAPSHOT_SAVE_STRATEGY` | `ON_SHUTDOWN`\|`ON_REQUEST`\|`SCHEDULED`\|`MANUAL` | Strategy that governs when LocalStack should make state snapshots |
 | `SNAPSHOT_LOAD_STRATEGY` | `ON_STARTUP`\|`ON_REQUEST`\|`MANUAL` | Strategy that governs when LocalStack restores state snapshots |
-| `SNAPSHOT_FLUSH_INTERVAL` | 15 (default) | The interval (in seconds) between persistence snapshots. It only applies to a `SCHEDULED` save strategy (see [Persistence Mechanism]({{< ref "user-guide/state-management/persistence" >}}))|
+| `SNAPSHOT_FLUSH_INTERVAL` | 15 (default) | The interval (in seconds) between persistence snapshots. It only applies to a `SCHEDULED` save strategy (see [Persistence Mechanism](/aws/capabilities/state-management/persistence))|
 
 ## Cloud Pods
 
-To learn more about these configuration options, see [Cloud Pods]({{< ref "user-guide/state-management/cloud-pods" >}}).
+To learn more about these configuration options, see [Cloud Pods](/aws/capabilities/state-management/cloud-pods).
 
 | Variable | Valid options | Description |
 | - | - | - |

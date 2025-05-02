@@ -22,4 +22,4 @@ Chaos engineering in LocalStack encompasses the following features:
 - **Robust architecture** tested via failover scenarios using the Chaos API.
 - **Consistent infrastructure setup** under challenging conditions like outages, examined through automated provisioning processes.
 
-The best way to understand concepts is through practice, so dive into our [chaos engineering tutorials]({{< ref "tutorials" >}}).
+The best way to understand concepts is through practice, so dive into our [chaos engineering tutorials](/aws/tutorials).

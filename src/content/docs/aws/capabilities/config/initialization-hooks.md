@@ -112,7 +112,7 @@ A common use case for init hooks is pre-seeding LocalStack with custom state.
 For example if you want to have a certain S3 bucket or DynamoDB table created when starting LocalStack, init hooks can be very useful.
 
 {{< callout "tip" >}}
-If you have more complex states, [Cloud Pods]({{< ref "user-guide/state-management/cloud-pods" >}})  and  [how to auto-load them on startup]({{< ref "user-guide/state-management/cloud-pods#auto-loading-cloud-pods" >}})  may be a good option to look into!
+If you have more complex states, [Cloud Pods](/aws/capabilities/state-management/cloud-pods)  and  [how to auto-load them on startup]({{< ref "user-guide/state-management/cloud-pods#auto-loading-cloud-pods" >}})  may be a good option to look into!
 {{< /callout >}}
 
 To execute aws cli commands when LocalStack becomes ready,
