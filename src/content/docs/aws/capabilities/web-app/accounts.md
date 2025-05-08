@@ -43,7 +43,7 @@ Once verified, you can log in using your email or GitHub account.
 > Terms: [localstack.cloud/legal/tos](https://www.localstack.cloud/legal/tos)  
 > Privacy Policy: [localstack.cloud/legal/privacy-policy](https://www.localstack.cloud/legal/privacy-policy)
 
-<img src="account-signup-form.png" width="700px" alt="Account sign-up form" title="Sign-up screen">
+![Sign-up screen](/images/aws/account-signup-form.png)
 
 ## Logging In
 
@@ -62,7 +62,6 @@ To update your profile or change account settings:
 2. Select **Settings** from the dropdown.
 3. Navigate to **Profile** to update your name, company, job title, phone number, or GitHub username.
 
-<img src="account-settings.png" width="700px" alt="Account settings in sidebar" title="Navigating to account settings">
-<br><br>
+![Account settings in sidebar](/images/aws/account-settings.png)
 
 Changes are saved automatically once submitted.

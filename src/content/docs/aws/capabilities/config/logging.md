@@ -43,7 +43,7 @@ AWS requests are logged uniformly in the `INFO` log level (set by default or whe
 The shape is `AWS <service>.<operation> => <http-status> (<error type>)`.
 Requests to HTTP endpoints are logged in a similar way.
 
-```sh
+```bash
 2022-07-12T10:12:03.250  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.PutObject => 404 (NoSuchBucket)
 2022-07-12T10:12:11.295  INFO --- [   asgi_gw_0] localstack.request.aws     : AWS s3.CreateBucket => 200
 2022-07-12T10:12:13.159  INFO --- [   asgi_gw_1] localstack.request.aws     : AWS s3.PutObject => 200
@@ -55,9 +55,9 @@ Requests to HTTP endpoints are logged in a similar way.
 You can inspect the logs of the LocalStack container using the `localstack` CLI or your Docker/Docker Compose setup.
 With the `localstack` CLI, you can run the following command to inspect the logs of the LocalStack container:
 
-{{< command >}}
-$ localstack logs
-{{< / command >}}
+```bash
+localstack logs
+```
 
 With Docker/Docker-Compose, you can run `docker ps` to get the container ID of the LocalStack container and then run `docker logs <container-id>` to inspect the logs.
 

@@ -16,9 +16,11 @@ This feature is useful when you want to save your LocalStack instance's state fo
 The LocalStack CLI enables you to export your infrastructure state to a file and import it into another LocalStack instance.
 You can access the state management commands by running `localstack state` in your terminal.
 
-{{< command >}}
-$ localstack state --help
-<disable-copy>
+```bash
+localstack state --help
+```
+
+```bash
 Usage: localstack state [OPTIONS] COMMAND [ARGS]...
 
   (Preview) Manage and manipulate the localstack state.
@@ -36,16 +38,15 @@ Commands:
   export  Export the state of LocalStack services
   import  Import the state of LocalStack services
   reset   Reset the state of LocalStack services
-</disable-copy>
-{{< /command >}}
+```
 
 ### Export the State
 
 To export the state, you can run the following command:
 
-{{< command >}}
+```bash
 $ localstack state export <file-name>
-{{< /command >}}
+```
 
 You can specify a file path to export the state to.
 If you do not specify a file path, the state will be exported to the current working directory into a file named `ls-state-export`.
@@ -61,9 +62,9 @@ You can specify the following flags to customize the export:
 
 To import the state, you can run the following command:
 
-{{< command >}}
+```bash
 $ localstack state import <file-name>
-{{< /command >}}
+```
 
 The `<file-name>` argument is required and specifies the file path to import the state from.
 The file should be generated from a previous export.
@@ -73,7 +74,7 @@ The file should be generated from a previous export.
 The LocalStack Web Application enables you to export your infrastructure state to a file and import it into another LocalStack instance.
 The Local mode allows you to perform local exports and imports of your LocalStack instance's state.
 
-<img src="export-import-state-local.png" alt="LocalStack Export/Import State Local Mode" title="LocalStack Export/Import State Local Mode" width="900" />
+![LocalStack Export/Import State Local Mode](/images/aws/export-import-state-local.png)
 
 ### Export the State
 

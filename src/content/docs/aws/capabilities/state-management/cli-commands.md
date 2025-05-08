@@ -12,9 +12,9 @@ This reference provides descriptions and example commands for LocalStack Cloud P
 
 Use the following syntax to run `localstack pod` commands from your terminal window:
 
-{{< command >}}
-$ localstack pod [OPTIONS] COMMAND [ARGS]...
-{{< / command >}}
+```bash
+localstack pod [OPTIONS] COMMAND [ARGS]...
+```
 
 In the above syntax:
 - `COMMAND` specifies the operation you want to perform with your Cloud Pods (`save` or `load`).
@@ -26,8 +26,7 @@ In the above syntax:
 The following section lists the available commands for the Cloud Pods CLI.
 You can have an overview of these command by typing `localstack pod --help`:
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod [OPTIONS] COMMAND [ARGS]...
 
   Manage the state of your instance via Cloud Pods.
@@ -43,13 +42,11 @@ Commands:
   remote    Manage cloud pod remotes
   save      Create a new Cloud Pod
   versions  List all available versions for a Cloud Pod This command lists...
-</disable-copy>
-{{< / command >}}
+```
 
 ### `save`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod save [OPTIONS] NAME [REMOTE]
 
   Save the current state of the LocalStack container in a Cloud Pod.
@@ -90,15 +87,14 @@ Options:
                                  output.
 
   --help                         Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `save` command allows you to save a new version of a Cloud Pod targeting a specific remote.
 To save and load the state locally, you can use the command in the `localstack state` group.
 
-{{< command >}}
-$ localstack pod save my-pod
-{{< / command >}}
+```bash
+localstack pod save my-pod
+```
 
 The above command generates a new version of `my-pod` and uploads it on the LocalStack platform.
 When pushing an already existing pod, a new version is created and subsequently uploaded to the platform.
@@ -107,17 +103,16 @@ Users also have the option to select a specific subset of AWS services they want
 
 Users who want to make a Cloud Pod accessible outside their organization can mark it as **public** with the following command:
 
-{{< command >}}
-$ localstack pod save --name my-pod --visibility public
-{{< / command >}}
+```bash
+localstack pod save --name my-pod --visibility public
+```
 
 The above command does not create a new version and requires a version already registered with the platform.
 The CLI manual for the `save` command is as follows:
 
 ### `load`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod load [OPTIONS] NAME [REMOTE]
 
   Load the state of a Cloud Pod into the application runtime/ Users can
@@ -152,16 +147,14 @@ Options:
                              answer to all prompts and run non-interactively
 
   --help                     Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `load` command is the inverse operation of `save`.
 It retrieves the content of a previously stored Cloud Pod a remote (by default, theLocalStack platform) and injects it into the LocalStack container.
 
 ### `delete`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod delete [OPTIONS] NAME
 
   Delete a Cloud Pod registered on the remote LocalStack platform.
@@ -171,16 +164,14 @@ Usage: pod delete [OPTIONS] NAME
 
 Options:
   --help  Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `delete` command let users delete a Cloud Pod stored in the remote platform.
 The CLI manual for the `delete` command is as follows:
 
 ### `inspect`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod inspect [OPTIONS] NAME
 
   Inspect the contents of a Cloud Pod
@@ -196,15 +187,13 @@ Options:
                                   output.
 
   --help                          Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `inspect` command simply lets the user inspect the content of a Cloud Pod.
 
 ### `list`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod list [OPTIONS] [REMOTE]
 
   List all the Cloud Pods available for a single user, or for an entire
@@ -222,16 +211,14 @@ Options:
                              output.
 
   --help                     Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `list` command lists all of the available Cloud Pods.
 It shows all the pods available for a single user and its organization by default.
 
 ### `versions`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod versions [OPTIONS] NAME
 
   List all available versions for a Cloud Pod
@@ -247,8 +234,7 @@ Options:
                              output.
 
   --help                     Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 The `versions` command lists all the available versions of a Cloud Pod.
 The CLI manual for the `version` command is as follows:
@@ -260,8 +246,7 @@ It offers 3 commands: `add`, `delete`, and `list`.
 
 For more info about remote usage, check our [documentation](https://docs.localstack.cloud/user-guide/cloud-pods/remotes/).
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod remote [OPTIONS] COMMAND [ARGS]...
 
   Manage cloud pod remotes
@@ -273,13 +258,11 @@ Commands:
   add     Add a remote
   delete  Delete a remote
   list    Lists the available remotes
-</disable-copy>
-{{< / command >}}
+```
 
 #### `remote add`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod remote add [OPTIONS] NAME URL
 
   Add a new remote for Cloud Pods.
@@ -290,26 +273,22 @@ Usage: pod remote add [OPTIONS] NAME URL
 
 Options:
   --help  Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 #### `remote delete`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod remote delete [OPTIONS] NAME
 
   Remove a remote for Cloud Pods.
 
 Options:
   --help  Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 #### `remote list`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: pod remote list [OPTIONS]
 
 Options:
@@ -317,8 +296,7 @@ Options:
                              output.
 
   --help                     Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 ---
 
@@ -329,8 +307,7 @@ The `state` group offers two commands to export and import the state of the Loca
 
 ## `state` syntax
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: state [OPTIONS] COMMAND [ARGS]...
 
   (Preview) Manage and manipulate the localstack state.
@@ -347,14 +324,11 @@ Commands:
   export  Export the state of LocalStack services
   import  Import the state of LocalStack services
   reset   Reset the state of LocalStack services
-
-</disable-copy>
-{{< / command >}}
+```
 
 ### `state export`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: state export [OPTIONS] [DESTINATION]
 
   Save the current state of the LocalStack container to a file on the local
@@ -389,13 +363,11 @@ By default,
 
   -f, --format [json]  The formatting style for the save command output.
   --help               Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 ### `state import`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: state import [OPTIONS] SOURCE
 
   Load the state of LocalStack from a file into the running container.
@@ -411,13 +383,11 @@ Usage: state import [OPTIONS] SOURCE
 
 Options:
   --help  Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```
 
 ### `state reset`
 
-{{< command >}}
-<disable-copy>
+```bash
 Usage: state reset [OPTIONS]
 
   Reset the service states of the current LocalStack runtime.
@@ -439,5 +409,4 @@ By default,
                        the state of all running services is reset.
 
   --help               Show this message and exit.
-</disable-copy>
-{{< / command >}}
+```

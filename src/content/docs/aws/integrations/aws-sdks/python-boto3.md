@@ -28,7 +28,7 @@ if __name__ == "__main__":
 ```
 
 {{< callout >}}
-If you're connecting from within a Python **Lambda function** handler in LocalStack, you can create a default client without configuring the `endpoint_url` - LocalStack will automatically forward the invocations to the local API endpoints (available in Pro, see [here]({{< ref "user-guide/tools/transparent-endpoint-injection" >}}) for more details).
+If you're connecting from within a Python **Lambda function** handler in LocalStack, you can create a default client without configuring the `endpoint_url` - LocalStack will automatically forward the invocations to the local API endpoints (available in Pro, see [here](/aws/tooling/transparent-endpoint-injection) for more details).
 {{< /callout >}}
 
 ```python

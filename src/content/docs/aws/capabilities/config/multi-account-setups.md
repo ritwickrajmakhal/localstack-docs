@@ -4,10 +4,10 @@ description: Using LocalStack in multi-tenant setups
 template: doc
 ---
 
-{{< callout >}}
+:::note
 Please note that multi-accounts may not work for use-cases that have cross-account and cross-service access.
 See [this issue](https://github.com/localstack/localstack/issues/7041) for more information.
-{{< /callout >}}
+:::
 
 LocalStack ships with multi-account support which allows namespacing based on AWS account ID.
 
@@ -20,7 +20,7 @@ The Access Key ID field can be configured in the AWS CLI in multiple ways: pleas
 
 In following examples, we configure the AWS CLI account ID via environment variable.
 
-{{< command >}}
+```bash
 $ AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 create-key-pair --key-name green-hospital
 
 $ AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 create-key-pair --key-name red-medicine
@@ -44,14 +44,14 @@ $ AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 describe-key-pairs
         }
     ]
 }
-{{< / command >}}
+```
 
 If no explicit Account ID is set, LocalStack falls back to default.
 In this example, no resources are returned.
 
-{{< command >}}
+```bash
 $ awslocal ec2 describe-key-pairs
 {
     "KeyPairs": []
 }
-{{< /command >}}
+```

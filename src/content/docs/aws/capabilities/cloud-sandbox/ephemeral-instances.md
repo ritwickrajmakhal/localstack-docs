@@ -25,7 +25,7 @@ In this guide, we will create an Ephemeral Instance and interact with it via the
 Navigate to the [**LocalStack Ephemeral Instance Management**](https://app.localstack.cloud/instances/ephemeral) page.
 In the form, enter the name of the new Ephemeral Instance, select the lifetime of the instance by dragging the slider, and click on **Launch**.
 
-<img src="ephemeral-instance-creation.png" alt="Creating an Ephemeral Instance" title="Creating an Ephemeral Instance" width="800" />
+![Creating an Ephemeral Instance](/images/aws/ephemeral-instance-creation.png)
 
 Optionally, you can specify a LocalStack Extension to be installed or loaded in the Ephemeral Instance.
 You can select the extension from the **Extension settings** dropdown list before launching the Ephemeral Instance.
@@ -43,7 +43,7 @@ You will also be able to access the following features with your Ephemeral Insta
 - Extensions
 - Logs
 
-<img src="localstack-ephemeral-instance.png" alt="LocalStack Ephemeral Instance" title="LocalStack Ephemeral Instance" width="800" />
+![LocalStack Ephemeral Instance](/images/aws/localstack-ephemeral-instance.png)
 
 ### Access the Ephemeral Instance via AWS CLI
 
@@ -53,16 +53,16 @@ Copy the endpoint URL and set it as the `--endpoint-url` parameter in the AWS CL
 
 To create an S3 bucket in the Ephemeral Instance, run the following command:
 
-{{< command >}}
-$ aws --endpoint-url=<EPHEMERAL_INSTANCE_ENDPOINT_URL> s3 mb s3://<BUCKET_NAME>
-{{< /command >}}
+```bash
+aws --endpoint-url=<EPHEMERAL_INSTANCE_ENDPOINT_URL> s3 mb s3://<BUCKET_NAME>
+```
 
 You can replace `<EPHEMERAL_INSTANCE_ENDPOINT_URL>` with the endpoint URL of the Ephemeral Instance and `<BUCKET_NAME>` with the name of the S3 bucket you want to create.
 To query the list of S3 buckets in the Ephemeral Instance, run the following command:
 
-{{< command >}}
-$ aws --endpoint-url=<EPHEMERAL_INSTANCE_ENDPOINT_URL> s3 ls
-{{< /command >}}
+```bash
+aws --endpoint-url=<EPHEMERAL_INSTANCE_ENDPOINT_URL> s3 ls
+```
 
 You can also use integrations, such as [CDK](https://docs.localstack.cloud/user-guide/integrations/aws-cdk/), [SAM CLI](https://docs.localstack.cloud/user-guide/integrations/aws-sam/), and [Terraform](https://docs.localstack.cloud/user-guide/integrations/terraform/), to interact with the Ephemeral Instance.
 In these integrations, you can change the `AWS_ENDPOINT_URL` environment variable to the endpoint URL of the Ephemeral Instance.
@@ -71,13 +71,13 @@ In these integrations, you can change the `AWS_ENDPOINT_URL` environment variabl
 
 You can view the logs of the Ephemeral Instance by navigating to the **Logs** tab in the **LocalStack Instance Management** page.
 
-<img src="ephemeral-instance-logs.png" alt="Ephemeral Instance Logs" title="Ephemeral Instance Logs" width="800" />
+![Ephemeral Instance Logs](/images/aws/ephemeral-instance-logs.png)
 
 ### Shut Down the Ephemeral Instance
 
 You can shut down the instance by navigating to the [Ephemeral Instances page](https://app.localstack.cloud/instances/ephemeral) and clicking on the **Shut Down** button.
 
-<img src="shutdown-ephemeral-instance.png" alt="Shutdown the LocalStack Ephemeral Instance" title="Shutdown the LocalStack Ephemeral Instance" width="800" />
+![Shutdown the LocalStack Ephemeral Instanc](/images/aws/shutdown-ephemeral-instance.png)
 
 :::danger
 Ephemeral Instances, by default, are created with the latest version of LocalStack.
@@ -91,9 +91,11 @@ If you're a licensed user, setting the `LOCALSTACK_AUTH_TOKEN` as an environment
 
 Access the Ephemeral Instances CLI by running the `localstack ephemeral` command from your terminal.
 
-{{< command >}}
-$ localstack ephemeral --help
-<disable-copy>
+```bash
+localstack ephemeral --help
+```
+
+```bash
 Usage: localstack ephemeral [OPTIONS] COMMAND [ARGS]...
 
   (Preview) Manage ephemeral LocalStack instances in the cloud.
@@ -111,14 +113,13 @@ Commands:
   delete  Delete an ephemeral instance
   list    List all ephemeral instances
   logs    Fetch logs from an ephemeral instance
-</disable-copy>
-{{< / command >}}
+```
 
 To start an Ephemeral Instance, run the following command:
 
-{{< command >}}
-$ localstack ephemeral create --name my-instance-123
-{{< / command >}}
+```bash
+localstack ephemeral create --name my-instance-123
+```
 
 The output of the command should look like this:
 
@@ -150,15 +151,15 @@ The output of the command should look like this:
 
 List your available running Ephemeral Instances with:
 
-{{< command >}}
+```bash
 $ localstack ephemeral list
-{{< / command >}}
+```
 
 Retrieve your Ephemeral Instance logs with:
 
-{{< command >}}
+```bash
 $ localstack ephemeral logs --name my-instance-123
-{{< / command >}}
+```
 
 The logs output will look like this:
 
@@ -174,12 +175,13 @@ Ready.
 
 Finally, delete your Ephemeral Instance with:
 
-{{< command >}}
-$ localstack ephemeral delete --name my-instance-123
-<disable-copy>
+```bash
+localstack ephemeral delete --name my-instance-123
+```
+
+```bash
 Successfully deleted instance: my-instance-123 ✅
-</disable-copy>
-{{< / command >}}
+```
 
 ## Credit Consumption
 
@@ -189,5 +191,4 @@ Currently, for every 1 credit, you can run an Ephemeral Instance for 1 minute.
 You can view the available minutes under the **Lifetime in minutes** slider when creating an Ephemeral Instance.
 You can also see the credit consumption in the **Credit Consumption** section of the Ephemeral Instance page.
 
-<img src="credit-consumption.png" alt="Credit Consumption" title="Credit Consumption" width="800" />
-<br><br>
+![Credit Consumption](/images/aws/credit-consumption.png)

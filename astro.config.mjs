@@ -164,10 +164,6 @@ export default defineConfig({
                   slug: 'aws/tooling/event-studio',
                 },
                 {
-                  label: 'Transparent Endpoint Injection',
-                  slug: 'aws/tooling/transparent-endpoint-injection',
-                },
-                {
                   label: 'DNS Server',
                   slug: 'aws/tooling/dns-server',
                 },

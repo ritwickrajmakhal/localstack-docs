@@ -22,7 +22,7 @@ These include:
 
 You can find these under the **Workspace** section in the left sidebar.
 
-<img src="workspace-features.png" width="200px" alt="User workspace features section in sidebar" title="Workspace features in sidebar">
+<img src="/images/aws/workspace-features.png" alt="User workspace features section in sidebar" width="200">
 
 ## Workspace Settings
 
@@ -40,4 +40,4 @@ Here, administrators can configure and manage:
 
 These options are available under the **Administration** section.
 
-<img src="workspace-admin-settings.png" width="700px" alt="Administration settings for workspace" title="Workspace settings panel">
+![Administration settings for workspace](/images/aws/workspace-admin-settings.png)

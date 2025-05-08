@@ -21,7 +21,7 @@ Instance Management offers these features:
 - **Chaos Engineering**: Allows you to inject failures & simulate outages in your LocalStack instance.
 - **Extensions**: Provides extra integrations to improve your LocalStack experience.
 
-<img src="instance-management.png" alt="LocalStack Web Application's Instance Management page" title="Instance Management" width="800px" />
+![LocalStack Web Application's Instance Management page](/images/aws/instance-management.png)
 
 ## Instance Bookmark
 
@@ -32,7 +32,7 @@ To create an Instance Bookmark, do the following:
 - Enter a name for the bookmark, specify the endpoint, and add a description.
 - Click on the **Save Bookmark** button.
 
-<img src="new-instance-bookmark.png" alt="Instance Bookmark" title="Instance Bookmark" width="800px" />
+![Instance Bookmark](/images/aws/new-instance-bookmark.png)
 
 ## Connect to an instance on a different machine
 
@@ -48,7 +48,7 @@ Tools like [simpleproxy](https://manpages.ubuntu.com/manpages/trusty/man1/simple
 
 Alternatively, you can direct `localhost.localstack.cloud` to your target machine's IP address by modifying the `/etc/hosts` file, which is useful if you’re using the LocalStack Web UI on a macOS or Linux-based machine.
 
-{{< callout >}}
+:::note
 To bind to a custom IP address and port, configure the ['GATEWAY_LISTEN' configuration variable](https://docs.localstack.cloud/references/configuration/#core).
 For troubleshooting, refer to the [network troubleshooting guide](https://docs.localstack.cloud/references/network-troubleshooting/).
-{{< /callout >}}
+:::

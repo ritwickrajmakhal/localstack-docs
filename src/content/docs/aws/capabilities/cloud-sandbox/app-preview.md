@@ -13,9 +13,9 @@ For example, you can create a preview URL for every GitHub Pull Request (PRs).
 It allows temporary deployment of AWS powered applications on a LocalStack Ephemeral Instance to preview changes.
 This feature is currently only available for GitHub repositories that use GitHub Actions.
 
-{{< callout >}}
+:::note
 Application Preview is offered as a **preview** feature and is under active development.
-{{< /callout >}}
+:::
 
 ## Getting started
 

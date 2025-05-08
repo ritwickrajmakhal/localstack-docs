@@ -40,7 +40,7 @@ This package is available for some distros:
 
 The simplest option is to run `localstack` using `podman` by having `podman-docker` and running `localstack start` as root
 
-```sh
+```bash
 # you have to start the podman socket first
 sudo systemctl start podman
 
@@ -65,7 +65,7 @@ You have to prepare your environment first:
 - https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md
 - https://www.redhat.com/sysadmin/rootless-podman
 
-```sh
+```bash
 # again, you have to start the podman socket first
 systemctl --user start podman.service
 
@@ -75,7 +75,7 @@ DEBUG=1 DOCKER_CMD="podman" DOCKER_SOCK=$XDG_RUNTIME_DIR/podman/podman.sock DOCK
 
 If you have problems with [subuid and subgid](https://wiki.archlinux.org/title/Podman#Set_subuid_and_subgid), you could try to use [overlay.ignore_chown_errors option](https://www.redhat.com/sysadmin/controlling-access-rootless-podman-users)
 
-```sh
+```bash
 DEBUG=1 DOCKER_CMD="podman --storage-opt overlay.ignore_chown_errors=true" DOCKER_SOCK=$XDG_RUNTIME_DIR/podman/podman.sock DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock localstack start --network podman
 ```
 
@@ -86,17 +86,17 @@ In the guide, we use a Docker Compose setup to run LocalStack.
 
 Initialize and start Podman:
 
-{{< command >}}
-$ podman machine init
-$ podman machine start
-{{< / command >}}
+```bash
+podman machine init
+podman machine start
+```
 
 At this stage, Podman operates in rootless mode, where exposing port 443 on Windows is not possible.
 To enable this, switch Podman to rootful mode using the following command:
 
-{{< command >}}
+```bash
 podman machine set --rootful
-{{< / command >}}
+```
 
 For the Docker Compose setup, use the following configuration.
 When running in rootless mode, ensure to comment out the HTTPS gateway port, as it is unable to bind to privileged ports below 1024.

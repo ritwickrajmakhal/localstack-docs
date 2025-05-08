@@ -124,7 +124,7 @@ else:
 ...
 ```
 
-In LocalStack Pro, no code changes are required using our [Transparent Endpoint Injection]({{< ref "user-guide/tools/transparent-endpoint-injection" >}}).
+In LocalStack Pro, no code changes are required using our [Transparent Endpoint Injection](/aws/tooling/transparent-endpoint-injection).
 
 ## Deploying to LocalStack
 

@@ -8,7 +8,7 @@ Like AWS, LocalStack requires AWS credentials to be supplied in all API operatio
 
 ## Access Key ID
 
-For root accounts, the choice of access key ID affects [multi-account namespacing]({{< ref "multi-account-setups" >}}).
+For root accounts, the choice of access key ID affects [multi-account namespacing](/aws/capabilities/config/multi-account-setups).
 
 Access key IDs can be one of following patterns:
 
@@ -27,12 +27,12 @@ If keys with `ASIA...`/`AKIA...` prefix are provided, these are rejected and the
 This is a safeguard to prevent misuse of production AWS access key IDs.
 To disable this safeguard, set the `PARITY_AWS_ACCESS_KEY_ID` configuration variable.
 
-{{< callout "warning" >}}
+:::danger
 Disabling the access key safeguard and using production access key IDs may cause accidental connections to AWS.
 We strongly recommend leaving it on.
-{{< /callout >}}
+:::
 
-Please refer to the [IAM docs]({{< ref "user-guide/aws/iam" >}}) to learn how to create access keys in LocalStack.
+Please refer to the [IAM docs](/aws/services/iam) to learn how to create access keys in LocalStack.
 
 ### Alphanumeric string
 

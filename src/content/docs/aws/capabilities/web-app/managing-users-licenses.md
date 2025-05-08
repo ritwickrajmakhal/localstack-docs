@@ -14,7 +14,7 @@ To access this page:
 1. Click on your name in the top-left corner of the dashboard.
 2. Go to **Settings** → **Users & Licenses** under the **Administration** section.
 
-<img src="users-licenses-page.png" width="800px" alt="Users & Licenses management screen" title="Users & Licenses management screen">
+![Users & Licenses management screen](/images/aws/users-licenses-page.png)
 
 ## Managing Users
 
@@ -31,11 +31,11 @@ If the invitee does not have a LocalStack account, they will receive an email to
 
 The name entered here is only a placeholder until the user completes signup.
 
-{{< callout >}}
+:::note
 Only workspace admins can invite users and manage license assignments.
-{{< /callout >}}
+:::
 
-<img src="invite-user.png" width="700px" alt="Invite user form" title="Invite user form">
+![Invite user form](/images/aws/invite-user.png)
 
 ### Removing Users
 
@@ -80,10 +80,9 @@ Previously, access was granted via personal developer API keys.
 3. Ask the user to switch their config to use an **Auth Token** (available in the **Auth Tokens** page).
 4. Remove the legacy API key once the Auth Token is in use.
 
-{{< callout >}}
+:::note
 If a user has both a legacy API key and a license, it only counts as **one** active license
-
-{{< /callout >}}
+:::
 
 ### Deprecation Notice
 

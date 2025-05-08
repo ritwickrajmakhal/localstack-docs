@@ -19,14 +19,15 @@ For instance, `/_localstack/health` checks the available and running AWS service
 `/_localstack/diagnose` (enable with the `DEBUG=1` configuration variable), reports extensive and sensitive data from
 the LocalStack instance.
 
-{{< callout "tip" >}}
+:::note
 You can use the `/_localstack/health` endpoint to restart or kill the services.
 You can use [curl](https://curl.se/) or your HTTP REST client to access the endpoint:
-{{< command >}}
-$ curl -v --request POST --header "Content-Type: application/json"  --data '{"action":"restart"}' http://localhost:4566/_localstack/health
-$ curl -v --request POST --header "Content-Type: application/json"  --data '{"action":"kill"}' http://localhost:4566/_localstack/health
-{{< /command >}}
-{{< /callout >}}
+
+```bash
+curl -v --request POST --header "Content-Type: application/json"  --data '{"action":"restart"}' http://localhost:4566/_localstack/health
+curl -v --request POST --header "Content-Type: application/json"  --data '{"action":"kill"}' http://localhost:4566/_localstack/health
+```
+:::
 
 ### AWS endpoints
 

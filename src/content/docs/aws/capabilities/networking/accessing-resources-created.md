@@ -14,17 +14,17 @@ This guide will explore different scenarios and provide detailed instructions on
 
 ## From your host
 
-{{< figure src="../images/3.svg" width="400" >}}
+![Accessing a resource created by LocalStack](/images/aws/3.svg)
 
 For example, suppose you have created an OpenSearch cluster using LocalStack and want to access it from the same computer.
 In such a case, you can set the `LOCALSTACK_HOST` environment variable to specify the desired hostname and port that will be returned.
-Check out the [service-specific documentation]({{<ref "references/coverage">}}) for more details.
+Check out the [service-specific documentation](/aws/services) for more details.
 
 ## From a container LocalStack created
 
-{{< figure src="../images/6.svg" width="400" >}}
+![Accessing a resource created by LocalStack from a container created by LocalStack](/images/aws/6.svg)
 
-Check out our documentation while [using the endpoint URL]({{<ref "endpoint-url#from-a-container-localstack-created" >}}).
+Check out our documentation while [using the endpoint URL](/aws/capabilities/networking/accessing-endpoint-url).
 
 <details>
 <summary>For LocalStack versions before 2.3.0</summary>
@@ -35,14 +35,14 @@ In that case, you can set the <code>HOSTNAME_FROM_LAMBDA</code> environment vari
 
 ## From your container
 
-{{< figure src="../images/9.svg" width="400" >}}
+![Accessing a resource created by LocalStack from a Docker container](/images/aws/9.svg)
 
-Check out our documentation [on using the endpoint URL]({{<ref "endpoint-url#from-your-container" >}}).
+Check out our documentation [on using the endpoint URL](/aws/capabilities/networking/accessing-endpoint-url#from-your-container).
 
 ## From a separate host
 
-{{< figure src="../images/12.svg" width="400" >}}
+![Accessing a resource created by LocalStack from a separate host](/images/aws/12.svg)
 
 LocalStack must listen to the address of the host, or `0.0.0.0`.
 
-Check out our [FAQ article on accessing LocalStack from another computer]({{<ref "getting-started/faq#how-can-i-access-localstack-from-an-alternative-computer">}}).
+Check out our [FAQ article on accessing LocalStack from another computer](/aws/getting-started/faq#how-can-i-access-localstack-from-an-alternative-computer).

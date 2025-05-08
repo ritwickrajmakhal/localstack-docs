@@ -15,9 +15,9 @@ This section will cover the different Docker images available for LocalStack and
 The LocalStack Community image (`localstack/localstack`) contains the community and open-source version of our [core cloud emulator](https://github.com/localstack/localstack).
 To use the LocalStack Community image, you can pull the image from Docker Hub:
 
-{{< command >}}
-$ docker pull localstack/localstack:latest
-{{< / command >}}
+```bash
+docker pull localstack/localstack:latest
+```
 
 To use the LocalStack Community image, you don't need to sign-up for an account on [LocalStack Web Application](https://app.localstack.cloud).
 The Community image is free to use and does not require a license to run.
@@ -35,9 +35,9 @@ LocalStack Pro contains various advanced extensions to the LocalStack base platf
 With LocalStack Pro image, you can access all the emulated AWS cloud services running entirely on your local machine.
 To use the LocalStack Pro image, you can pull the image from Docker Hub:
 
-{{< command >}}
-$ docker pull localstack/localstack-pro:latest
-{{< / command >}}
+```bash
+docker pull localstack/localstack-pro:latest
+```
 
 To use the LocalStack Pro image, you must configure an environment variable named `LOCALSTACK_AUTH_TOKEN` to contain your Auth Token.
 The LocalStack Pro image will display a warning if you do not set an Auth Token (or if the license is invalid/expired) and will not activate the Pro features.
@@ -46,11 +46,11 @@ LocalStack Pro gives you access to the complete set of LocalStack features, incl
 You can use the Pro image to start your LocalStack container using various [installation methods](https://docs.localstack.cloud/getting-started/installation/).
 While configuring to run LocalStack with Docker or Docker Compose, run the `localstack/localstack-pro` image with the appropriate tag you have pulled (if not `latest`).
 
-{{< callout >}}
+:::note
 Earlier, we maintained `localstack/localstack-light` and `localstack/localstack-full` images.
 They have been deprecated and are removed with the LocalStack 2.0 release.
 The [BigData image](https://hub.docker.com/r/localstack/bigdata/tags), which started as a `bigdata_container` container, has also been deprecated in favor of a BigData Mono container which installs dependencies directly into the LocalStack (`localstack-main`) container.
-{{< /callout >}}
+:::
 
 ## Image tags
 

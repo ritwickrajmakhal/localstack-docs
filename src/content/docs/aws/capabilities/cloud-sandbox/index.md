@@ -15,6 +15,6 @@ LocalStack Cloud Sandbox encompasses the following features:
 - Create easy previews by enabling preview-per-PR type workflows for application change.
 - Facilitate collaboration by allowing developers to test features on the same environment.
 
-{{< callout >}}
+:::note
 Cloud Sandbox is offered as a **preview** feature and is under active development.
-{{< /callout >}}
+:::
