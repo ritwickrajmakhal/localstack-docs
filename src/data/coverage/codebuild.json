@@ -1,0 +1,1330 @@
+{
+  "service": "codebuild",
+  "pro_support": true,
+  "operations": [
+    {
+      "BatchDeleteBuilds": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetBuildBatches": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetBuilds": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetCommandExecutions": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetFleets": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetProjects": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetReportGroups": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetReports": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "BatchGetSandboxes": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreateFleet": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreateProject": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreateReportGroup": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreateWebhook": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteBuildBatch": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteFleet": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteProject": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteReport": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteReportGroup": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteResourcePolicy": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteSourceCredentials": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteWebhook": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeCodeCoverages": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeTestCases": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetReportGroupTrend": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetResourcePolicy": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ImportSourceCredentials": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "InvalidateProjectCache": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListBuildBatches": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListBuildBatchesForProject": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListBuilds": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListBuildsForProject": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListCommandExecutionsForSandbox": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListCuratedEnvironmentImages": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListFleets": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListProjects": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListReportGroups": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListReports": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListReportsForReportGroup": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListSandboxes": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListSandboxesForProject": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListSharedProjects": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListSharedReportGroups": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListSourceCredentials": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "PutResourcePolicy": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "RetryBuild": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "RetryBuildBatch": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StartBuild": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StartBuildBatch": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StartCommandExecution": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StartSandbox": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StartSandboxConnection": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StopBuild": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StopBuildBatch": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "StopSandbox": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateFleet": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateProject": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": true,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateProjectVisibility": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateReportGroup": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateWebhook": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    }
+  ],
+  "details": {
+    "BatchDeleteBuilds": {
+      "ids": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "400",
+            "error": "InvalidInputException",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "BatchGetBuilds": {
+      "ids": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_failure",
+            "test": "test_codebuild_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases', '$..artifacts.md5sum', '$..artifacts.sha256sum']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_timeout",
+            "test": "test_codebuild_timeout",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_getting_started_sample",
+            "test": "test_getting_started_sample",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_multiple_builds",
+            "test": "test_multiple_builds",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_build_and_push_docker_image",
+            "test": "test_build_and_push_docker_image",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_s3_deployment_provider",
+            "test": "test_s3_deployment_provider",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_source_to_java_build",
+            "test": "test_source_to_java_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          }
+        ]
+      }
+    },
+    "BatchGetProjects": {
+      "names": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_codebuild.py::test_codebuild_stack",
+            "test": "test_codebuild_stack",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..artifacts.namespaceType', '$..environment.environmentVariables..type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_codebuild.py::test_codebuild_stack",
+            "test": "test_codebuild_stack",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..artifacts.namespaceType', '$..environment.environmentVariables..type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_build_and_push_docker_image",
+            "test": "test_build_and_push_docker_image",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_s3_deployment_provider",
+            "test": "test_s3_deployment_provider",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_source_to_java_build",
+            "test": "test_source_to_java_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          }
+        ]
+      }
+    },
+    "CreateProject": {
+      "artifacts, description, environment, name, serviceRole, source, tags, timeoutInMinutes": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_codebuild.py::test_codebuild_stack",
+            "test": "test_codebuild_stack",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..artifacts.namespaceType', '$..environment.environmentVariables..type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          }
+        ]
+      },
+      "artifacts, environment, name, serviceRole, source": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_failure",
+            "test": "test_codebuild_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases', '$..artifacts.md5sum', '$..artifacts.sha256sum']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_getting_started_sample",
+            "test": "test_getting_started_sample",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_multiple_builds",
+            "test": "test_multiple_builds",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_build_and_push_docker_image",
+            "test": "test_build_and_push_docker_image",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_s3_deployment_provider",
+            "test": "test_s3_deployment_provider",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_source_to_java_build",
+            "test": "test_source_to_java_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "400",
+            "error": "ResourceAlreadyExistsException",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      },
+      "artifacts, environment, name, serviceRole, source, timeoutInMinutes": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_timeout",
+            "test": "test_codebuild_timeout",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "DeleteProject": {
+      "name": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_codebuild.py::test_codebuild_stack",
+            "test": "test_codebuild_stack",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..artifacts.namespaceType', '$..environment.environmentVariables..type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_failure",
+            "test": "test_codebuild_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases', '$..artifacts.md5sum', '$..artifacts.sha256sum']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_timeout",
+            "test": "test_codebuild_timeout",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_getting_started_sample",
+            "test": "test_getting_started_sample",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_multiple_builds",
+            "test": "test_multiple_builds",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_build_and_push_docker_image",
+            "test": "test_build_and_push_docker_image",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_s3_deployment_provider",
+            "test": "test_s3_deployment_provider",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_source_to_java_build",
+            "test": "test_source_to_java_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "ListProjects": {
+      "- (without any parameters)": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/cloudformation/resources/test_codebuild.py::test_codebuild_stack",
+            "test": "test_codebuild_stack",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..artifacts.namespaceType', '$..environment.environmentVariables..type']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "StartBuild": {
+      "artifactsOverride, environmentVariablesOverride, projectName, sourceVersion": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_actions.py::TestAction::test_code_build_action",
+            "test": "test_code_build_action",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": false,
+            "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_build_and_push_docker_image",
+            "test": "test_build_and_push_docker_image",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_s3_deployment_provider",
+            "test": "test_s3_deployment_provider",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codepipeline/test_codepipeline.py::TestCodePipeline::test_source_to_java_build",
+            "test": "test_source_to_java_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..pipelineExecution.artifactRevisions', '$..pipelineExecution.trigger.triggerDetail', '$..pipelineExecutionSummaries..sourceRevisions', '$..pipelineExecutionSummaries..trigger', '$..actionExecutionDetails..output.executionResult.externalExecutionId', '$..actionExecutionDetails..output.outputVariables.AuthorDisplayName', '$..actionExecutionDetails..output.outputVariables.AuthorEmail', '$..actionExecutionDetails..output.outputVariables.AuthorId', '$..actionExecutionDetails..output.outputVariables.ProviderType']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "internal"
+          }
+        ]
+      },
+      "projectName": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_failure",
+            "test": "test_codebuild_failure",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases', '$..artifacts.md5sum', '$..artifacts.sha256sum']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_codebuild_timeout",
+            "test": "test_codebuild_timeout",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases', '$..logs', '$..phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_delete_build",
+            "test": "test_delete_build",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_getting_started_sample",
+            "test": "test_getting_started_sample",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..build.logs', '$..build.phases']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_multiple_builds",
+            "test": "test_multiple_builds",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "UpdateProject": {
+      "environment, name, timeoutInMinutes": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      },
+      "name": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/codebuild/test_codebuild.py::TestCodeBuild::test_project_crud_operations",
+            "test": "test_project_crud_operations",
+            "response": "400",
+            "error": "ResourceNotFoundException",
+            "snapshot_skipped": "['$..project.tags', '$..projects..tags']",
+            "aws_validated": true,
+            "snapshot_tested": true,
+            "origin": "external"
+          }
+        ]
+      }
+    }
+  }
+}

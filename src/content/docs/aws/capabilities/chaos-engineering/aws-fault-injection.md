@@ -12,14 +12,14 @@ This service allows you to conduct controlled experiments on your AWS infrastruc
 By using the Fault Injection Service, you can identify weaknesses, test recovery procedures, and ensure that your applications can withstand unexpected disruptions.
 This proactive approach to reliability engineering enables you to enhance system robustness, minimize downtime, and maintain a high level of service availability for your users.
 
-{{< alert title="Note">}}
+:::note
 Fault Injection Service emulation is available as part of the LocalStack Enterprise plan.
 If you'd like to try it out, please [contact us](https://www.localstack.cloud/demo) to request access.
-{{< /alert >}}
+:::
 
-{{< callout "tip" >}}
-For more information, please refer to the [FIS service docs]({{< ref "user-guide/aws/fis" >}}).
-{{< /callout >}}
+:::tip
+For more information, please refer to the [FIS service docs](/aws/services/fis).
+:::
 
 Some of the most important concepts associated with a FIS experiment are:
 

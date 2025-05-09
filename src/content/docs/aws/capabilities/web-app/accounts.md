@@ -34,8 +34,7 @@ After submitting your email:
 1. Select whether you're working on **commercial** or **personal** projects.
 2. Fill in your first and last name.
 3. (**Optional**) Add company, job title, and GitHub username.
-4. Agree to the terms and conditions to continu
-.
+4. Agree to the terms and conditions to continue.
 
 A verification link will be sent to your email.
 Once verified, you can log in using your email or GitHub account.

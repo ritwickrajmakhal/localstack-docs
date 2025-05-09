@@ -1,0 +1,508 @@
+{
+  "service": "acm-pca",
+  "pro_support": true,
+  "operations": [
+    {
+      "CreateCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreateCertificateAuthorityAuditReport": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "CreatePermission": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeleteCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeletePermission": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DeletePolicy": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "DescribeCertificateAuthorityAuditReport": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetCertificate": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetCertificateAuthorityCertificate": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetCertificateAuthorityCsr": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "GetPolicy": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ImportCertificateAuthorityCertificate": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "IssueCertificate": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListCertificateAuthorities": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListPermissions": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "ListTags": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "PutPolicy": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "RestoreCertificateAuthority": {
+        "implemented": false,
+        "availability": "",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "RevokeCertificate": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "TagCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UntagCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": false,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": false,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    },
+    {
+      "UpdateCertificateAuthority": {
+        "implemented": true,
+        "availability": "pro",
+        "internal_test_suite": true,
+        "external_test_suite": false,
+        "terraform_test_suite": false,
+        "aws_validated": true,
+        "snapshot_tested": false,
+        "snapshot_skipped": ""
+      }
+    }
+  ],
+  "details": {
+    "CreateCertificateAuthority": {
+      "CertificateAuthorityConfiguration, CertificateAuthorityType, RevocationConfiguration, Tags": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/acm_pca/test_acmpca.py::TestACMPCA::test_create_describe_tag_ca",
+            "test": "test_create_describe_tag_ca",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      },
+      "CertificateAuthorityConfiguration, CertificateAuthorityType, UsageMode": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "internal"
+          }
+        ]
+      }
+    },
+    "DeleteCertificateAuthority": {
+      "CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/acm_pca/test_acmpca.py::TestACMPCA::test_create_describe_tag_ca",
+            "test": "test_create_describe_tag_ca",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      },
+      "CertificateAuthorityArn, PermanentDeletionTimeInDays": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "DescribeCertificateAuthority": {
+      "CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/acm_pca/test_acmpca.py::TestACMPCA::test_create_describe_tag_ca",
+            "test": "test_create_describe_tag_ca",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "GetCertificate": {
+      "CertificateArn, CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "GetCertificateAuthorityCertificate": {
+      "CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "GetCertificateAuthorityCsr": {
+      "CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "internal"
+          },
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "ImportCertificateAuthorityCertificate": {
+      "Certificate, CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "IssueCertificate": {
+      "CertificateAuthorityArn, Csr, SigningAlgorithm, TemplateArn, Validity": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "ListTags": {
+      "CertificateAuthorityArn": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/acm_pca/test_acmpca.py::TestACMPCA::test_create_describe_tag_ca",
+            "test": "test_create_describe_tag_ca",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "TagCertificateAuthority": {
+      "CertificateAuthorityArn, Tags": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/services/acm_pca/test_acmpca.py::TestACMPCA::test_create_describe_tag_ca",
+            "test": "test_create_describe_tag_ca",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    },
+    "UpdateCertificateAuthority": {
+      "CertificateAuthorityArn, Status": {
+        "ls_pro": [
+          {
+            "node_id": "LocalStack Pro: tests/aws/scenario/ec2_acm_pca/test_ec2_acm_pca.py::TestEC2ACMPCA::test_curl_from_client",
+            "test": "test_curl_from_client",
+            "response": "200",
+            "error": "",
+            "snapshot_skipped": "",
+            "aws_validated": true,
+            "snapshot_tested": false,
+            "origin": "external"
+          }
+        ]
+      }
+    }
+  }
+}

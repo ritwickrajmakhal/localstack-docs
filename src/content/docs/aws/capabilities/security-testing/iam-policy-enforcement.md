@@ -18,9 +18,9 @@ This guide is designed for users new to IAM Policy Enforcement and assumes basic
 
 Start your LocalStack container with the `DEBUG=1` and `ENFORCE_IAM=1` environment variables set:
 
-{{< command >}}
-$ DEBUG=1 ENFORCE_IAM=1 localstack start
-{{< /command >}}
+```bash
+DEBUG=1 ENFORCE_IAM=1 localstack start
+```
 
 We will demonstrate IAM Policy Enforcement, by creating a user and obtaining the access/secret keys.
 We will make an attempt to create a bucket using the user’s credentials, which inevitably fails due to insufficient permissions.
@@ -34,9 +34,11 @@ This way, we can demonstrate the differentiation in access permissions between t
 
 In **Terminal 1**, execute the following commands to create a `test` user and obtain the access/secret keys:
 
-{{< command >}}
-$ awslocal iam create-user --user-name test
-<disable-copy>
+```bash
+awslocal iam create-user --user-name test
+```
+
+```bash
 {
     "User": {
         "Path": "/",
@@ -46,9 +48,13 @@ $ awslocal iam create-user --user-name test
         "CreateDate": "2023-11-03T12:20:12.332000Z"
     }
 }
-</disable-copy>
-$ awslocal iam create-access-key --user-name test
-<disable-copy>
+```
+
+```bash
+awslocal iam create-access-key --user-name test
+```
+
+```bash
 {
     "AccessKey": {
         "UserName": "test",
@@ -58,21 +64,21 @@ $ awslocal iam create-access-key --user-name test
         "CreateDate": "2023-11-03T12:20:27Z"
     }
 }
-</disable-copy>
-{{< / command >}}
+```
 
 ### Attempt to create a bucket
 
 Navigate to **Terminal 2**, where we will configure the access keys for the user `test` in the environment.
 Once the access keys are set, you will attempt to create an S3 bucket using these credentials.
 
-{{< command >}}
+```bash
 $ export AWS_ACCESS_KEY_ID=LKIAQAAAAAAAHFR7QTN3 AWS_SECRET_ACCESS_KEY=EYUHpIol7bRJpKd/28c/LI2C4bbEnp82LJCRwXRV
 $ awslocal s3 mb s3://mybucket
-<disable-copy>
+```
+
+```bash
 make_bucket failed: s3://mybucket An error occurred (AccessDeniedException) when calling the CreateBucket operation: Access to the specified resource is denied
-</disable-copy>
-{{< / command >}}
+```
 
 As anticipated, the attempt to create the bucket fails with an `AccessDeniedException` error, confirming that user `test` lacks the necessary permissions for this action.
 You can view the LocalStack logs to validate the policy enforcement:
@@ -86,21 +92,22 @@ You can view the LocalStack logs to validate the policy enforcement:
 
 Let's now return to **Terminal 1** and execute the following commands to attach a policy to the user `test`:
 
-{{< command >}}
+```bash
 $ awslocal iam create-policy --policy-name p1 --policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"s3:CreateBucket","Resource":"*"}]}'
 $ awslocal iam attach-user-policy --user-name test --policy-arn arn:aws:iam::000000000000:policy/p1
-{{< / command >}}
+```
 
 ### Create a bucket
 
 Now, let's switch back to **Terminal 2** and observe how the bucket creation succeeds with the `test` IAM user:
 
-{{< command >}}
+```bash
 $ awslocal s3 mb s3://mybucket
-<disable-copy>
+```
+
+```bash
 make_bucket: mybucket
-</disable-copy>
-{{< / command >}}
+```
 
 The bucket creation succeeds, confirming that the user `test` now has the necessary permissions to perform this action.
 You can view the LocalStack logs to validate the policy enforcement:
@@ -116,4 +123,4 @@ If the IAM policies are not correctly enforced, you will get an unsuccessful res
 
 ## Feature coverage
 
-The feature coverage is documented in the [IAM coverage documentation]({{< ref "references/coverage/coverage_iam" >}}).
+The feature coverage is documented in the [IAM coverage documentation](/aws/services/iam#coverage).

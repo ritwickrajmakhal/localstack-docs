@@ -6,6 +6,8 @@ sidebar:
     order: 5
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 ## Background
 
 LocalStack sometimes performs on-demand fetching of resources from the public internet.
@@ -15,9 +17,9 @@ You may see errors in the logs relating to TLS such as "unable to get local issu
 
 There are three options when running LocalStack:
 
-1. [creating a custom Docker image]({{< ref "#creating-a-custom-docker-image" >}}),
-2. [using init hooks]({{< ref "#custom-ssl-certificates-with-init-hooks" >}}) or
-3. [when running in host mode]({{< ref "#custom-ssl-certificates-with-host-mode" >}}).
+1. [creating a custom Docker image](#creating-a-custom-docker-image),
+2. [using init hooks](#custom-ssl-certificates-with-init-hooks) or
+3. [when running in host mode](#custom-ssl-certificates-with-host-mode).
 
 They all can be summarised as:
 
@@ -28,11 +30,11 @@ They all can be summarised as:
 
 ## Creating a custom docker image
 
-If you run LocalStack in a docker container (which includes using [the CLI]({{< ref "/getting-started#localstack-cli" >}}), [docker]({{< ref "/getting-started/#docker" >}}), [docker-compose]({{< ref "/getting-started/#docker-compose" >}}), or [helm]({{< ref "/getting-started/#helm" >}})), to include a custom TLS root certificate a new docker image should be created.
+If you run LocalStack in a docker container (which includes using [the CLI](/aws/getting-started/installation/#installing-localstack-cli), [docker](/aws/getting-started/installation/#docker), [docker-compose](/aws/getting-started/installation/#docker-compose), or [helm](/aws/getting-started/installation/#helm)), to include a custom TLS root certificate a new docker image should be created.
 
 Create a `Dockerfile` containing the following commands:
 
-```docker
+```yaml
 FROM localstack/localstack:latest
 # or if using the pro image:
 FROM localstack/localstack-pro:latest
@@ -46,34 +48,40 @@ ENV NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt
 
 and build the image:
 
-{{< command >}}
-$ docker build -t <image name> .
-{{< / command >}}
+```bash
+docker build -t <image name> .
+```
 
-{{< callout "tip" >}}
+:::tip
 Certificate files must end in `.crt` to be included in the system certificate store.
 If your certificate file ends with `.pem`, you can rename it to end in `.crt`.
-{{< /callout >}}
+:::
 
 ### Starting LocalStack with the custom image
 
 LocalStack now needs to be configured to use this custom image.
 The workflow is different depending on how you start localstack.
 
-{{< tabpane lang="bash">}}
-{{< tab header="CLI" lang="bash" >}}
+<Tabs>
+<TabItem label="CLI">
+```bash
 IMAGE_NAME=<image name> localstack start
-{{< /tab >}}
-{{< tab header="Docker" lang="bash" >}}
+```
+</TabItem>
+<TabItem label="Docker">
+```bash
 docker run <docker arguments> <image name>
-{{< /tab >}}
-{{< tab header="docker-compose.yml" lang="yml" >}}
+```
+</TabItem>
+<TabItem label="docker-compose.yml">
+```yaml
 services:
   localstack:
     image: <image name>
     # the rest of your configuration
-{{< /tab >}}
-{{< / tabpane >}}
+```
+</TabItem>
+</Tabs>
 
 ## Custom TLS certificates with init hooks
 
@@ -98,7 +106,7 @@ Then run LocalStack with the environment variables
 * `CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt`, and
 * `NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt`
 
-and follow the instructions fn the [init hooks documentation]({{< ref "init-hooks" >}}) for configuring LocalStack to use the hook directory as a `boot` hook.
+and follow the instructions fn the [init hooks documentation](/aws/capabilities/config/initialization-hooks) for configuring LocalStack to use the hook directory as a `boot` hook.
 
 ## Custom TLS certificates with host mode
 
@@ -107,21 +115,21 @@ and follow the instructions fn the [init hooks documentation]({{< ref "init-hook
 On linux the custom certificate should be added to your `ca-certificates` bundle.
 For example on Debian based systems (as root):
 
-{{< command >}}
+```bash
 # cp <your custom certificate.crt> /usr/local/share/ca-certificates
 
 # update-ca-certificates
 
-{{< / command >}}
+```
 
 Then run LocalStack with the environment variables `REQUESTS_CA_BUNDLE`, `CURL_CA_BUNDLE`, and `NODE_EXTRA_CA_CERTS``:
 
-{{< command >}}
-$ NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt \
+```bash
+NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt \
   CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
   REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
   localstack start --host
-{{< / command >}}
+```
 
 ### macOS
 
@@ -130,14 +138,14 @@ See [this Apple support article](https://support.apple.com/en-gb/guide/keychain-
 
 Then run LocalStack with the environment variables `REQUESTS_CA_BUNDLE`, `CURL_CA_BUNDLE`, and `NODE_EXTRA_CA_CERTS``:
 
-{{< command >}}
-$ NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt \
+```bash
+NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt \
   CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
   REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
   localstack start --host
-{{< / command >}}
+```
 
 ### Windows
 
 Currently host mode does not work with Windows.
-If you are using WSL2 you should follow the [Linux]({{< ref "#linux" >}}) steps above.
+If you are using WSL2 you should follow the [Linux](#linux) steps above.

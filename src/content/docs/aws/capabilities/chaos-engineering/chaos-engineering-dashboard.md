@@ -12,7 +12,7 @@ The Chaos Engineering Dashboard in LocalStack offers streamlined testing for clo
 
 The dashboard uses [LocalStack Chaos API]({{< ref "chaos-api" >}}) under the hood to offer a set of customizable templates that can be seamlessly integrated into any automation workflows.
 
-{{< figure src="chaos-engineering-dashboard.png" width="900" >}}
+![chaos engineering dashboard](/images/aws/chaos-engineering-dashboard.png)
 
 You can find this feature in the LocalStack Web Application by navigating to [**app.localstack.cloud/chaos-engineering**](https://app.localstack.cloud/chaos-engineering).
 

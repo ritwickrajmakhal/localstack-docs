@@ -17,9 +17,9 @@ This guide is designed for users new to Explainable IAM and assumes basic knowle
 
 Start your LocalStack container with the `DEBUG=1` and `ENFORCE_IAM=1` environment variables set:
 
-{{< command >}}
-$ DEBUG=1 ENFORCE_IAM=1 localstack start
-{{< /command >}}
+```bash
+DEBUG=1 ENFORCE_IAM=1 localstack start
+```
 
 In this guide, we will create a policy for creating Lambda functions by only allowing the `lambda:CreateFunction` permission.
 However we have not included the `iam:PassRole` permission, and we will use the Policy Engine's log to point out adding the necessary permission.
@@ -44,9 +44,11 @@ Create a policy document named `policy_1.json` and add the following content:
 
 You can now create a new user named `test-user`, and put the policy in place by executing the following commands:
 
-{{< command >}}
-$ awslocal iam create-user --user-name test-user
-<disable-copy>
+```bash
+awslocal iam create-user --user-name test-user
+```
+
+```bash
 {
     "User": {
         "Path": "/",
@@ -56,38 +58,41 @@ $ awslocal iam create-user --user-name test-user
         "CreateDate": "2022-07-05T16:08:25.741000+00:00"
     }
 }
-</disable-copy>
-$ awslocal iam put-user-policy --user-name test-user --policy-name policy1 --policy-document file://policy_1.json
-{{< /command >}}
+```
+
+```bash
+awslocal iam put-user-policy --user-name test-user --policy-name policy1 --policy-document file://policy_1.json
+```
 
 You can further create an access key for the user by executing the following command:
 
-{{< command >}}
-$ awslocal iam create-access-key --user-name test-user
-{{< /command >}}
+```bash
+awslocal iam create-access-key --user-name test-user
+```
 
 Export the access key and secret key as environment variables:
 
-{{< command >}}
-$ export AWS_ACCESS_KEY_ID=...
-$ export AWS_SECRET_ACCESS_KEY=...
-{{< /command >}}
+```bash
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+```
 
 ### Attempt to create a Lambda function
 
 You can now attempt to create a Lambda function using the newly created user's credentials:
 
-{{< command >}}
-$ awslocal lambda create-function \
+```bash
+awslocal lambda create-function \
     --function-name test-function \
     --role arn:aws:iam::000000000000:role/lambda-role \
     --runtime python3.8 \
     --handler handler.handler \
     --zip-file fileb://function.zip
-<disable-copy>
+```
+
+```bash
 An error occurred (AccessDeniedException) when calling the CreateFunction operation: Access to the specified resource is denied
-</disable-copy>
-{{< / command >}}
+```
 
 You can inspect the LocalStack logs, to observe the presence of five log entries directly related to the denied request:
 

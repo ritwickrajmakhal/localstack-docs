@@ -33,26 +33,26 @@ To experiment with the IAM Policy Stream, initiate LocalStack using these flags:
 
 You can execute the following command in your terminal to start your LocalStack container:
 
-{{< command >}}
-$ DEBUG=1 IAM_SOFT_MODE=1 localstack start
-{{< /command >}}
+```bash
+DEBUG=1 IAM_SOFT_MODE=1 localstack start
+```
 
 ### Enable IAM Policy Stream
 
 To enable the IAM Policy Stream, open a new terminal window or tab and run the following command:
 
-{{< command >}}
-$ localstack aws iam stream
-{{< /command >}}
+```bash
+localstack aws iam stream
+```
 
 ### Create AWS Resources
 
 In a separate terminal tab, we will create AWS resources to observe the necessary policies for them.
 In this example, we are creating an SNS topic using the following command:
 
-{{< command >}}
-$ awslocal sns create-topic --name test-topic
-{{< /command >}}
+```bash
+awslocal sns create-topic --name test-topic
+```
 
 In the other tab, the required policy will be generated.
 This policy can then be attached to an IAM role, enabling it to create the resource.
@@ -91,15 +91,14 @@ However, it won't enforce policies or print IAM-related logs in the LocalStack c
 
 To use this feature, open the LocalStack Web Application in your browser, go to the IAM Policy Stream section, and click on **Enable** to view the **Summary Policy** and **Output**.
 
-<img src="live-policy-stream-enable.png" alt="IAM Policy Stream UI" title="IAM Policy Stream UI" width="800" class="img-fluid shadow rounded" />
-<br><br>
+![IAM Policy Stream UI](/images/aws/live-policy-stream-enable.png)
 
 Run the following command in your terminal to generate a corresponding policy in the IAM Policy Stream dashboard:
 
-{{< command >}}
-$ awslocal sns create-topic --name test-topic
-{{< /command >}}
+```bash
+awslocal sns create-topic --name test-topic
+```
 
 You will see the following output in the IAM Policy Stream dashboard:
 
-<img src="policy-generate.png" alt="IAM Policy Stream UI" title="IAM Policy Stream UI" width="800" class="img-fluid shadow rounded" />
+![IAM Policy Stream UI](/images/aws/policy-generate.png)

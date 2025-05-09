@@ -18,15 +18,15 @@ You can use LocalStack Chaos API to cause API failures for any combination of th
 - Region
 - Operation
 
-You can customise the HTTP error code and message that LocalStack responds with.
+You can customize the HTTP error code and message that LocalStack responds with.
 If required, you can make the failures occur probabilistically.
 
 Furthermore, the Chaos API can also be configured to add a network latency for all calls.
 
-{{< alert title="Note">}}
+:::note
 Chaos API is available as part of the LocalStack Enterprise plan.
 If you'd like to try it out, please [contact us](https://www.localstack.cloud/demo) to request access.
-{{< /alert >}}
+:::
 
 ## Prerequisites
 
@@ -92,8 +92,8 @@ This endpoint allows the following operations:
 
 To cause faults, make a POST request as follows:
 
-{{< command >}}
-$ curl --location --request POST 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
+```bash
+curl --location --request POST 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
 --header 'Content-Type: application/json' \
 --data '
 [
@@ -109,48 +109,50 @@ $ curl --location --request POST 'http://localhost.localstack.cloud:4566/_locals
         "service": "lambda"
     }
 ]'
-{{< /command >}}
+```
 
 In this example, S3 is affected in `us-east-1` and `ap-south-1,` and Lambda is affected in all regions.
 All calls to these services in these regions will return a 503 Service Unavailable error.
 
 To see this in action, try to create an S3 bucket in `us-east-1`:
 
-{{< command >}}
-$ awslocal s3 mb s3://test-bucket --region us-east-1
-<disable-copy>
+```bash
+awslocal s3 mb s3://test-bucket --region us-east-1
+```
+
+```bash
 make_bucket failed: s3://test-bucket An error occurred (ServiceUnavailableException) when calling the CreateBucket operation (reached max retries: 4): Service 's3' not accessible due to an outage
-</disable-copy>
-{{< /command >}}
+```
 
 However, the same operation, when run in `eu-central-1` will work as expected.
 
-{{< command >}}
+```bash
 $ awslocal s3 mb s3://test-bucket --region eu-central-1
-<disable-copy>
+```
+
+```bash
 make_bucket: test-bucket
-</disable-copy>
-{{< /command >}}
+```
 
 Faults can be disabled by setting an empty rule list in the configuration.
 The following request will clear the current configuration:
 
-{{< command >}}
-$ curl --location --request POST 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
+```bash
+curl --location --request POST 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
 --header 'Content-Type: application/json' \
 --data '[]'
-{{< /command >}}
+```
 
 To retrieve the current configuration, make the following GET call:
 
-{{< command >}}
-$ curl --location --request GET 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults'
-{{</ command >}}
+```bash
+curl --location --request GET 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults'
+```
 
 To add a new rule to the current configuration, make a PATCH call as follows:
 
-{{< command >}}
-$ curl --location --request PATCH 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
+```bash
+curl --location --request PATCH 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
 --header 'Content-Type: application/json' \
 --data '
 [
@@ -164,18 +166,18 @@ $ curl --location --request PATCH 'http://localhost.localstack.cloud:4566/_local
         }
     }
 ]'
-{{</ command >}}
+```
 
 This new rule will cause probabilistic failures for Kinesis PutRecord operation.
 Here, the returned error is also customised to be HTTP 400 ProvisionedThroughputExceededException.
 
 To remove a rule from the configuration, make a DELETE call as follows:
 
-{{< command >}}
-$ curl --location --request DELETE 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
+```bash
+curl --location --request DELETE 'http://localhost.localstack.cloud:4566/_localstack/chaos/faults' \
 --header 'Content-Type: application/json' \
 --data '[{"service": "lambda"}]'
-{{</ command >}}
+```
 
 The rule to be removed must be exactly the same as in the existing configuration.
 
