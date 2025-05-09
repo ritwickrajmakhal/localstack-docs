@@ -20,18 +20,17 @@ While developing and testing AWS cloud Web applications locally with LocalStack,
 This extension is not yet available in the Chrome Web Store, but can be installed directly from source.
 Clone the repository on your local machine to get started:
 
-{{< command >}}
-$ git clone git@github.com:localstack/local-surf.git
-{{< /command >}}
+```bash
+git clone git@github.com:localstack/local-surf.git
+```
 
 Head over to `chrome://extensions/`  in Chrome, then select  `"Load unpacked"`  and point to the directory where the source code files are stored on the disk.
 
 Once installed, a new icon should appear in the Chrome extensions bar.
 When clicking on the icon, the plugin can be enabled/disabled by toggling the **Enable local mode** checkbox.
 
-<p>
-{{< img src="localsurf-extension.png" class="img-fluid shadow rounded" >}}
-</p>
+
+![LocalSurf Extension](/images/aws/localsurf-extension.png)
 
 ## Usage
 
@@ -40,14 +39,14 @@ This app consists of various backend components (e.g., DynamoDB tables, Lambda f
 
 We can deploy the backend components to LocalStack directly, using the `samlocal` command line interface (CLI):
 
-{{< command >}}
-$ samlocal build
-$ samlocal deploy
-{{< /command >}}
+```bash
+samlocal build
+samlocal deploy
+```
 
 Once deployed, the `samlocal` CLI will print out a display app URL which will look similar to the following:
 
-```sh
+```bash
 Key                 DisplayAppURI
 Description         The URL for the Display App
 Value               https://workshop-display.serverlesscoffee.com/?region=us-east-1&userPoolId=us-east-1_43c9800e64c84467aa0abdb102e226ef&userPoolWebClientId=vr9aw2jr7iv36ezwaaqlzzkvbp&poolId=us-east-1:95dc88d0-1029-48fe-ba7b-1e6a9741bfc5&host=localhost.localstack.cloud&orderManagerEndpoint=https://fapencq0ue.execute-api.amazonaws.com:4566/Prod&APIGWEndpointValidatorService=https://psmdc7b1lv.execute-api.amazonaws.com:4566/Prod&APIGWEndpointConfigService=https://hw7yw61ba7.execute-api.amazonaws.com:4566/Prod
@@ -55,22 +54,16 @@ Value               https://workshop-display.serverlesscoffee.com/?region=us-eas
 
 We can then open the URL in the browser and confirm the configurations in the form dialog:
 
-<p>
-{{< img src="serverlesspresso-config.png" class="img-fluid shadow rounded" >}}
-</p>
-<br>
+![Confirm configurations dialog](/images/aws/serverlesspresso-config.png)
+
 Once confirmed, we are being forwarded to a signin screen, which uses an AWS Cognito user pool to manage authentication:
 
-<p>
-{{< img src="serverlesspresso-login.png" class="img-fluid shadow rounded" >}}
-</p>
-<br>
+![AWS Cognito sign in](/images/aws/serverlesspresso-login.png)
+
 After clicking **Sign In** in this form, we can see that the browser makes a request to LocalStack (to  `localhost.localstack.cloud`, which is a domain name that resolves to `127.0.0.1`).
-<br>
-<p>
-{{< img src="chrome-networking.png" class="img-fluid shadow rounded" >}}
-</p>
-<br>
+
+![Chrome Networking](/images/aws/chrome-networking.png)
+
 This sample demonstrates how we can take an existing Web application, without any modification, and make it talk to the LocalStack APIs directly from the browser via the LocalSurf plugin.
 
 ## Note

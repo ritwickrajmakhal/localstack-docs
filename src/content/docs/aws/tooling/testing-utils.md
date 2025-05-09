@@ -17,9 +17,9 @@ This Python Testing Utils streamlines the integration of Localstack with your un
 
 ### Installation
 
-{{< command >}}
-$ pip install localstack-utils
-{{< /command >}}
+```bash
+pip install localstack-utils
+```
 
 ### Usage
 
