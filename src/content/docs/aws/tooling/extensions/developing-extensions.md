@@ -121,7 +121,7 @@ example below.
 
 A minimal `setup.cfg` for the extension above could look like this:
 
-```ini
+```toml
 [metadata]
 name = localstack-extension-ready-announcer
 description = LocalStack extension that logs when LocalStack is ready to receive requests

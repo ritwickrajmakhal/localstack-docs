@@ -5,6 +5,10 @@ import starlightUtils from '@lorenzo_lewis/starlight-utils';
 
 import markdoc from '@astrojs/markdoc';
 
+import react from '@astrojs/react';
+
+import tailwindcss from '@tailwindcss/vite';
+
 // Fetch the latest release version from GitHub
 const response = await fetch(
   'https://api.github.com/repos/localstack/localstack/releases/latest',
@@ -27,9 +31,11 @@ export default defineConfig({
       }),
     },
   },
+
   integrations: [
     starlight({
       title: 'LocalStack Docs',
+      customCss: ['./src/styles/global.css'],
       social: [
         {
           icon: 'github',
@@ -300,5 +306,10 @@ export default defineConfig({
       ],
     }),
     markdoc(),
+    react(),
   ],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
