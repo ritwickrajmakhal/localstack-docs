@@ -28,7 +28,7 @@ const columns: ColumnDef<any>[] = [
       <a href={`/aws/${row.original.service}`}>{row.original.full_name}</a>
     ),
     enableColumnFilter: true,
-    filterFn: (row, columnId, filterValue) => {
+    filterFn: (row, filterValue) => {
       return row.original.full_name
         .toLowerCase()
         .includes((filterValue ?? "").toLowerCase());

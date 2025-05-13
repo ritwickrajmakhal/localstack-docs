@@ -2,8 +2,6 @@
 title: Overview
 description: Increase your development efficiency with LocalStack Cloud Developer Tools.
 template: doc
-sidebar:
-  order: 1
 ---
 
 The core of LocalStack is the [cloud service emulation]({{< ref "aws" >}}).
