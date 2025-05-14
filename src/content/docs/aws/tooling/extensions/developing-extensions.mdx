@@ -6,6 +6,8 @@ sidebar:
     order: 4
 ---
 
+import { FileTree } from '@astrojs/starlight/components';
+
 ## Introduction
 
 This section provides a brief overview of how to develop your own extensions.
@@ -101,12 +103,12 @@ class ReadyAnnouncerExtension(Extension):
      LOG.info("my plugin is loaded and localstack is ready to roll!")
 ```
 
-{{< callout >}}
+:::note
 A note on importing LocalStack modules: since extensions run in the same Python process as the LocalStack runtime,
 you can also import other LocalStack modules outside the `localstack.extensions.api` module, and work with them.
 However, be aware that these modules are not part of our public API, and can change even with patch versions any time.
 Your extension may break in unexpected ways, and we cannot provide support for internal APIs.
-{{</callout>}}
+:::
 
 ## Packaging extensions
 
@@ -172,7 +174,7 @@ Commands:
 First, create a new extension from a template.
 To use `localstack extensions dev new`, you will also need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter) via `pip install cookiecutter`.
 
-{{< command >}}
+```bash
 $ localstack extensions dev new
 project_name [My LocalStack Extension]:
 project_short_description [All the boilerplate you need to create a LocalStack extension.]:
@@ -182,20 +184,20 @@ full_name [Jane Doe]:
 email [jane@example.com]:
 github_username [janedoe]:
 version [0.1.0]:
-{{< / command >}}
+```
 
 This will create a new Python project with the following layout:
 
-```bash
-my-localstack-extension
-├── Makefile
-├── my_localstack_extension
-│  ├── extension.py
-│  └── __init__.py
-├── README.md
-├── setup.cfg
-└── setup.py
-```
+<FileTree>
+- my-localstack-extension
+  - Makefile
+  - my_localstack_extension
+    - extension.py
+    - __init__.py
+  - README.md
+  - setup.cfg
+  - setup.py
+</FileTree>
 
 Then run `make install` in the newly created project to make a distribution package.
 
@@ -203,16 +205,16 @@ Then run `make install` in the newly created project to make a distribution pack
 
 To start LocalStack with the extension in dev mode, first enable it by running:
 
-{{< command >}}
+```bash
 $ localstack extensions dev enable ./my-localstack-extension
-{{< / command >}}
+```
 
 Then, start LocalStack with `EXTENSION_DEV_MODE=1`
 
-{{< command >}}
+```bash
 $ EXTENSION_DEV_MODE=1 LOCALSTACK_AUTH_TOKEN=...
 localstack start
-{{< / command >}}
+```
 
 In the LocalStack logs you should then see something like:
 
@@ -230,9 +232,10 @@ Now, when you make changes to your extensions, you just need to restart LocalSta
 
 Once your extension is ready to be used, release it on a public GitHub repository.
 To make your extension easily installable for everyone generate an extension badge for your extension on this page.
-The resulting badge should look like this <img src="https://localstack.cloud/gh/extension-badge.svg" alt="Extension badge">.
+The resulting badge should look like this:
+
+![Extension badge](https://localstack.cloud/gh/extension-badge.svg)
+
 You can create a one-click installer for your extension using our [Extension Installer](https://app.localstack.cloud/extensions/remote).
 
-{{< figure src="extension-installer.png" >}}
-
-<!-- TODO: add screenshot of installer with a specific extension, currently doesn't work -->
+![Extension Installer](/images/aws/extension-installer.png)

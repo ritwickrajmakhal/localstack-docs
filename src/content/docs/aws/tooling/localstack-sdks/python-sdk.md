@@ -19,17 +19,17 @@ The LocalStack SDK for Python supports these features:
 - List SQS queue messages without causing side effects.
 - Retrieve and delete sent SES messages.
 
-{{< callout >}}
+:::note
 This SDK is still in a preview phase, and will be subject to fast and breaking changes.
-{{< /callout >}}
+:::
 
 ## Installation
 
 Install the latest `localstack-sdk-python` release via pip:
 
-{{< command >}}
-$ pip install --upgrade localstack-sdk-python
-{{< / command >}}
+```bash
+pip install --upgrade localstack-sdk-python
+```
 
 ## Basic Concepts
 

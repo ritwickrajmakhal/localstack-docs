@@ -6,7 +6,8 @@ sidebar:
     order: 1
 ---
 
-{{< figure src="https://user-images.githubusercontent.com/3996682/184503940-c30bfcac-e049-4ee4-b905-207b340111d1.png" >}}
+
+![LocalStack Extensions](/images/aws/localstack-extensions-header.png)
 
 LocalStack Extensions allow developers to extend and customize LocalStack.
 Extensions are a feature of our paid offering.
@@ -21,10 +22,10 @@ You can use LocalStack Extensions to:
 - Instrumenting AWS requests with additional information before they reach your Lambdas.
 - Logging AWS API calls to custom data backends.
 
-The officially supported [LocalStack Extensions]({{< ref "user-guide/extensions/official-extensions" >}}) can be discovered on our [Extension Library](https://app.localstack.cloud/extensions/library).
+The officially supported [LocalStack Extensions]({/aws/tooling/extensions/official-extensions) can be discovered on our [Extension Library](https://app.localstack.cloud/extensions/library).
 To install and use extensions, you need an active LocalStack license.
 
-{{< callout >}}
+:::note
 The feature and the API are currently in a preview stage and may be subject to change.
 Please report any issues or feature requests on [LocalStack Extension's GitHub repository](https://github.com/localstack/localstack-extensions).
-{{< /callout >}}
+:::

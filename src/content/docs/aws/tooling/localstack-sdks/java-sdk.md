@@ -16,9 +16,9 @@ The LocalStack SDK for Java currently supports these features:
 - Save, list, load, and delete Cloud Pods.
 - Manage fault configurations for the Chaos API.
 
-{{< callout >}}
+:::note
 This SDK is still in a preview phase, and will be subject to fast and breaking changes.
-{{< /callout >}}
+:::
 
 ## Installation
 

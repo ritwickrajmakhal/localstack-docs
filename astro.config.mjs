@@ -148,9 +148,28 @@ export default defineConfig({
                 },
                 {
                   label: 'Extensions',
-                  autogenerate: {
-                    directory: '/aws/tooling/extensions',
-                  },
+                  items: [
+                    {
+                      label: 'Overview',
+                      slug: 'aws/tooling/extensions',
+                    },
+                    {
+                      label: 'Managing Extensions',
+                      slug: 'aws/tooling/extensions/managing-extensions',
+                    },
+                    {
+                      label: 'Developing Extensions',
+                      slug: 'aws/tooling/extensions/developing-extensions',
+                    },
+                    {
+                      label: 'Extensions Library',
+                      slug: 'aws/tooling/extensions/extensions-library',
+                    },
+                    {
+                      label: 'Official Extensions',
+                      link: 'https://app.localstack.cloud/extensions/library/',
+                    },
+                  ],
                   collapsed: true,
                 },
                 {

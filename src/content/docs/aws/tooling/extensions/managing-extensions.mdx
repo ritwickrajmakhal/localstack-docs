@@ -6,9 +6,11 @@ sidebar:
     order: 3
 ---
 
+import { FileTree } from '@astrojs/starlight/components';
+
 You have different options to install and manage your LocalStack extensions depending on your environment and work style.
 
-Extensions are managed through the LocalStack container, but stored in the [LocalStack volume]({{< ref "/references/filesystem#localstack-volume" >}}) on your host.
+Extensions are managed through the LocalStack container, but stored in the [LocalStack volume](/aws/capabilities/config/filesystem-layout) on your host.
 The next time you start up LocalStack, your extensions will still be there!
 
 ## Using the extensions manager in our App
@@ -19,21 +21,21 @@ Simply install and remove extensions from your specific LocalStack instance dire
 If you have multiple instances of LocalStack, each instance has its own set of extensions,
 and our App allows you to manage extensions for each instance individually.
 
-{{< callout "tip" >}}
+:::tip
 When you install or uninstall extensions, LocalStack needs to be restarted.
 LocalStack will do this automatically for you!
 It re-starts the process inside the running container, not the container itself.
 However, you may lose LocalStack state if you do not use persistence.
-{{</callout>}}
+:::
 
-{{< figure src="extensions-manager.png" >}}
+![Extensions Manager](/images/aws/extensions-manager.png)
 
 ## Using the extensions CLI
 
 If you use LocalStack with the CLI, you can also use our `localstack extensions` CLI command suite.
 To get a list of all available commands in LocalStack Extensions, run:
 
-{{< command >}}
+```bash
 $ localstack extensions --help
 
 Usage: localstack extensions [OPTIONS] COMMAND [ARGS]...
@@ -50,28 +52,28 @@ init       Initialize the LocalStack extensions environment
 install    Install a LocalStack extension
 list       List installed extension
 uninstall  Remove a LocalStack extension
-{{< / command >}}
+```
 
 To install an extension, specify the name of the `pip` dependency that contains the extension.
 For example, for the official Stripe extension, you can either use the package distributed on PyPI:
 
-{{< command >}}
+```bash
 $ localstack extensions install localstack-extension-httpbin
-{{< / command >}}
+```
 
 Extensions are just Python pip packages, and the `install` command will accept anything that resolves to a valid pip package.
 For example, you can install the latest development version directly from our Git repository using the `git+https` directive.
 
-{{< command >}}
-$ localstack extensions install "git+https://github.com/localstack/localstack-extensions/#egg=localstack-extension-httpbin&subdirectory=httpbin"
-{{< / command >}}
+```bash
+localstack extensions install "git+https://github.com/localstack/localstack-extensions/#egg=localstack-extension-httpbin&subdirectory=httpbin"
+```
 
 If you have Python distribution as files on your local machine, for instance pip wheels or source distributions, then you can also install those via the `file://` directive
 The file will be automatically mounted into the container and installed from there.
 
-{{< command >}}
+```bash
 pip install file://./my-extensions/dist/my-extension-0.0.1.dev0.tar.gz
-{{< / command >}}
+```
 
 ### Specify the `LOCALSTACK_VOLUME_DIR`
 
@@ -87,10 +89,10 @@ volumes:
 
 Here's how you can use `LOCALSTACK_VOLUME_DIR` in your commands:
 
-{{< command >}}
+```bash
 export LOCALSTACK_VOLUME_DIR=/tmp/volume
 localstack extensions install file:///tmp/my_files/my-extension-1.0.0.tar.gz
-{{< / command >}}
+```
 
 ## Automating extensions installation
 
@@ -142,12 +144,12 @@ An example project could look something like this:
 
 * Project layout:
 
-    ```console
-    extension-install
-    ├── conf.d
-    │   └── extensions.txt
-    └── docker-compose.yml
-    ```
+    <FileTree>
+    - extension-install
+      - conf.d
+        - extensions.txt
+    - docker-compose.yml
+    </FileTree>
 
 * `docker-compose.yaml`
 
@@ -173,27 +175,29 @@ LocalStack integrates its virtual environment, ensuring the resolution of all tr
 Here's an example what the default LocalStack volume looks like after installing the MailHog extension:
 
 ```bash
-$ pwd
+pwd
 ~/.cache/localstack/volume
-$ tree -L 4
-.
-├── cache
-│   ├── ...
-├── lib
-│   ├── extensions
-│   │   └── python_venv
-│   │       ├── bin
-│   │       ├── include
-│   │       ├── lib
-│   │       ├── lib64 -> lib
-│   │       └── pyvenv.cfg
-│   └── mailhog
-│       └── v1.0.1
-│           └── MailHog_linux_amd64
-├── logs
-└── tmp
-    └── state
+tree -L 4
 ```
+
+<FileTree>
+- cache
+  - ...
+- lib
+  - extensions
+    - python_venv
+      - bin
+      - include
+      - lib
+      - lib64 -> lib
+      - pyvenv.cfg
+  - mailhog
+    - v1.0.1
+      - MailHog_linux_amd64
+- logs
+- tmp
+  - state
+</FileTree>
 
 ## Troubleshooting
 

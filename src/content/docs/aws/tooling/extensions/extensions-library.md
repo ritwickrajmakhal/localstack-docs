@@ -13,7 +13,7 @@ A LocalStack extension is a Python application that runs together with LocalStac
 
 LocalStack extensions are available to licensed users, and the list of available extensions can be found in the [Extensions Library](https://app.localstack.cloud/extensions/library).
 
-<img src="extensions-library-ui.png" alt="LocalStack Extensions Library" title="LocalStack Extensions Library" width="900" />
+![LocalStack Extensions Library](/images/aws/extensions-library-ui.png)
 
 ## Installing an Extension
 
@@ -29,4 +29,4 @@ Click **Continue** to proceed.
 You can further manage the installed extensions by navigating to the **Extensions** tab in the LocalStack Instance page.
 You can remove an Extension by clicking the **Remove** button.
 
-<img src="extensions-library-management.png" alt="Installed LocalStack Extensions Library" title="Installed LocalStack Extensions Library" width="900" />
+![Installed LocalStack Extensions Library](/images/aws/extensions-library-management.png)
