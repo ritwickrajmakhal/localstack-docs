@@ -193,6 +193,10 @@ export default defineConfig({
                   slug: 'aws/tooling/dns-server',
                 },
                 {
+                  label: 'LocalStack Docker Extension',
+                  slug: 'aws/tooling/localstack-docker-extension',
+                },
+                {
                   label: 'Lambda Tools',
                   autogenerate: {
                     directory: '/aws/tooling/lambda-tools',
