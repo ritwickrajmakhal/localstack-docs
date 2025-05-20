@@ -5,6 +5,7 @@ template: doc
 sidebar:
     order: 4
 ---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
 ## Overview
 
@@ -197,7 +198,7 @@ shadowJar {
 
 assemble.dependsOn shadowJar
 ```
-{/* {/* {/* {/* {/* {/* {/* {/* {/* {/* {{< / highlight >}} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */}
+{/* {{< / highlight >}} */} {/* mdx-disabled */}
 
 Please note that we will be using `org.localstack.sampleproject` as a
 working namespace, and `org.localstack.sampleproject.Application` as an
@@ -257,7 +258,7 @@ org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest
 Now our application needs an entry-class, the one we referenced earlier.
 Let's add it under `src/main/kotlin/org/localstack/sampleproject/Application.kt`.
 
-{/* {/* {/* {/* {/* {/* {/* {/* {/* {{< highlight kotlin "linenos=table" >}} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */}
+{/* {{< highlight kotlin "linenos=table" >}} */} {/* mdx-disabled */}
 {/* TODO: packing this into a java block for now */}
 ```java
 package org.localstack.sampleproject
@@ -559,7 +560,7 @@ class LambdaApi : SpringBootStreamHandler() {
     companion object : Logger()
 
     @Bean
-{/* fun functionOne(): Function<Any, String> { */} {/* mdx-disabled */}
+    fun functionOne(): Function<Any, String> {
         return Function {
             LOGGER.info("calling function one")
             return@Function "ONE";
@@ -567,7 +568,7 @@ class LambdaApi : SpringBootStreamHandler() {
     }
 
     @Bean
-{/* fun functionTwo(): Function<SampleModel, SampleModel> { */} {/* mdx-disabled */}
+    fun functionTwo(): Function<SampleModel, SampleModel> {
         return Function {
             LOGGER.info("calling function two")
             return@Function it;
@@ -575,7 +576,7 @@ class LambdaApi : SpringBootStreamHandler() {
     }
 
     @Bean
-{/* fun dynamoDbStreamHandlerExample(): Function<DynamodbEvent, Unit> { */} {/* mdx-disabled */}
+    fun dynamoDbStreamHandlerExample(): Function<DynamodbEvent, Unit> {
         return Function {
             LOGGER.info("handling DynamoDB stream event")
         }
@@ -601,8 +602,8 @@ The `Lambda-Events` package comes with a set of predefined wrappers that you can
 Check our [sample project](https://github.com/localstack/localstack-pro-samples/tree/master/sample-archive/spring-cloud-function-microservice)
 for usage examples.
 
-{/* {{< tabpane >}} */} {/* mdx-disabled */}
-{/* {{< tab header="Serverless" lang="yaml" >}} */} {/* mdx-disabled */}
+<Tabs>
+<TabItem label="Serverless">
 ```yaml
 service: localstack-sampleproject-serverless
 
@@ -653,9 +654,9 @@ functions:
     handler: org.localstack.sampleproject.api.LambdaApi
     environment:
       FUNCTION_NAME: functionTwo
-```yaml
-{/* {/* {/* {{< /tab >}} */} {/* mdx-disabled */} */} {/* mdx-disabled */} */} {/* mdx-disabled */}
-{/* {{< tab header="AWS CDK" lang="kotlin" >}} */} {/* mdx-disabled */}
+```
+</TabItem>
+<TabItem label="AWS CDK">
 ```java
 package org.localstack.cdkstack
 
@@ -728,8 +729,10 @@ class ApplicationStack(parent: Construct, name: String) : Stack(parent, name) {
             .build()
     }
 }
-{{< /tab >}}
-{/* {{< tab header="Terraform" lang="tf" >}} */} {/* mdx-disabled */}
+```
+</TabItem>
+<TabItem label="Terraform">
+```
 variable "STAGE" {
     type    = string
     default = "local"
@@ -877,9 +880,9 @@ resource "aws_lambda_function" "exampleFunctionTwo" {
         }
     }
 }
-{{< /tab >}}
-{/* {{< /tabpane >}} */} {/* mdx-disabled */}
 ```
+</TabItem>
+</Tabs>
 ## Testing, Debugging and Hot Reloading
 
 Please read our [Lambda Tools](/content/en/tools/lambda-tools/_index.md)

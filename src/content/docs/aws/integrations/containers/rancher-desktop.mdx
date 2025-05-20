@@ -34,7 +34,8 @@ These setups enable LocalStack to run smoothly with Rancher Desktop across vario
 
 ### Linux/macOS
 
-{/* {{<alert type="info">}} */} {/* mdx-disabled */}
+{/*TODO: this was an "alert" before, change container accordingly (or remove this TODO)*/}
+:::note 
 ### Recommended Settings for Rancher Desktop on macOS
 
 If you're using Rancher Desktop on macOS, particularly on Apple Silicon (M1, M2, etc.), it's crucial to adjust both the emulation engine and the volume-sharing method.
@@ -66,7 +67,7 @@ To switch the volume sharing method from reverse-SSHFS to VirtioFS:
 2. Proceed to the **Virtual Machine** section, where you'll find the volume mount options.
 3. Select the **File Sharing** setting and change it from `reverse-sshfs` to `VirtioFS`.
 4. Restart Rancher Desktop to implement the changes.
-{/* {{</alert>}} */} {/* mdx-disabled */}
+:::
 
 #### Rancher Desktop with dockerd
 
