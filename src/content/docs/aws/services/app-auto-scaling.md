@@ -1,6 +1,9 @@
 ---
-title: Application Auto Scaling
+title: "Application Auto Scaling"
+linkTitle: "Application Auto Scaling"
 description: Get started with Application Auto Scaling on LocalStack
+tags: ["Base"]
+persistence: supported
 ---
 
 ## Introduction
@@ -11,7 +14,7 @@ With Application Auto Scaling, you can configure automatic scaling for services 
 Auto scaling uses CloudWatch under the hood to configure scalable targets which a service namespace, resource ID, and scalable dimension can uniquely identify.
 
 LocalStack allows you to use the Application Auto Scaling APIs in your local environment to scale different resources based on scaling policies and scheduled scaling.
-The supported APIs are available on our [API coverage page](https://docs.localstack.cloud/references/coverage/coverage_application-autoscaling/), which provides information on the extent of Application Auto Scaling's integration with LocalStack.
+The supported APIs are available on our [API coverage page]({{< ref "coverage_application-autoscaling" >}}), which provides information on the extent of Application Auto Scaling's integration with LocalStack.
 
 ## Getting Started
 
