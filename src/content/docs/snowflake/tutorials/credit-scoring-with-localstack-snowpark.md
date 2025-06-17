@@ -15,8 +15,8 @@ The Jupyter Notebook and the dataset used in this tutorial are available on [Git
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli) with a [`LOCALSTACK_AUTH_TOKEN`](https://docs.localstack.cloud/getting-started/auth-token/)
-- [LocalStack for Snowflake]({{< ref "installation" >}})
-- [Snowpark]({{< ref "snowpark" >}}) with other Python libraries
+- [LocalStack for Snowflake](/snowflake/getting-started/)
+- [Snowpark](/snowflake/integrations/snowpark) with other Python libraries
 - [Jupyter Notebook](https://jupyter.org/install#jupyter-notebook)
 
 You should also download [`credit_files.csv`](https://github.com/localstack-samples/localstack-snowflake-samples/blob/main/credit-scoring-with-snowpark/credit_files.csv) and [`credit_request.csv`](https://github.com/localstack-samples/localstack-snowflake-samples/blob/main/credit-scoring-with-snowpark/credit_request.csv) files from the LocalStack repository. The files should be present in the same directory as your Jupyter Notebook.
@@ -25,10 +25,10 @@ You should also download [`credit_files.csv`](https://github.com/localstack-samp
 
 Start your LocalStack container in your preferred terminal/shell.
 
-{{< command >}}
-$ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ IMAGE_NAME=localstack/snowflake localstack start
-{{< / command >}}
+```bash
+export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
+IMAGE_NAME=localstack/snowflake localstack start
+```
 
 ## Create a Snowpark session
 
@@ -126,7 +126,7 @@ credit_df.toPandas().hist(figsize=(15,15))
 The following output is displayed:
 <br><br>
 
-<img src="credit_df_hist.png" alt="credit_df_hist" width="700"/>
+![credit_df_hist](/images/snowflake/credit_df_hist.png)
 <br><br>
 
 You can also visualize the categorical features of the `credit_df` table:
@@ -155,7 +155,7 @@ plt.show()
 The following output is displayed:
 <br><br>
 
-<img src="credit_df_cat.png" alt="credit_df_cat" width="700"/>
+![credit_df_cat](/images/snowflake/credit_df_cat.png)
 
 ## Conclusion
 

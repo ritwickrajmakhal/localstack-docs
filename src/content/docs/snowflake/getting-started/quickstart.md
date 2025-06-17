@@ -2,9 +2,9 @@
 title: Quickstart
 description: Get started with LocalStack for Snowflake in a few simple steps
 template: doc
+sidebar:
+    order: 2
 ---
-
-
 
 ## Introduction
 
@@ -13,7 +13,7 @@ This guide explains how to set up the Snowflake emulator and develop a Python pr
 ## Prerequisites
 
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli)
-- [LocalStack for Snowflake]({{< ref "installation" >}})
+- [LocalStack for Snowflake](/snowflake/getting-started/)
 - Python 3.10 or later 
 - [`snowflake-connector-python` library](https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-install)
 
@@ -21,19 +21,22 @@ This guide explains how to set up the Snowflake emulator and develop a Python pr
 
 Before you begin, pull the Snowflake emulator image (`localstack/snowflake`) and start the container:
 
-{{< command >}}
-$ export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
-$ IMAGE_NAME=localstack/snowflake:latest localstack start
-{{< / command >}}
+```bash
+export LOCALSTACK_AUTH_TOKEN=<your_auth_token>
+IMAGE_NAME=localstack/snowflake:latest localstack start
+```
 
 Check the emulator's availability by running:
 
-{{< command >}}
-$ curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
-<disable-copy>
+```bash
+curl -d '{}' snowflake.localhost.localstack.cloud:4566/session
+```
+
+The response should be:
+
+```bash
 {"success": true}
-</disable-copy>
-{{< / command >}}
+```
 
 ### Connect to the Snowflake emulator
 
@@ -90,9 +93,9 @@ This program creates a table named `ability`, inserts rows, and fetches the resu
 
 Execute the Python program with:
 
-{{< command >}}
-$ python main.py
-{{< / command >}}
+```bash
+python main.py
+```
 
 The output should be:
 
@@ -122,9 +125,9 @@ Verify the results by navigating to the LocalStack logs:
 
 To stop LocalStack and remove locally created resources, use:
 
-{{< command >}}
-$ localstack stop
-{{< / command >}}
+```bash
+localstack stop
+```
 
 LocalStack is ephemeral and doesn't persist data across restarts. It runs inside a Docker container, and once it’s stopped, all locally created resources are automatically removed. In a future release of the Snowflake emulator, we will provide proper persistence and integration with our [Cloud Pods](https://docs.localstack.cloud/user-guide/state-management/cloud-pods/) feature as well.
 
@@ -132,6 +135,6 @@ LocalStack is ephemeral and doesn't persist data across restarts. It runs inside
 
 You can now explore the following resources to learn more about the Snowflake emulator:
 
-- [User Guide]({{< ref "user-guide" >}}): Learn about the Snowflake emulator's features and how to use them.
-- [Tutorials](/aws/tutorials): Explore tutorials to use the Snowflake emulator for local development and testing.
-- [References]({{< ref "references" >}}): Find information about the Snowflake emulator's configuration, changelog, and function coverage.
+- [Features](/snowflake/features/): Learn about the Snowflake emulator's features and how to use them.
+- [SQL Functions](/snowflake/sql-functions): Learn about the SQL functions supported by the Snowflake emulator.
+- [Changelog](/snowflake/changelog): Find information about the Snowflake emulator's changelog.
