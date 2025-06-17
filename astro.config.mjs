@@ -296,9 +296,9 @@ export default defineConfig({
               collapsed: true,
             },
             {
-              label: 'Services',
+              label: 'Features',
               collapsed: true,
-              autogenerate: { directory: '/snowflake/services' },
+              autogenerate: { directory: '/snowflake/features' },
             },
             {
               label: 'Capabilities',
@@ -323,6 +323,14 @@ export default defineConfig({
             {
               label: 'SQL Functions',
               slug: 'snowflake/sql-functions',
+            },
+            {
+              label: 'Feature Coverage',
+              slug: 'snowflake/coverage-features',
+            },
+            {
+              label: 'Changelog',
+              slug: 'snowflake/changelog',
             },
           ],
         },
