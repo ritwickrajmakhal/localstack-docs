@@ -66,8 +66,7 @@ export default defineConfig({
             },
             {
               label: 'Local AWS Services',
-              autogenerate: { directory: '/aws/services' },
-              collapsed: true,
+              slug: 'aws/aws-services',
             },
             {
               label: 'Sample Apps',
