@@ -150,6 +150,8 @@ At this time LocalStack supports the following [target types](https://docs.aws.a
 The LocalStack Web Application provides a Resource Browser for managing EventBridge Buses.
 You can access the Resource Browser by opening the LocalStack Web Application in your browser, navigating to the **Resources** section, and then clicking on **EventBridge** under the **App Integration** section.
 
+![EventBridge Resource Browser](/images/aws/eventbridge-resource-browser.png)
+
 The Resource Browser allows you to perform the following actions:
 
 - **View the Event Buses**: You can view the list of EventBridge Buses running locally, alongside their Amazon Resource Names (ARNs) and Policies.
