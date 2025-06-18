@@ -142,7 +142,7 @@ if __name__ == '__main__':
 
 Amazon Neptune resources with IAM DB authentication enabled require all requests to use AWS Signature Version 4.  
 
-When LocalStack starts with [IAM enforcement enabled]({{< ref "/user-guide/security-testing" >}}), the Neptune database checks user permissions before granting access.
+When LocalStack starts with [IAM enforcement enabled](/aws/capabilities/security-testing/iam-policy-enforcement), the Neptune database checks user permissions before granting access.
  The following Gremlin query actions are available for database engine versions `1.3.2.0` and higher:
 
 ```json
@@ -237,9 +237,7 @@ rm -rf <LocalStack Volume>/lib/tinkerpop
 The LocalStack Web Application provides a Resource Browser for managing Neptune databases and clusters.
 You can access the Resource Browser by opening the LocalStack Web Application in your browser, navigating to the **Resources** section, and then clicking on **Neptune** under the **Database** section.
 
-<img src="neptune-resource-browser.png" alt="Neptune Resource Browser" title="Neptune Resource Browser" width="900" />
-<br>
-<br>
+![Neptune Resource Browser](/images/aws/neptune-resource-browser.png)
 
 The Resource Browser allows you to perform the following actions:
 
