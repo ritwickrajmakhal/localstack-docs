@@ -34,15 +34,31 @@ export default defineConfig({
 
   integrations: [
     starlight({
-      title: 'LocalStack Docs',
+      title: 'Docs',
+      favicon: '/images/favicons/favicon.ico',
       customCss: ['./src/styles/global.css'],
       social: [
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/withastro/starlight',
+          href: 'https://github.com/localstack/localstack',
+        },
+        {
+          icon: 'linkedin',
+          label: 'LinkedIn',
+          href: 'https://www.linkedin.com/company/localstack-cloud/',
+        },
+        {
+          icon: 'youtube',
+          label: 'YouTube',
+          href: 'https://www.youtube.com/@localstack',
         },
       ],
+      logo: {
+        light: './src/assets/Logo_Light.svg',
+        dark: './src/assets/Logo_Dark.svg',
+        alt: 'LocalStack',
+      },
       plugins: [
         starlightUtils({
           multiSidebar: {
