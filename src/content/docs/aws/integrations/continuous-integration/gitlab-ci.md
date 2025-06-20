@@ -136,7 +136,7 @@ job:
 ...
 ```
 
-More info about Localstack's state export and import [here](/user-guide/state-management/export-import-state/).
+More info about Localstack's state export and import [here](/aws/capabilities/state-management/export-import-state/).
 
 #### Cache
 
@@ -159,7 +159,7 @@ job:
 ...
 ```
 
-Additional information about state export and import [here](/user-guide/state-management/export-import-state/).
+Additional information about state export and import [here](/aws/capabilities/state-management/export-import-state/).
 
 #### Cloud Pod
 
@@ -174,7 +174,7 @@ job:
 ...
 ```
 
-Find more information about cloud pods [here](/user-guide/state-management/cloud-pods/).
+Find more information about cloud pods [here](/aws/capabilities/state-management/cloud-pods).
 
 #### Ephemeral Instance (Preview)
 
@@ -213,7 +213,7 @@ test-job:
 ...
 ```
 
-Find out more about ephemeral instances [here](/user-guide/cloud-sandbox/).
+Find out more about ephemeral instances [here](/aws/capabilities/cloud-sandbox/ephemeral-instances).
 
 ## Current Limitations
 
@@ -225,4 +225,4 @@ Find out more about ephemeral instances [here](/user-guide/cloud-sandbox/).
 
 ## Examples
 
-[End-to-End Testing in Gitlab CI with Testcontainers and LocalStack: Understanding Runners and Docker in Docker](/aws/tutorials/gitlab_ci_testcontainers) {/*TODO: link target doesn't exist yet*/} - A readily configured demo project, that will walk you through the process of setting up end-to-end testing for a backend application using Testcontainers and LocalStack within GitLab CI.
+[End-to-End Testing in Gitlab CI with Testcontainers and LocalStack: Understanding Runners and Docker in Docker]() {/*TODO: link target doesn't exist yet*/} - A readily configured demo project, that will walk you through the process of setting up end-to-end testing for a backend application using Testcontainers and LocalStack within GitLab CI.

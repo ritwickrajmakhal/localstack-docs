@@ -2,6 +2,7 @@
 import { defineConfig, envField } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
+import starlightLinksValidator from 'starlight-links-validator'
 
 import markdoc from '@astrojs/markdoc';
 
@@ -75,6 +76,10 @@ export default defineConfig({
         alt: 'LocalStack',
       },
       plugins: [
+        starlightLinksValidator({
+          errorOnRelativeLinks: false,
+          errorOnLocalLinks: false,
+        }),
         starlightUtils({
           multiSidebar: {
             switcherStyle: 'dropdown',
