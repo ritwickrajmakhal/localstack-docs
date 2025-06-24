@@ -39,6 +39,9 @@ export default defineConfig({
       title: 'Docs',
       favicon: '/images/favicons/favicon.ico',
       customCss: ['./src/styles/global.css'],
+      components: {
+        PageTitle: './src/components/PageTitleWithPricing.astro',
+      },
       head: [
         {
           tag: 'script',
