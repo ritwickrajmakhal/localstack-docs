@@ -366,6 +366,10 @@ export default defineConfig({
               slug: 'aws/tutorials',
             },
             {
+              label: 'Changelog',
+              slug: 'aws/changelog',
+            },
+            {
               label: 'Licensing & Tiers',
               slug: 'aws/licensing',
             },
