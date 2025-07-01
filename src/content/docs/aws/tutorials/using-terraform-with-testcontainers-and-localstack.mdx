@@ -149,7 +149,7 @@ aws apigateway get-rest-apis \
 This will get us the ID of the API Gateway, which is necessary to build the URL:
 
 ```bash
-$ curl --location "http://ixqd52qrip.execute-api.localhost.localstack.cloud:4566/dev/productApi" \
+curl --location "http://ixqd52qrip.execute-api.localhost.localstack.cloud:4566/dev/productApi" \
                                                         --header 'Content-Type: application/json' \
                                                         --data '{
                                                       "id": "34534",

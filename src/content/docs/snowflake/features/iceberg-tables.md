@@ -21,7 +21,7 @@ In this guide, you will create an external volume, and an Iceberg table to store
 You can create a local S3 bucket using the `mb` command with the `awslocal` CLI.
 
 ```bash
-$ awslocal s3 mb s3://test-bucket
+awslocal s3 mb s3://test-bucket
 ```
 
 ### Create an external volume

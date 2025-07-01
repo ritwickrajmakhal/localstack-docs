@@ -105,7 +105,7 @@ If you are using LocalStack with an Auth Token, it's necessary to download the [
 To start LocalStack via Docker, you need to provide the Auth Token using the `-e` flag, which is used for setting environment variables.
 
 ```bash {5}
-$ docker run \
+docker run \
   --rm -it \
   -p 4566:4566 \
   -p 4510-4559:4510-4559 \

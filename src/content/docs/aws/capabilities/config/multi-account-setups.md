@@ -21,11 +21,11 @@ The Access Key ID field can be configured in the AWS CLI in multiple ways: pleas
 In following examples, we configure the AWS CLI account ID via environment variable.
 
 ```bash
-$ AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 create-key-pair --key-name green-hospital
+AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 create-key-pair --key-name green-hospital
 
-$ AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 create-key-pair --key-name red-medicine
+AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 create-key-pair --key-name red-medicine
 
-$ AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 describe-key-pairs
+AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 describe-key-pairs
 {
     "KeyPairs": [
         {
@@ -35,7 +35,7 @@ $ AWS_ACCESS_KEY_ID=000000000001 awslocal ec2 describe-key-pairs
     ]
 }
 
-$ AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 describe-key-pairs
+AWS_ACCESS_KEY_ID=000000000002 awslocal ec2 describe-key-pairs
 {
     "KeyPairs": [
         {
@@ -50,7 +50,7 @@ If no explicit Account ID is set, LocalStack falls back to default.
 In this example, no resources are returned.
 
 ```bash
-$ awslocal ec2 describe-key-pairs
+awslocal ec2 describe-key-pairs
 {
     "KeyPairs": []
 }

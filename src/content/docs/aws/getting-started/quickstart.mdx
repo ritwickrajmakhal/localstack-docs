@@ -145,7 +145,7 @@ awslocal ssm put-parameter \
  --name /localstack-thumbnail-app/buckets/images \
  --type "String" \
  --value "localstack-thumbnails-app-images"
-$ awslocal ssm put-parameter \
+awslocal ssm put-parameter \
  --name /localstack-thumbnail-app/buckets/resized \
  --type "String" \
  --value "localstack-thumbnails-app-resized"
@@ -179,8 +179,8 @@ awslocal lambda create-function \
     --handler handler.handler \
     --role arn:aws:iam::000000000000:role/lambda-role \
     --environment Variables="{STAGE=local}"
-$ awslocal lambda wait function-active-v2 --function-name presign
-$ awslocal lambda create-function-url-config \
+awslocal lambda wait function-active-v2 --function-name presign
+awslocal lambda create-function-url-config \
     --function-name presign \
     --auth-type NONE
 ```
@@ -197,8 +197,8 @@ awslocal lambda create-function \
     --timeout 10 \
     --role arn:aws:iam::000000000000:role/lambda-role \
     --environment Variables="{STAGE=local}"
-$ awslocal lambda wait function-active-v2 --function-name list
-$ awslocal lambda create-function-url-config \
+awslocal lambda wait function-active-v2 --function-name list
+awslocal lambda create-function-url-config \
     --function-name list \
     --auth-type NONE
 ```
@@ -255,8 +255,8 @@ awslocal lambda create-function \
     --dead-letter-config TargetArn=arn:aws:sns:us-east-1:000000000000:failed-resize-topic \
     --role arn:aws:iam::000000000000:role/lambda-role \
     --environment Variables="{STAGE=local}"
-$ awslocal lambda wait function-active-v2 --function-name resize
-$ awslocal lambda put-function-event-invoke-config \
+awslocal lambda wait function-active-v2 --function-name resize
+awslocal lambda put-function-event-invoke-config \
     --function-name resize \
     --maximum-event-age-in-seconds 3600 \
     --maximum-retry-attempts 0

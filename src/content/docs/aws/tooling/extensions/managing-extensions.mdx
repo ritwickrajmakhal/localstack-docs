@@ -37,7 +37,7 @@ If you use LocalStack with the CLI, you can also use our `localstack extensions`
 To get a list of all available commands in LocalStack Extensions, run:
 
 ```bash
-$ localstack extensions --help
+localstack extensions --help
 
 Usage: localstack extensions [OPTIONS] COMMAND [ARGS]...
 
@@ -59,7 +59,7 @@ To install an extension, specify the name of the `pip` dependency that contains 
 For example, for the official Stripe extension, you can either use the package distributed on PyPI:
 
 ```bash
-$ localstack extensions install localstack-extension-httpbin
+localstack extensions install localstack-extension-httpbin
 ```
 
 Extensions are just Python pip packages, and the `install` command will accept anything that resolves to a valid pip package.

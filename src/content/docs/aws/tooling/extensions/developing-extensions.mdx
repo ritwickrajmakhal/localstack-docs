@@ -176,7 +176,7 @@ First, create a new extension from a template.
 To use `localstack extensions dev new`, you will also need to install [cookiecutter](https://github.com/cookiecutter/cookiecutter) via `pip install cookiecutter`.
 
 ```bash showLineNumbers
-$ localstack extensions dev new
+localstack extensions dev new
 project_name [My LocalStack Extension]:
 project_short_description [All the boilerplate you need to create a LocalStack extension.]:
 project_slug [my-localstack-extension]:
@@ -207,13 +207,13 @@ Then run `make install` in the newly created project to make a distribution pack
 To start LocalStack with the extension in dev mode, first enable it by running:
 
 ```bash
-$ localstack extensions dev enable ./my-localstack-extension
+localstack extensions dev enable ./my-localstack-extension
 ```
 
 Then, start LocalStack with `EXTENSION_DEV_MODE=1`
 
 ```bash
-$ EXTENSION_DEV_MODE=1 LOCALSTACK_AUTH_TOKEN=...
+EXTENSION_DEV_MODE=1 LOCALSTACK_AUTH_TOKEN=...
 localstack start
 ```
 

@@ -73,8 +73,8 @@ Navigate to **Terminal 2**, where we will configure the access keys for the user
 Once the access keys are set, you will attempt to create an S3 bucket using these credentials.
 
 ```bash
-$ export AWS_ACCESS_KEY_ID=LKIAQAAAAAAAHFR7QTN3 AWS_SECRET_ACCESS_KEY=EYUHpIol7bRJpKd/28c/LI2C4bbEnp82LJCRwXRV
-$ awslocal s3 mb s3://mybucket
+export AWS_ACCESS_KEY_ID=LKIAQAAAAAAAHFR7QTN3 AWS_SECRET_ACCESS_KEY=EYUHpIol7bRJpKd/28c/LI2C4bbEnp82LJCRwXRV
+awslocal s3 mb s3://mybucket
 ```
 
 ```bash
@@ -94,8 +94,8 @@ You can view the LocalStack logs to validate the policy enforcement:
 Let's now return to **Terminal 1** and execute the following commands to attach a policy to the user `test`:
 
 ```bash
-$ awslocal iam create-policy --policy-name p1 --policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"s3:CreateBucket","Resource":"*"}]}'
-$ awslocal iam attach-user-policy --user-name test --policy-arn arn:aws:iam::000000000000:policy/p1
+awslocal iam create-policy --policy-name p1 --policy-document '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"s3:CreateBucket","Resource":"*"}]}'
+awslocal iam attach-user-policy --user-name test --policy-arn arn:aws:iam::000000000000:policy/p1
 ```
 
 ### Create a bucket
@@ -103,7 +103,7 @@ $ awslocal iam attach-user-policy --user-name test --policy-arn arn:aws:iam::000
 Now, let's switch back to **Terminal 2** and observe how the bucket creation succeeds with the `test` IAM user:
 
 ```bash
-$ awslocal s3 mb s3://mybucket
+awslocal s3 mb s3://mybucket
 ```
 
 ```bash

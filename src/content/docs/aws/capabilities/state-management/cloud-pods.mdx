@@ -419,7 +419,7 @@ By running the following command, we create a remote named `s3-storage-aws` resp
 The `access_key_id` and `secret_access_key` placeholders ensure the correct transmission of AWS credentials to the container.
 
 ```bash
-$ localstack pod remote add s3-storage-aws 's3://ls-pods-bucket-test/?access_key_id={access_key_id}&secret_access_key={secret_access_key}'
+localstack pod remote add s3-storage-aws 's3://ls-pods-bucket-test/?access_key_id={access_key_id}&secret_access_key={secret_access_key}'
 ```
 
 Lastly, you can utilize the standard `pod` CLI command to generate a new Cloud Pod that points to the previously established remote.

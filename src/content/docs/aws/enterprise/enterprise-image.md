@@ -30,5 +30,5 @@ This offline functionality is enabled by:
 - To use the image from the command line interface (CLI), set the `IMAGE_NAME` configuration to the name of the Enterprise image, typically using the command:
 
     ```bash
-    $ IMAGE_NAME=localstack-enterprise localstack start
+    IMAGE_NAME=localstack-enterprise localstack start
     ```

@@ -46,7 +46,7 @@ Commands:
 To export the state, you can run the following command:
 
 ```bash
-$ localstack state export <file-name>
+localstack state export <file-name>
 ```
 
 You can specify a file path to export the state to.
@@ -64,7 +64,7 @@ You can specify the following flags to customize the export:
 To import the state, you can run the following command:
 
 ```bash
-$ localstack state import <file-name>
+localstack state import <file-name>
 ```
 
 The `<file-name>` argument is required and specifies the file path to import the state from.

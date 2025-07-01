@@ -538,7 +538,7 @@ A configuration profile is a set of environment variables stored in an `.env` fi
 Here is an example of what configuration profiles might look like:
 
 ```bash
-$ tree ~/.localstack
+tree ~/.localstack
 /home/username/.localstack
 ├── default.env
 ├── dev.env
@@ -548,7 +548,7 @@ $ tree ~/.localstack
 Here is an example of what a specific environment profile looks like
 
 ```bash
-$ cat ~/.localstack/pro-debug.env
+cat ~/.localstack/pro-debug.env
 LOCALSTACK_AUTH_TOKEN=XXXXX
 DEBUG=1
 DEVELOP=1
@@ -558,7 +558,7 @@ You can load a profile by either setting the `env` variable `CONFIG_PROFILE=<pro
 Let's take an example to load the `dev.env` profile file if it exists:
 
 ```bash
-$ python -m localstack.cli.main --profile=dev start
+python -m localstack.cli.main --profile=dev start
 ```
 
 If no profile is specified, the `default.env` profile will be loaded.

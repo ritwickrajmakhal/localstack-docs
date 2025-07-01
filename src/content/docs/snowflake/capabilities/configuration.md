@@ -70,7 +70,7 @@ A configuration profile is a set of environment variables stored in a `*.env` fi
 Here is an example of what configuration profiles might look like:
 
 ```bash
-$ tree ~/.localstack
+tree ~/.localstack
 /home/username/.localstack
 ├── default.env
 ├── dev.env
@@ -80,7 +80,7 @@ $ tree ~/.localstack
 Here is an example of what a specific environment profile looks like
 
 ```bash
-$ cat ~/.localstack/pro-debug.env
+cat ~/.localstack/pro-debug.env
 LOCALSTACK_AUTH_TOKEN=XXXXX
 SF_LOG=trace
 SF_S3_ENDPOINT=s3.localhost.localstack.cloud:4566

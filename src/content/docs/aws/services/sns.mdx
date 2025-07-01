@@ -126,7 +126,7 @@ awslocal sns subscribe \
 Sending a message to the queue, via the topic
 
 ```bash
-$ awslocal sns publish --topic-arn "arn:aws:sns:us-east-1:000000000000:localstack-topic" --message "hello"
+awslocal sns publish --topic-arn "arn:aws:sns:us-east-1:000000000000:localstack-topic" --message "hello"
 {
     "MessageId": "5a1593ce-411b-44dc-861d-907daa05353b"
 }

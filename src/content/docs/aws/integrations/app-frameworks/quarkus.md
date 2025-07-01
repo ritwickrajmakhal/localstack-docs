@@ -86,20 +86,20 @@ quarkus.lambda.aws.credentials.static-provider.secret-access-key=test-secret
 You can package the application with the following command:
 
 ```bash
-$ ./mvnw clean package
+./mvnw clean package
 ```
 
 You can further run the application in dev mode with the following command:
 
 ```bash
-$ java -Dparameters.path=/quarkus/is/awesome/ -jar target/quarkus-app/quarkus-run.jar
+java -Dparameters.path=/quarkus/is/awesome/ -jar target/quarkus-app/quarkus-run.jar
 ```
 
 :::tip
 With GraalVM installed, you can also create a native executable binary using the following command:
 
 ```bash
-$ ./mvnw clean package -Dnative.
+./mvnw clean package -Dnative.
 ```
 :::
 

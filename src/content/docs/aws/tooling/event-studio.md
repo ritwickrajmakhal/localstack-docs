@@ -30,8 +30,8 @@ Event Studio is offered as a **preview** feature and is under active development
 To install Event Studio, start your LocalStack container with your `LOCALSTACK_AUTH_TOKEN`:
 
 ```bash
-$ export LOCALSTACK_AUTH_TOKEN=...
-$ localstack start
+export LOCALSTACK_AUTH_TOKEN=...
+localstack start
 ```
 
 Event Studio is available as a LocalStack Extension.
@@ -39,7 +39,7 @@ To install it, use the `extensions` sub-command in the `localstack` CLI.
 Run the following command to install Event Studio:
 
 ```bash
-$ localstack extensions install localstack-extension-event-studio
+localstack extensions install localstack-extension-event-studio
 ```
 
 Check the LocalStack logs for Event Studio output, where you should see logs like:

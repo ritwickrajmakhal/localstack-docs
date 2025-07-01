@@ -47,8 +47,8 @@ Here are some options:
 If you have the AWS CLI v2 installed, the CLI will read credentials from your configured `AWS_PROFILE`.
 
 ```bash
-$ export AWS_PROFILE=my-aws-profile
-$ localstack replicator ...
+export AWS_PROFILE=my-aws-profile
+localstack replicator ...
 ```
 </TabItem>
 <TabItem label="AWS CLI v1">
@@ -153,9 +153,9 @@ When creating a replication job, the response includes a `job_id`.
 Use this ID to check the job status:
 
 ```bash
-$ export LOCALSTACK_AUTH_TOKEN=<auth token>
+export LOCALSTACK_AUTH_TOKEN=<auth token>
 
-$ localstack replicator status <job-id>
+localstack replicator status <job-id>
 ```
 
 This command returns the job status in JSON format, for example:

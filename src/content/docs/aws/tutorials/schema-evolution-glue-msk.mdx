@@ -822,7 +822,7 @@ We create the new producer by executing the following steps:
   - In the schema, remove the previously required field `customer`:
 
     ```bash
-    $ diff -u producer/src/main/resources/avro/unicorn_ride_request_v1.avsc producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc
+    diff -u producer/src/main/resources/avro/unicorn_ride_request_v1.avsc producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc
     --- producer/src/main/resources/avro/unicorn_ride_request_v1.avsc 2022-05-13 08:27:08.219354922 +0200
     +++ producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc 2022-05-13 08:27:08.219354922 +0200
     @@ -20,23 +20,6 @@
@@ -919,7 +919,7 @@ Similar to the previous scenario, we create a new producer by executing the foll
   - In the schema, add a new required field `unicorn_food`:
 
     ```bash
-    $ diff -u producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc producer-3/src/main/resources/avro/unicorn_ride_request_v3.avsc
+    diff -u producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc producer-3/src/main/resources/avro/unicorn_ride_request_v3.avsc
     --- producer-2/src/main/resources/avro/unicorn_ride_request_v2.avsc 2022-05-13 08:27:08.219354922 +0200
     +++ producer-3/src/main/resources/avro/unicorn_ride_request_v3.avsc 2022-05-13 08:27:08.219354922 +0200
     @@ -20,6 +20,17 @@

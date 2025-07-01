@@ -145,7 +145,7 @@ To create the Lambda function, you just need to take care of two things:
 So, using the AWS example, this would be:
 
 ```bash
-$ awslocal lambda create-function --function-name my-cool-local-function \
+awslocal lambda create-function --function-name my-cool-local-function \
     --code S3Bucket="hot-reload",S3Key="/tmp/aws-doc-sdk-examples/python/example_code/lambda" \
     --handler lambda_handler_basic.lambda_handler \
     --runtime python3.8 \

@@ -168,7 +168,7 @@ The response is the one that we expect: `Product added/updated successfully.`
 However, retrieving one of the products does not return the desired result:
 
 ```bash
-$ curl --location "http://$rest_api_id.execute-api.localhost.localstack.cloud:4566/dev/productApi?id=34534"
+curl --location "http://$rest_api_id.execute-api.localhost.localstack.cloud:4566/dev/productApi?id=34534"
 ```
 
 ```bash title="Output"
@@ -187,7 +187,7 @@ The Lambda code and the configurations look fine to him.
 To share this exact environment and issue with Alice, a more experienced colleague, Bob only needs to run a simple `localstack pod` command:
 
 ```bash
-$ localstack pod save cloud-pod-product-app
+localstack pod save cloud-pod-product-app
 ```
 
 ```bash title="Output"

@@ -43,7 +43,7 @@ pip install --upgrade localstack localstack-ext
 If you are running a newer version of LocalStack, you can check the version by running the following command:
 
 ```bash
-$ localstack update localstack-cli
+localstack update localstack-cli
 ```
 
 ### Is using `localhost.localstack.cloud:4566` to set as the endpoint for AWS services recommended?
@@ -109,19 +109,19 @@ Another workaround is to double the first slash in your command to prevent the P
 This will lead to issues with Git Bash
 
 ```bash
-$ aws ssm get-parameter --name "/test/parameter/new"
+aws ssm get-parameter --name "/test/parameter/new"
 ```
 
 Option 1: Set the environment variable
 
 ```bash
-$ MSYS_NO_PATHCONV=1 aws ssm put-parameter --name "/test/parameter/new" --type String --value "test"
+MSYS_NO_PATHCONV=1 aws ssm put-parameter --name "/test/parameter/new" --type String --value "test"
 ```
 
 Option 2: Double the first slash
 
 ```bash
-$ aws ssm put-parameter --name "//test/parameter/new" --type String --value "test"
+aws ssm put-parameter --name "//test/parameter/new" --type String --value "test"
 ```
 
 For additional known issues related to Git Bash, you can refer to the following link: [Git Bash Known Issues](https://github.com/git-for-windows/build-extra/blob/main/ReleaseNotes.md#known-issues)
@@ -275,7 +275,7 @@ Pushing and pulling a Cloud Pod from our Web Application is facilitated by using
 The easiest way to check if LocalStack Pro or Enterprise is activated is to check the health endpoint of LocalStack for a list of the running services:
 
 ```bash
-$ curl localhost:4566/_localstack/health | jq
+curl localhost:4566/_localstack/health | jq
 ```
 
 If a Pro-only service -- like [XRay](/aws/services/xray) -- is running, LocalStack Pro or Enterprise has started successfully.
@@ -322,7 +322,7 @@ socket.gaierror: [Errno -3] Temporary failure in name resolution
 Confirm this by using a tool like `dig`:
 
 ```bash
-$ dig api.localstack.cloud
+dig api.localstack.cloud
 ```
 
 If the result has some other status than `status: NOERROR,` your machine cannot resolve this domain.

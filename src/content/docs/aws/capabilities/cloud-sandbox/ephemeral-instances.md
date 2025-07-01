@@ -153,13 +153,13 @@ The output of the command should look like this:
 List your available running Ephemeral Instances with:
 
 ```bash
-$ localstack ephemeral list
+localstack ephemeral list
 ```
 
 Retrieve your Ephemeral Instance logs with:
 
 ```bash
-$ localstack ephemeral logs --name my-instance-123
+localstack ephemeral logs --name my-instance-123
 ```
 
 The logs output will look like this:

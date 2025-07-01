@@ -128,7 +128,7 @@ make_bucket failed: s3://test-bucket An error occurred (ServiceUnavailableExcept
 However, the same operation, when run in `eu-central-1` will work as expected.
 
 ```bash
-$ awslocal s3 mb s3://test-bucket --region eu-central-1
+awslocal s3 mb s3://test-bucket --region eu-central-1
 ```
 
 ```bash

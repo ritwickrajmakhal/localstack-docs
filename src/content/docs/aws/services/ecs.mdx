@@ -207,7 +207,7 @@ awslocal ecs create-service --service-name myservice --cluster mycluster --task-
 You should see a new docker container has been created, using the `ubuntu:latest` image, and running the infinite loop command:
 
 ```bash
-$ docker ps
+docker ps
 CONTAINER ID   IMAGE                       COMMAND                  CREATED         STATUS                   PORTS                                                                                              NAMES
 5dfeb9376391   ubuntu                      "sh -c 'while true; …"   3 minutes ago   Up 3 minutes                                                                                                                ls-ecs-mycluster-75f0515e-0364-4ee5-9828-19026140c91a-0-a1afaa9d
 9967fe5300cc   localstack/localstack-pro   "docker-entrypoint.sh"   5 minutes ago   Up 5 minutes (healthy)   0.0.0.0:443->443/tcp, 0.0.0.0:4510-4560->4510-4560/tcp, 53/tcp, 5678/tcp, 0.0.0.0:4566->4566/tcp   localstack-main

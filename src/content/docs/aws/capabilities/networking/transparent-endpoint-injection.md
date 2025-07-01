@@ -74,14 +74,14 @@ we are repointing AWS domain names (e.g., `*.amazonaws.com`) to `localhost.local
 For example, the following command fails with an SSL error:
 
 ```bash
-$ aws kinesis list-streams
+aws kinesis list-streams
 SSL validation failed for https://kinesis.us-east-1.amazonaws.com/ [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1076)
 ```
 
 whereas the following command works:
 
 ```bash
-$ PYTHONWARNINGS=ignore aws --no-verify-ssl kinesis list-streams
+PYTHONWARNINGS=ignore aws --no-verify-ssl kinesis list-streams
 {
 "StreamNames": []
 }

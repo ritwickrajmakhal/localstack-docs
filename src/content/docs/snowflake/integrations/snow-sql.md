@@ -22,8 +22,8 @@ To install SnowSQL, follow the instructions in the [official SnowSQL documentati
 To start SnowSQL, execute the following command:
 
 ```bash showLineNumbers
-$ export SNOWSQL_PWD=test
-$ snowsql \
+export SNOWSQL_PWD=test
+snowsql \
     -a test \
     -u test \
     -h snowflake.localhost.localstack.cloud \
@@ -58,7 +58,7 @@ test#test@test.test>
 You can execute SQL commands using SnowSQL. For example, to create a new database, execute the following command:
 
 ```bash
-$ CREATE DATABASE test_db;
+CREATE DATABASE test_db;
 +----------------------------------------+                                      
 | status                                 |
 |----------------------------------------|

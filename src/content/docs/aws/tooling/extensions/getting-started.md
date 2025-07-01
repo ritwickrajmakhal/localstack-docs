@@ -49,7 +49,7 @@ This is a required step before you can send emails from SES.
 Run the following command to verify an email address:
 
 ```bash
-$ aws --endpoint-url=http://localhost:4566 \
+aws --endpoint-url=http://localhost:4566 \
     ses verify-email-identity --email-address user1@yourdomain.com
 ```
 
@@ -57,7 +57,7 @@ You can further send an email using the [`SendEmail`](https://docs.aws.amazon.co
 Run the following command to send an email:
 
 ```bash
-$ aws --endpoint-url=http://localhost:4566 \
+aws --endpoint-url=http://localhost:4566 \
     ses send-email \
     --from user1@yourdomain.com \
     --message 'Body={Text={Data="Hello from LocalStack to MailHog"}},Subject={Data=Test Email}' \

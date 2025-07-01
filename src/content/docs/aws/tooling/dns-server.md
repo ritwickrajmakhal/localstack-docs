@@ -87,7 +87,7 @@ If you are using the LocalStack DNS server, DNS rebind protection should not cau
 You can check if your DNS setup works correctly by resolving a subdomain of `localhost.localstack.cloud`:
 
 ```bash  {16}
-$ dig test.localhost.localstack.cloud
+dig test.localhost.localstack.cloud
 
 ; <<>> DiG 9.16.8-Ubuntu <<>> test.localhost.localstack.cloud
 ;; global options: +cmd
@@ -190,13 +190,13 @@ Once LocalStack is started, you can test the DNS server using `dig @127.0.0.1 s3
 Run:
 
 ```bash
-$ localstack dns systemd-resolved
+localstack dns systemd-resolved
 ```
 
 To revert, please run:
 
 ```bash
-$ localstack dns systemd-resolved --revert
+localstack dns systemd-resolved --revert
 ```
 
 :::note
