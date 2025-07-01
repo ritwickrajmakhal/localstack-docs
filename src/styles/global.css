@@ -4,11 +4,69 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+:root {
+  --gray-neutral-100: #E1E3EB;
+  --gray-neutral-400: #707385;
+  --gray-neutral-600: #4B4E5C;
+  --gray-neutral-800: #212229;
+  --localstack-purple: #4D0DCF;
+  --sl-text-h1: 40px;
+  --sl-text-h2: 24px;
+  --sl-text-h3: 32px;
+/* Dark mode colors. */
+	--sl-color-accent-low: #241b47;
+	--sl-color-accent: #6e3ae8;
+	--sl-color-accent-high: #c6c1fa;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c0c2c7;
+	--sl-color-gray-3: #888b96;
+	--sl-color-gray-4: #545861;
+	--sl-color-gray-5: #353841;
+	--sl-color-gray-6: #24272f;
+	--sl-color-black: #17181c;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #d5d1fd;
+	--sl-color-accent: #703cea;
+	--sl-color-accent-high: #33216a;
+	--sl-color-white: #212229;
+	--sl-color-gray-1: #24272f;
+	--sl-color-gray-2: #4B4E5C;
+	--sl-color-gray-3: #545861;
+	--sl-color-gray-4: #888b96;
+	--sl-color-gray-5: #c0c2c7;
+	--sl-color-gray-6: #eceef2;
+	--sl-color-gray-7: #f5f6f8;
+	--sl-color-black: #ffffff;
+}
+
+body {
+	font-family: 'Aeonikpro', sans-serif;
+  font-size: 18px;
+  font-weight:normal;
+  line-height: 1.5;
+  letter-spacing: -0.025%;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight:600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
 .service-box {
   display: block;
   padding: 1.5rem;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid  #999CAD;
   text-decoration: none;
   color: inherit;
   transition: all 0.2s ease;
@@ -28,18 +86,24 @@
 }
 
 .service-box-title {
-  font-size: 1.125rem;
-  font-weight: 600;
   margin: 0 0 0.5rem 0;
-  color: var(--sl-color-white);
   line-height: 1.4;
+  color: #212229;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 140% */
+  letter-spacing: -0.15px;
 }
 
 .service-box-description {
   font-size: 0.875rem;
-  color: var(--sl-color-gray-2);
-  margin: 0;
-  line-height: 1.5;
+  color: #4B4E5C;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing:  -0.15px;
   flex-grow: 1;
 }
 
@@ -80,13 +144,13 @@
 .search-input {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
-  border: 2px solid var(--sl-color-gray-5);
-  border-radius: 2rem;
   background-color: var(--sl-color-bg-nav);
   color: var(--sl-color-white);
   font-size: 1rem;
   transition: all 0.2s ease;
   outline: none;
+  border-radius: 6px;
+  border: 1px solid #999CAD;
 }
 
 .search-input::placeholder {

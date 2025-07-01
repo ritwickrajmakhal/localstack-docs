@@ -43,12 +43,23 @@ export default defineConfig({
     starlight({
       title: 'Docs',
       favicon: '/images/favicons/favicon.ico',
-      customCss: ['./src/styles/global.css'],
+      customCss: [
+        './src/fonts/font-face.css',
+        './src/styles/global.css',
+        './src/styles/custom.css',
+      ],
       editLink: {
         baseUrl: 'https://github.com/localstack/localstack-docs/edit/master/',
       },
       components: {
-        PageTitle: './src/components/PageTitleWithBadges.astro',
+        PageSidebar: './src/components/PageSidebarWithBadges.astro',
+      },
+      expressiveCode: {
+        themes: ['one-light', 'one-dark-pro'],
+        styleOverrides: {
+          codeFontFamily: 'AeonikFono, ui-monospace',
+          borderRadius: '0.5rem',
+        },
       },
       head: [
         {
@@ -75,6 +86,16 @@ export default defineConfig({
         {
           tag: 'script',
           attrs: {
+            type: 'text/javascript',
+            id: 'icon-script-loader',
+            async: true,
+            defer: true,
+            src: '/js/icon-loader.js',
+          },
+        },
+        {
+          tag: 'script',
+          attrs: {
             async: true,
             src: 'https://widget.kapa.ai/kapa-widget.bundle.js',
             'data-website-id': '3dfbd0ac-9e56-4664-8315-032e17917ab6',
@@ -95,6 +116,11 @@ export default defineConfig({
           href: 'https://github.com/localstack/localstack',
         },
         {
+          icon: 'slack',
+          label: 'Slack',
+          href: 'https://slack.localstack.cloud',
+        },
+        {
           icon: 'linkedin',
           label: 'LinkedIn',
           href: 'https://www.linkedin.com/company/localstack-cloud/',
@@ -106,9 +132,10 @@ export default defineConfig({
         },
       ],
       logo: {
-        light: './src/assets/Logo_Light.svg',
-        dark: './src/assets/Logo_Dark.svg',
-        alt: 'LocalStack',
+        light: './src/assets/Docs_logo_Light.svg',
+        dark: './src/assets/Docs_Logo_Dark.svg',
+        alt: 'LocalStack Docs',
+        replacesTitle: true,
       },
       plugins: [
         starlightImageZoom({
