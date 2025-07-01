@@ -325,7 +325,7 @@ The operations [`CreatePipeline`](https://docs.aws.amazon.com/codepipeline/lates
 LocalStack supports emulation for V1 pipelines.
 V2 pipelines are only created as mocks.
 
-:::note
+:::tip
 Emulation for V2 pipelines is not supported.
 Make sure that the pipeline type is explicitly set in the declaration.
 :::
@@ -388,7 +388,7 @@ CodePipeline on LocalStack supports [variables](https://docs.aws.amazon.com/code
 Actions produce output variables which can be referenced in the configuration of subsequent actions.
 Make note that only when the action defines a namespace, its output variables are availabe to downstream actions.
 
-:::note
+:::tip
 If an action does not use a namespace, its output variables are not available to downstream actions.
 :::
 

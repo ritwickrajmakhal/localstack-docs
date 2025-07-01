@@ -233,7 +233,7 @@ In the events, we can see that the pull from ECR was successful:
   Normal  Pulled     10s   kubelet            Successfully pulled image "000000000000.dkr.ecr.us-east-1.localhost.localstack.cloud:4566/fancier-nginx:latest" in 2.412775896s
 ```
 
-:::note
+:::tip
 Public Docker images from `registry.k8s.io` can be pulled without additional configuration from EKS nodes, but if you pull images from any other locations that resolve to S3 you can configure `DNS_NAME_PATTERNS_TO_RESOLVE_UPSTREAM=<bucket-name>\.s3.*\.amazonaws\.com` in your [configuration](/aws/capabilities/config/configuration).
 :::
 
@@ -297,7 +297,7 @@ curl http://localhost:8081/test123
 ...
 ```
 
-:::note
+:::tip
 You can customize the Load Balancer port by configuring `EKS_LOADBALANCER_PORT` in your environment.
 :::
 

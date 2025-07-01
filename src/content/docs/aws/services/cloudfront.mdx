@@ -46,7 +46,7 @@ domain=$(awslocal cloudfront create-distribution \
 curl -k https://$domain/hello.txt
 ```
 
-:::note
+:::tip
 If you wish to use CloudFront on system host, ensure your local DNS setup is correctly configured.
 Refer to the section on [System DNS configuration](/aws/tooling/dns-server#system-dns-configuration) for details.
 :::

@@ -196,7 +196,7 @@ Assuming the instance is available under `127.0.0.1:12862` (as per the LocalStac
 ssh -p 12862 -i key.pem root@127.0.0.1
 ```
 
-:::note
+:::tip
 If the `ssh` command throws an error like "Identity file not accessible" or "bad permissions", make sure that the key file has a restrictive `0400` permission as illustrated above.
 :::
 
@@ -479,7 +479,7 @@ INFO: /dev/kvm exists
 KVM acceleration can be used
 ```
 
-:::note
+:::tip
 You may also need to enable virtualization support at hardware level.
 This is often labelled as 'Virtualization Technology', 'VT-d' or 'VT-x' in UEFI/BIOS setups.
 :::
@@ -500,7 +500,7 @@ If you are using [Docker CLI](/aws/getting-started/installation#docker), include
 
 If you are using a remote Libvirt hypervisor, you can set the [`EC2_HYPERVISOR_URI`](/aws/capabilities/config/configuration#ec2) config option with a connection URI.
 
-:::note
+:::tip
 If you encounter an error like `failed to connect to the hypervisor: Permission denied`, you may need to perform additional setup on the hypervisor host.
 Please refer to [Libvirt Wiki](https://wiki.libvirt.org/Failed_to_connect_to_the_hypervisor.html#permission-denied) for more details.
 :::
@@ -581,7 +581,7 @@ If a key pair is provided, it will added as an authorised SSH key for this user.
 LocalStack shuts down all virtual machines when it terminates.
 The Libvirt domains and volumes are left defined and can be used for debugging, etc.
 
-:::note
+:::tip
 Use [Virtual Machine Manager](https://virt-manager.org/) or [virsh](https://www.libvirt.org/manpages/virsh.html) to manage the virtual machines outside of LocalStack.
 :::
 
