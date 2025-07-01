@@ -379,7 +379,7 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
 
         .complexity-badge {
           background: rgba(255, 255, 255, 0.9);
-          color: var(--sl-color-gray-6);
+          color: var(--sl-color-gray-3);
           padding: 0.25rem 0.5rem;
           border-radius: 0.25rem;
           font-size: 0.75rem;

@@ -1,5 +1,6 @@
 ---
 import { ApplicationsShowcase } from './applications/ApplicationsShowcase';
+import { getImage } from 'astro:assets';
 
 // Import data
 import applicationsData from '../data/developerhub/applications.json';
@@ -9,13 +10,34 @@ import deployments from '../data/developerhub/deployments.json';
 import complexities from '../data/developerhub/complexities.json';
 
 const applications = applicationsData.applications;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/aws/sample-apps/*.{jpeg,jpg,png,gif}'
+);
+
+const applicationsUpdated = await Promise.all(
+  applications.map(async (application) => {
+    const updatedApplication = { ...application };
+    const imagePath = `/src/assets/images/aws/sample-apps/${application.teaser}`;
+
+    if (images[imagePath]) {
+      const optimizedLeadImage = await getImage({
+        src: images[imagePath](),
+        format: 'png',
+        width: 372,
+      });
+      updatedApplication.teaser = optimizedLeadImage.src;
+    }
+    return updatedApplication;
+  })
+);
 ---
 
 <ApplicationsShowcase
-  applications={applications}
+  applications={applicationsUpdated}
   services={services}
   platforms={platforms}
   deployments={deployments}
   complexities={complexities}
   client:load
-/> 
+/>
