@@ -15,4 +15,4 @@ export const ServiceBox: React.FC<ServiceBoxProps> = ({ title, description, href
       </div>
     </a>
   );
-}; 
+};
