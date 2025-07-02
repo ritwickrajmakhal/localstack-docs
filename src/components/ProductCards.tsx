@@ -114,7 +114,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 export function ProductCards() {
   const cards: ProductCardProps[] = [
     {
-      title: 'LocalStack for AWS Docs',
+      title: 'LocalStack for AWS',
       description: "Run your AWS services locally to emulate cloud, serverless, and AI applications, without touching your live AWS instance.",
       primaryHref: '/aws',
       primaryText: 'Explore the Docs',
@@ -127,7 +127,7 @@ export function ProductCards() {
       borderColor: '#5C1AE2',
     },
     {
-      title: 'LocalStack for Snowflake Docs',
+      title: 'LocalStack for Snowflake',
       description: "Run your queries and pipelines locally with full control over your data workflows, without touching your live Snowflake instance.",
       primaryHref: '/snowflake',
       primaryText: 'Explore the Docs',
