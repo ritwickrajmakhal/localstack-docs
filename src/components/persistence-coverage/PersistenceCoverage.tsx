@@ -292,7 +292,7 @@ export default function PersistenceCoverage() {
         <button
           className="px-3 py-1 border rounded disabled:opacity-50"
           style={{
-            color: '#707385',
+            color: 'var(--sl-color-gray-1)',
             fontFamily: 'AeonikFono',
             fontSize: '14px',
             fontStyle: 'normal',
@@ -312,7 +312,7 @@ export default function PersistenceCoverage() {
         <button
           className="px-3 py-1 border rounded disabled:opacity-50"
           style={{
-            color: '#707385',
+            color: 'var(--sl-color-gray-1)',
             fontFamily: 'AeonikFono',
             fontSize: '14px',
             fontStyle: 'normal',
