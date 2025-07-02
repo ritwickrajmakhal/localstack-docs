@@ -29,8 +29,8 @@ The Snowflake emulator supports the following features:
 -   [**Tasks**](https://docs.snowflake.com/en/user-guide/tasks-intro) for scheduled execution and workflow automation
 -   [**Row Access Policies**](https://docs.snowflake.com/en/user-guide/security-row-intro) for fine-grained data access control
 - [**Running Streamlit apps locally**](https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit) for interactive data apps with [**Native Apps**](https://docs.snowflake.com/en/developer-guide/native-apps/native-apps-about) support
--   [**Infrastructure-as-code with Terraform & Pulumi**](https://docs.snowflake.com/en/user-guide/ecosystem-terraform) for automated resource provisioning
--   [**Polaris Catalog**](https://docs.snowflake.com/en/user-guide/polaris-getting-started) integration for open catalog management
+-  [**Infrastructure-as-code with Terraform**](https://docs.snowflake.com/en/user-guide/terraform) & [**Pulumi**](https://www.pulumi.com/registry/packages/snowflake/) for automated resource provisioning
+-   [**Polaris Catalog**](https://other-docs.snowflake.com/en/opencatalog/overview) integration for open catalog management
 
 Integrating the Snowflake emulator into your existing CI/CD pipeline allows you to run integration tests and identify issues early, reducing surprises during production deployment.
 
