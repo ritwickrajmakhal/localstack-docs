@@ -4,13 +4,14 @@
 /references/coverage/coverage_scheduler/ /aws/services/scheduler 301
 /user-guide/extensions/ /aws/capabilities/extensions 301
 /tutorials/s3-static-website-terraform/ /aws/tutorials/s3-static-website-terraform 301
+/references/coverage/coverage_sso-admin/ /aws/services/sso-admin/ 301
 /references/coverage/coverage_rds-data/ /aws/services/rds 301
 /references/coverage/coverage_ec2/ /aws/services/ec2 301
 /references/licensing/ /aws/licensing 301
 /legal/ /aws/legal/third-party-software-tools 301
 /references/coverage/coverage_iotwireless/ /aws/services/iotwireless 301
 /references/coverage/coverage_mwaa/ /aws/services/mwaa 301
-/applications/amazon-rds-initialization-using-cdk-lambda-ecr-and-secrets-manager/ https://github.com/localstack-samples/amazon-rds-init-cdk 301
+/applications/amazon-rds-initialization-using-cdk-lambda-ecr-and-secrets-manager/ https://github.com/localstack-samples/sample-cdk-rds 301
 /references/coverage/coverage_pipes/ /aws/services/pipes 301
 /user-guide/state-management/persistence/ /aws/capabilities/state-management/persistence 301
 /references/coverage/coverage_mq/ /aws/services/mq 301
@@ -26,7 +27,7 @@
 /tutorials/elb-load-balancing/ /aws/tutorials/elb-load-balancing 301
 /references/docker-images/ /aws/capabilities/config/docker-images 301
 /user-guide/aws/eks/ /aws/services/eks 301
-/applications/appsync-graphql-apis-for-dynamodb-and-rds-aurora-postgresql/ https://github.com/localstack-samples/appsync-graphql-api-sample 301
+/applications/appsync-graphql-apis-for-dynamodb-and-rds-aurora-postgresql/ https://github.com/localstack-samples/sample-appsync-graphql-api 301
 /user-guide/aws/cloudfront/ /aws/services/cloudfront 301
 /applications/note-taking-application-using-aws-sdk-for-javascript/ https://github.com/localstack-samples/sample-notes-app-dynamodb-lambda-apigateway 301
 /user-guide/state-management/export-import-state/ /aws/capabilities/state-management/export-import-state 301
@@ -72,7 +73,7 @@
 /references/coverage/coverage_kinesis/ /aws/services/kinesis 301
 /references/coverage/coverage_autoscaling/ /aws/services/autoscaling 301
 /references/coverage/coverage_kms/ /aws/services/kms 301
-/applications/step-up-authentication-using-amazon-cognito/ https://github.com/localstack-samples/step-up-auth-sample 301
+/applications/step-up-authentication-using-amazon-cognito/ https://github.com/localstack-samples/sample-cdk-cognito-dynamodb-api-gateway 301
 /references/coverage/coverage_athena/ /aws/services/athena 301
 /user-guide/aws/mediastore/ /aws/services/mediastore 301
 /references/coverage/coverage_fis/ /aws/services/fis 301
@@ -96,7 +97,7 @@
 /user-guide/web-application/ci-keys/ /aws/capabilities/web-app/ci-keys 301
 /academy/localstack-deployment/ls-integrations/ https://www.youtube.com/watch?v=YV0Zs6UNI9I&feature=youtu.be 301
 /references/coverage/coverage_appconfigdata/ /aws/services/appconfig 301
-/applications/serverless-image-resizer-with-aws-lambda-s3-sns-and-ses/ https://github.com/localstack-samples/serverless-image-resizer 301
+/applications/serverless-image-resizer-with-aws-lambda-s3-sns-and-ses/ https://github.com/localstack-samples/sample-serverless-image-resizer-s3-lambda 301
 /user-guide/security-testing/ /aws/capabilities/security-testing/ 301
 /user-guide/aws/applicationautoscaling/ /aws/services/appautoscaling 301
 /user-guide/aws/bedrock/ /aws/services/bedrock 301
@@ -113,6 +114,7 @@
 /references/external-ports/ /aws/capabilities/networking/external-port-range 301
 /references/coverage/coverage_ce/ /aws/services/ce 301
 /user-guide/extensions/getting-started/ /aws/tooling/extensions/getting-started 301
+/references/coverage/coverage_codeartifact/ /aws/services/codeartifact/ 301
 /user-guide/integrations/sdks/ /aws/integrations/aws-sdks/ 301
 /user-guide/localstack-enterprise/single-sign-on/azure-ad/ /aws/enterprise/sso/azure-ad 301
 /user-guide/tools/localstack-desktop/ /aws/capabilities/web-app/localstack-desktop 301
@@ -130,7 +132,7 @@
 /references/coverage/coverage_batch/ /aws/services/batch 301
 /references/coverage/coverage_neptune/ /aws/services/neptune 301
 /applications/temp/ /aws/sample-apps/ 301
-/applications/serverless-container-based-apis-with-amazon-ecs-api-gateway/ https://github.com/localstack-samples/serverless-api-ecs-apigateway-sample 301
+/applications/serverless-container-based-apis-with-amazon-ecs-api-gateway/ https://github.com/localstack-samples/sample-terraform-ecs-apigateway 301
 /user-guide/aws/s3/ /aws/services/s3 301
 /user-guide/lambda-tools/vscode-extension/ /aws/tooling/lambda-tools/vscode-extension 301
 /user-guide/chaos-engineering/ /aws/capabilities/chaos-engineering/ 301
@@ -182,7 +184,7 @@
 /user-guide/chaos-engineering/fault-injection-service/ /aws/capabilities/chaos-engineering/fault-injection-service 301
 /references/logging/ /aws/capabilities/config/logging 301
 /tutorials/java-notification-app/ /aws/tutorials/java-notification-app 301
-/applications/serverless-transcription-application-using-transcribe-s3-lambda-sqs-and-ses/ https://github.com/localstack-samples/sample-transcribe-app 301
+/applications/serverless-transcription-application-using-transcribe-s3-lambda-sqs-and-ses/ https://github.com/localstack-samples/sample-serverless-transcribe 301
 /user-guide/aws/route53resolver/ /aws/services/route53resolver 301
 /references/coverage/coverage_wafv2/ /aws/services/waf 301
 /user-guide/integrations/sdks/cpp/ /aws/integrations/aws-sdks/net/cpp 301
@@ -205,6 +207,7 @@
 /user-guide/tools/localstack-sdk/ /aws/tooling/localstack-sdks/ 301
 /references/coverage/coverage_apigatewaymanagementapi/ /aws/services/apigateway 301
 /references/coverage/coverage_transfer/ /aws/services/transfer 301
+/references/coverage/coverage_codeconnections/ /aws/services/codeconnections/ 301
 /user-guide/aws/athena/ /aws/services/athena 301
 /user-guide/extensions/official-extensions/ /aws/tooling/extensions/official-extensions 301
 /user-guide/aws/textract/ /aws/services/textract 301
@@ -249,7 +252,7 @@
 /user-guide/tools/ /aws/tooling/ 301
 /user-guide/aws/timestream/ /aws/services/timestream 301
 /references/coverage/coverage_pinpoint/ /aws/services/pinpoint 301
-/applications/serverless-rds-proxy-with-api-gateway-lambda-and-aurora-rds/ https://github.com/localstack-samples-samples/sample-serverless-rds-proxy-demo 301
+/applications/serverless-rds-proxy-with-api-gateway-lambda-and-aurora-rds/ https://github.com/localstack-samples/sample-serverless-rds-proxy-demo 301
 /academy/localstack-101/why-localstack/ https://www.youtube.com/watch?list=PLTew28KOwGxPqbkFiW518eeIfiV495bm0&v=EDGIBpUpYWU&feature=youtu.be 301
 /user-guide/aws/transcribe/ /aws/services/transcribe 301
 /references/coverage/coverage_cloudformation/ /aws/services/cloudformation 301
@@ -281,6 +284,7 @@
 /academy/localstack-deployment/ https://www.youtube.com/playlist?list=PLTew28KOwGxPdtdW00WNXZLZnstvRQyTF&si=R-Ed-JQKOxXP473O 301
 /references/coverage/coverage_application-autoscaling/ /aws/services/appautoscaling 301
 /user-guide/lambda-tools/debugging/ /aws/tooling/lambda-tools/debugging 301
+/references/coverage/coverage_codestar-connections/ /aws/services/codeconnections/ 301
 /user-guide/integrations/rancher-desktop/ /aws/integrations/containers/rancher-desktop 301
 /user-guide/integrations/sdks/ruby/ /aws/integrations/aws-sdks/net/ruby 301
 /user-guide/aws/mwaa/ /aws/services/mwaa 301
@@ -321,13 +325,13 @@
 /user-guide/integrations/architect/ /aws/integrations/app-frameworks/architect/ 301
 /user-guide/integrations/gitpod/ /aws/integrations/containers/gitpod/ 301
 /user-guide/aws/managedblockchain/ /aws/services/managedblockchain 301
-/applications/query-data-in-s3-bucket-with-amazon-athena-glue-catalog-cloudformation/ https://github.com/localstack-samples/query-data-s3-athena-glue-sample 301
+/applications/query-data-in-s3-bucket-with-amazon-athena-glue-catalog-cloudformation/ https://github.com/localstack-samples/sample-query-data-s3-athena-glue 301
 /academy/localstack-101/web-app-resource-browser/ https://www.youtube.com/watch?list=PLTew28KOwGxPqbkFiW518eeIfiV495bm0&v=SoXtngYp-8k&feature=youtu.be 301
 /user-guide/integrations/ /aws/integrations/ 301
 /user-guide/aws/codebuild/ /aws/services/codebuild 301
 /user-guide/aws/ses/ /aws/services/ses 301
 /references/coverage/coverage_sagemaker-runtime/ /aws/services/sagemaker 301
-/applications/messaging-processing-application-with-sqs-dynamodb-and-fargate/ https://github.com/localstack-samples/sqs-fargate-ddb-cdk-go 301
+/applications/messaging-processing-application-with-sqs-dynamodb-and-fargate/ https://github.com/localstack-samples/sample-cdk-sqs-fargate-dynamodb 301
 /user-guide/aws/mq/ /aws/services/mq 301
 /user-guide/localstack-enterprise/kubernetes-executor/ /aws/enterprise/kubernetes-executor 301
 /user-guide/aws/iot/ /aws/services/iot 301
@@ -338,7 +342,7 @@
 /user-guide/aws/redshift/ /aws/services/redshift 301
 /references/coverage/coverage_verifiedpermissions/ /aws/services/verifiedpermissions 301
 /academy/localstack-101/full-project-demo/ https://www.youtube.com/watch?list=PLTew28KOwGxPqbkFiW518eeIfiV495bm0&v=cQxg3Dnteyc&feature=youtu.be 301
-/applications/full-stack-application-with-aws-lambda-dynamodb-s3-for-shipment-validation/ https://github.com/localstack-samples/shipment-list-demo 301
+/applications/full-stack-application-with-aws-lambda-dynamodb-s3-for-shipment-validation/ https://github.com/localstack-samples/sample-shipment-list-demo-lambda-dynamodb-s3 301
 /references/coverage/coverage_iotanalytics/ /aws/services/iotanalytics 301
 /user-guide/integrations/chalice/ /aws/integrations/aws-native-tools/aws-chalice/ 301
 /user-guide/security-testing/iam-policy-stream/ /aws/capabilities/security-testing/iam-policy-stream 301
@@ -383,9 +387,10 @@
 /user-guide/aws/ecr/ /aws/services/ecr 301
 /user-guide/aws/stepfunctions/ /aws/services/stepfunctions 301
 /references/coverage/coverage_elasticache/ /aws/services/elasticache 301
-/applications/mnist-handwritten-digit-recognition-model-running-on-a-local-sagemaker-endpoint/ https://github.com/localstack-samples-samples/sample-mnist-digit-recognition-sagemaker 301
+/applications/mnist-handwritten-digit-recognition-model-running-on-a-local-sagemaker-endpoint/ https://github.com/localstack-samples/sample-mnist-digit-recognition-sagemaker 301
 /user-guide/state-management/pods-cli/ /aws/capabilities/state-management/cli-commands 301
 /user-guide/aws/dynamodbstreams/ /aws/services/dynamodbstreams 301
+/references/api-key/ /aws/getting-started/auth-token/#how-do-i-activate-older-versions-of-localstack-before-v30 301
 /user-guide/ci/ /aws/user-guide/ci 301
 /references/coverage/coverage_eks/ /aws/services/eks 301
 /references/coverage/coverage_cognito-idp/ /aws/services/cognito 301
@@ -395,8 +400,10 @@
 /user-guide/tools/localstack-sdk/python/ /aws/tooling/localstack-sdks/python 301
 /user-guide/lambda-tools/hot-reloading/ /aws/tooling/lambda-tools/hot-reloading 301
 /getting-started/quickstart/ /aws/getting-started/quickstart 301
-/overview/ /aws/getting-started 301
+/overview/ /aws 301
 /user-guide/aws/glue/ /aws/services/glue 301
 /getting-started/ /aws/getting-started 301
 /user-guide/extensions/managing-extensions/ /aws/tooling/extensions/managing-extensions 301
 /references/filesystem/ /aws/capabilities/config/filesystem/ 301
+/references/ /aws/capabilities/config/ 301
+/academy/localstack-101/getting-started/ https://www.youtube.com/watch?v=CzX4mfiS058&feature=youtu.be 301

@@ -79,7 +79,7 @@ Edit the generated template to map old URLs to new URLs:
 Convert your JSON config to CloudFlare's `_redirects` format:
 
 ```bash
-python generate_redirects.py \
+python3 generate_redirects.py \
   --config redirects_config.json \
   --output _redirects
 ```
@@ -99,9 +99,9 @@ This creates a `_redirects` file like:
 Test your redirects against the staging environment:
 
 ```bash
-python test_redirects.py \
+python3 test_redirects.py \
   --config redirects_config.json \
-  --staging-url "https://redirects.localstack-docs.pages.dev" \
+  --staging-url "https://localstack-docs.pages.dev/" \
   --report redirect_test_report.md
 ```
 

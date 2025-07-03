@@ -32,9 +32,8 @@
     },
     {
       "old_link": "/references/coverage/coverage_sso-admin/",
-      "new_link": "/aws/services/sso-admin",
-      "status_code": 301,
-      "_note": "MANUALLY REVIEW AND UPDATE new_link"
+      "new_link": "/aws/services/sso-admin/",
+      "status_code": 301
     },
     {
       "old_link": "/references/coverage/coverage_rds-data/",
@@ -68,7 +67,7 @@
     },
     {
       "old_link": "/applications/amazon-rds-initialization-using-cdk-lambda-ecr-and-secrets-manager/",
-      "new_link": "https://github.com/localstack-samples/amazon-rds-init-cdk",
+      "new_link": "https://github.com/localstack-samples/sample-cdk-rds",
       "status_code": 301
     },
     {
@@ -148,7 +147,7 @@
     },
     {
       "old_link": "/applications/appsync-graphql-apis-for-dynamodb-and-rds-aurora-postgresql/",
-      "new_link": "https://github.com/localstack-samples/appsync-graphql-api-sample",
+      "new_link": "https://github.com/localstack-samples/sample-appsync-graphql-api",
       "status_code": 301
     },
     {
@@ -378,7 +377,7 @@
     },
     {
       "old_link": "/applications/step-up-authentication-using-amazon-cognito/",
-      "new_link": "https://github.com/localstack-samples/step-up-auth-sample",
+      "new_link": "https://github.com/localstack-samples/sample-cdk-cognito-dynamodb-api-gateway",
       "status_code": 301
     },
     {
@@ -498,7 +497,7 @@
     },
     {
       "old_link": "/applications/serverless-image-resizer-with-aws-lambda-s3-sns-and-ses/",
-      "new_link": "https://github.com/localstack-samples/serverless-image-resizer",
+      "new_link": "https://github.com/localstack-samples/sample-serverless-image-resizer-s3-lambda",
       "status_code": 301
     },
     {
@@ -583,9 +582,8 @@
     },
     {
       "old_link": "/references/coverage/coverage_codeartifact/",
-      "new_link": "/aws/services/codeartifact",
-      "status_code": 301,
-      "_note": "MANUALLY REVIEW AND UPDATE new_link"
+      "new_link": "/aws/services/codeartifact/",
+      "status_code": 301
     },
     {
       "old_link": "/user-guide/integrations/sdks/",
@@ -664,8 +662,7 @@
     },
     {
       "old_link": "/references/coverage/coverage_neptune/",
-      "new_link": "/aws/services/neptune",
-      "status_code": 301
+      "new_link": "/aws/services/neptune"
     },
     {
       "old_link": "/applications/temp/",
@@ -674,7 +671,8 @@
     },
     {
       "old_link": "/applications/serverless-container-based-apis-with-amazon-ecs-api-gateway/",
-      "new_link": "https://github.com/localstack-samples/serverless-api-ecs-apigateway-sample"
+      "new_link": "https://github.com/localstack-samples/sample-terraform-ecs-apigateway",
+      "status_code": 301
     },
     {
       "old_link": "/user-guide/aws/s3/",
@@ -933,7 +931,7 @@
     },
     {
       "old_link": "/applications/serverless-transcription-application-using-transcribe-s3-lambda-sqs-and-ses/",
-      "new_link": "https://github.com/localstack-samples/sample-transcribe-app",
+      "new_link": "https://github.com/localstack-samples/sample-serverless-transcribe",
       "status_code": 301
     },
     {
@@ -1048,9 +1046,8 @@
     },
     {
       "old_link": "/references/coverage/coverage_codeconnections/",
-      "new_link": "/aws/services/codeconnections",
-      "status_code": 301,
-      "_note": "MANUALLY REVIEW AND UPDATE new_link"
+      "new_link": "/aws/services/codeconnections/",
+      "status_code": 301
     },
     {
       "old_link": "/user-guide/aws/athena/",
@@ -1273,7 +1270,7 @@
     },
     {
       "old_link": "/applications/serverless-rds-proxy-with-api-gateway-lambda-and-aurora-rds/",
-      "new_link": "https://github.com/localstack-samples-samples/sample-serverless-rds-proxy-demo",
+      "new_link": "https://github.com/localstack-samples/sample-serverless-rds-proxy-demo",
       "status_code": 301
     },
     {
@@ -1433,9 +1430,8 @@
     },
     {
       "old_link": "/references/coverage/coverage_codestar-connections/",
-      "new_link": "/aws/services/codestar-connections",
-      "status_code": 301,
-      "_note": "MANUALLY REVIEW AND UPDATE new_link"
+      "new_link": "/aws/services/codeconnections/",
+      "status_code": 301
     },
     {
       "old_link": "/user-guide/integrations/rancher-desktop/",
@@ -1639,7 +1635,7 @@
     },
     {
       "old_link": "/applications/query-data-in-s3-bucket-with-amazon-athena-glue-catalog-cloudformation/",
-      "new_link": "https://github.com/localstack-samples/query-data-s3-athena-glue-sample",
+      "new_link": "https://github.com/localstack-samples/sample-query-data-s3-athena-glue",
       "status_code": 301
     },
     {
@@ -1669,7 +1665,7 @@
     },
     {
       "old_link": "/applications/messaging-processing-application-with-sqs-dynamodb-and-fargate/",
-      "new_link": "https://github.com/localstack-samples/sqs-fargate-ddb-cdk-go",
+      "new_link": "https://github.com/localstack-samples/sample-cdk-sqs-fargate-dynamodb",
       "status_code": 301
     },
     {
@@ -1724,7 +1720,7 @@
     },
     {
       "old_link": "/applications/full-stack-application-with-aws-lambda-dynamodb-s3-for-shipment-validation/",
-      "new_link": "https://github.com/localstack-samples/shipment-list-demo",
+      "new_link": "https://github.com/localstack-samples/sample-shipment-list-demo-lambda-dynamodb-s3",
       "status_code": 301
     },
     {
@@ -1949,7 +1945,7 @@
     },
     {
       "old_link": "/applications/mnist-handwritten-digit-recognition-model-running-on-a-local-sagemaker-endpoint/",
-      "new_link": "https://github.com/localstack-samples-samples/sample-mnist-digit-recognition-sagemaker",
+      "new_link": "https://github.com/localstack-samples/sample-mnist-digit-recognition-sagemaker",
       "status_code": 301
     },
     {
@@ -1964,9 +1960,8 @@
     },
     {
       "old_link": "/references/api-key/",
-      "new_link": "/aws/references/api-key",
-      "status_code": 301,
-      "_note": "MANUALLY REVIEW AND UPDATE new_link"
+      "new_link": "/aws/getting-started/auth-token/#how-do-i-activate-older-versions-of-localstack-before-v30",
+      "status_code": 301
     },
     {
       "old_link": "/user-guide/ci/",
@@ -2015,7 +2010,7 @@
     },
     {
       "old_link": "/overview/",
-      "new_link": "/aws/getting-started",
+      "new_link": "/aws",
       "status_code": 301
     },
     {
@@ -2036,6 +2031,16 @@
     {
       "old_link": "/references/filesystem/",
       "new_link": "/aws/capabilities/config/filesystem/",
+      "status_code": 301
+    },
+    {
+      "old_link": "/references/",
+      "new_link": "/aws/capabilities/config/",
+      "status_code": 301
+    },
+    {
+      "old_link": "/academy/localstack-101/getting-started/",
+      "new_link": "https://www.youtube.com/watch?v=CzX4mfiS058&feature=youtu.be",
       "status_code": 301
     }
   ],
