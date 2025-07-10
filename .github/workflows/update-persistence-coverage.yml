@@ -48,7 +48,7 @@ jobs:
           mkdir -p resources
           (git diff --name-only origin/persistence-auto-updates src/data/persistence/ 2>/dev/null || git diff --name-only origin/${{ github.event.inputs.targetBranch || 'master' }} src/data/persistence/ 2>/dev/null) | tee -a resources/diff-check.log
           echo "diff-count=$(cat resources/diff-check.log | wc -l)" >> $GITHUB_OUTPUT
-          rm resources/diff-check.log
+          cat resources/diff-check.log
 
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
@@ -57,7 +57,7 @@ jobs:
           path: docs
           title: "Update Persistence Docs"
           body: "Updating Persistence Coverage Documentation based on the [Persistence Catalog](https://www.notion.so/localstack/Persistence-Catalog-a9e0e5cb89df4784adb4a1ed377b3c23) on Notion."
-          branch: "persistence-auto-updates"
+          branch: "automated-persistence-coverage-updates"
           author: "LocalStack Bot <localstack-bot@users.noreply.github.com>"
           committer: "LocalStack Bot <localstack-bot@users.noreply.github.com>"
           commit-message: "update generated persistence docs"
