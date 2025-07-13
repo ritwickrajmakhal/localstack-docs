@@ -27,6 +27,7 @@ The content will be updated as additional query features and functions are imple
 |AI_COMPLETE (Single image)|❓|
 |AI_COMPLETE (Single string)|❓|
 |AI_COMPLETE|❓|
+|AI_EMBED|❓|
 |AI_FILTER|❓|
 |AI_SIMILARITY|❓|
 |AI_SUMMARIZE_AGG|❓|
@@ -209,6 +210,7 @@ The content will be updated as additional query features and functions are imple
 |DENSE_RANK|✅|
 |DIV0|✅|
 |DIV0NULL|✅|
+|ACCEPTED_VALUES (system data metric function)|❓|
 |AVG (system data metric function)|❓|
 |BLANK_COUNT (system data metric function)|❓|
 |BLANK_PERCENT (system data metric function)|❓|
@@ -795,8 +797,8 @@ The content will be updated as additional query features and functions are imple
 |TRANSLATE (SNOWFLAKE.CORTEX)|❓|
 |TRANSLATE|❓|
 |TRIM|✅|
-|TRUNCATE, TRUNC|❓|
-|TRUNCATE, TRUNC|❓|
+|TRUNCATE, TRUNC|✅|
+|TRUNCATE, TRUNC|✅|
 |TRY_BASE64_DECODE_BINARY|❓|
 |TRY_BASE64_DECODE_STRING|❓|
 |TRY_CAST|❓|
@@ -806,15 +808,15 @@ The content will be updated as additional query features and functions are imple
 |TRY_HEX_DECODE_BINARY|❓|
 |TRY_HEX_DECODE_STRING|❓|
 |TRY_PARSE_JSON|✅|
-|TRY_TO_BINARY|❓|
-|TRY_TO_BOOLEAN|❓|
-|TRY_TO_DATE|❓|
+|TRY_TO_BINARY|✅|
+|TRY_TO_BOOLEAN|✅|
+|TRY_TO_DATE|✅|
 |TRY_TO_DECIMAL, TRY_TO_NUMBER, TRY_TO_NUMERIC|✅|
-|TRY_TO_DOUBLE|❓|
+|TRY_TO_DOUBLE|✅|
 |TRY_TO_FILE|❓|
 |TRY_TO_GEOGRAPHY|❓|
 |TRY_TO_GEOMETRY|❓|
-|TRY_TO_TIME|❓|
+|TRY_TO_TIME|✅|
 |TRY_TO_TIMESTAMP, TRY_TO_TIMESTAMP_*|✅|
 |TYPEOF|❓|
 |UNICODE|❓|

@@ -119,7 +119,7 @@ The content will be updated as additional query features and functions are imple
 ### Shares
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
 |----|----|----|----|----|----|
-|**SHARE**|❓|✅|❓|✅|❓|
+|**SHARE**|❓|✅|❓|✅|✅|
 
 ### Stages
 | |ALTER|CREATE|DESCRIBE|DROP|SHOW|
