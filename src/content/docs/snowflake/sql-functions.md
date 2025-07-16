@@ -100,7 +100,7 @@ The content will be updated as additional query features and functions are imple
 |BASE64_DECODE_BINARY|❓|
 |BASE64_DECODE_STRING|❓|
 |BASE64_ENCODE|❓|
-|[ NOT ] BETWEEN|❓|
+|[ NOT ] BETWEEN|✅|
 |BIT_LENGTH|❓|
 |BITAND|✅|
 |BITAND_AGG|❓|
@@ -328,7 +328,7 @@ The content will be updated as additional query features and functions are imple
 |H3_UNCOMPACT_CELLS_STRINGS|❓|
 |HASH|✅|
 |HASH_AGG|❓|
-|HAVERSINE|❓|
+|HAVERSINE|✅|
 |HEX_DECODE_BINARY|❓|
 |HEX_DECODE_STRING|❓|
 |HEX_ENCODE|❓|
@@ -345,15 +345,15 @@ The content will be updated as additional query features and functions are imple
 |IFNULL|✅|
 |[ NOT ] ILIKE|❓|
 |ILIKE ANY|❓|
-|[ NOT ] IN|❓|
+|[ NOT ] IN|✅|
 |INFER_SCHEMA|✅|
 |INITCAP|✅|
 |INSERT|✅|
-|INTEGRATION|❓|
+|INTEGRATION|✅|
 |INVOKER_ROLE|❓|
 |INVOKER_SHARE|❓|
 |IS [ NOT ] DISTINCT FROM|❓|
-|IS [ NOT ] NULL|❓|
+|IS [ NOT ] NULL|✅|
 |IS_<object_type>|❓|
 |IS_APPLICATION_ROLE_IN_SESSION|❓|
 |IS_ARRAY|✅|
@@ -389,7 +389,7 @@ The content will be updated as additional query features and functions are imple
 |LEAST_IGNORE_NULLS|✅|
 |LEFT|❓|
 |LENGTH, LEN|✅|
-|[ NOT ] LIKE|❓|
+|[ NOT ] LIKE|✅|
 |LIKE ALL|❓|
 |LIKE ANY|❓|
 |LISTAGG|✅|
@@ -601,7 +601,7 @@ The content will be updated as additional query features and functions are imple
 |STRTOK|❓|
 |STRTOK_SPLIT_TO_TABLE|❓|
 |STRTOK_TO_ARRAY|❓|
-|SUBSTR, SUBSTRING|❓|
+|SUBSTR, SUBSTRING|✅|
 |SUM|✅|
 |SUMMARIZE (SNOWFLAKE.CORTEX)|❓|
 |SYSDATE|❓|
@@ -801,7 +801,7 @@ The content will be updated as additional query features and functions are imple
 |TRUNCATE, TRUNC|✅|
 |TRY_BASE64_DECODE_BINARY|❓|
 |TRY_BASE64_DECODE_STRING|❓|
-|TRY_CAST|❓|
+|TRY_CAST|✅|
 |TRY_COMPLETE (SNOWFLAKE.CORTEX)|❓|
 |TRY_DECRYPT|❓|
 |TRY_DECRYPT_RAW|❓|
