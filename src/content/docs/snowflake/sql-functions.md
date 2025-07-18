@@ -141,7 +141,7 @@ The content will be updated as additional query features and functions are imple
 |COMPLETE (SNOWFLAKE.CORTEX)|❓|
 |COMPLETE_TASK_GRAPHS|❓|
 |COMPRESS|❓|
-|CONCAT, |||✅|
+|CONCAT, \|\||✅|
 |CONCAT_WS|❓|
 |CONDITIONAL_CHANGE_EVENT|❓|
 |CONDITIONAL_TRUE_EVENT|❓|
