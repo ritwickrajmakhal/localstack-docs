@@ -280,6 +280,7 @@ The content will be updated as additional query features and functions are imple
 |GET_CONTACTS|❓|
 |GET_DDL|❓|
 |GET_IGNORE_CASE|❓|
+|GET_JOB_HISTORY|❓|
 |GET_LINEAGE (SNOWFLAKE.CORE)|❓|
 |GET_OBJECT_REFERENCES|❓|
 |GET_PATH, :|✅|
@@ -412,7 +413,7 @@ The content will be updated as additional query features and functions are imple
 |MATERIALIZED_VIEW_REFRESH_HISTORY|❓|
 |MAX|✅|
 |MAX_BY|✅|
-|MD5, MD5_HEX|❓|
+|MD5, MD5_HEX|✅|
 |MD5_BINARY|❓|
 |MD5_NUMBER — Obsoleted|❓|
 |MD5_NUMBER_LOWER64|❓|
@@ -527,6 +528,11 @@ The content will be updated as additional query features and functions are imple
 |SOUNDEX|❓|
 |SOUNDEX_P123|❓|
 |SPACE|❓|
+|<service_name>!SPCS_CANCEL_JOB|❓|
+|<service_name>!SPCS_GET_EVENTS|❓|
+|<service_name>!SPCS_GET_LOGS|❓|
+|<service_name>!SPCS_GET_METRICS|❓|
+|<service_name>!SPCS_WAIT_FOR|❓|
 |SPLIT|✅|
 |SPLIT_PART|❓|
 |SPLIT_TEXT_RECURSIVE_CHARACTER (SNOWFLAKE.CORTEX)|❓|
@@ -623,6 +629,7 @@ The content will be updated as additional query features and functions are imple
 |SYSTEM$BLOCK_INTERNAL_STAGES_PUBLIC_ACCESS|❓|
 |SYSTEM$CANCEL_ALL_QUERIES|✅|
 |SYSTEM$CANCEL_QUERY|❓|
+|SYSTEM$CATALOG_LINK_STATUS|❓|
 |SYSTEM$CLEANUP_DATABASE_ROLE_GRANTS|❓|
 |SYSTEM$CLIENT_VERSION_INFO|✅|
 |SYSTEM$CLUSTERING_DEPTH|❓|
