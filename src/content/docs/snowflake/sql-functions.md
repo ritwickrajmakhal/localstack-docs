@@ -235,7 +235,7 @@ The content will be updated as additional query features and functions are imple
 |EMBED_TEXT_1024 (SNOWFLAKE.CORTEX)|❓|
 |ENCRYPT|❓|
 |ENCRYPT_RAW|❓|
-|ENDSWITH|❓|
+|ENDSWITH|✅|
 |ENTITY_SENTIMENT (SNOWFLAKE.CORTEX)|❓|
 |EQUAL_NULL|✅|
 |ESTIMATE_REMAINING_DP_AGGREGATES|❓|
@@ -600,7 +600,7 @@ The content will be updated as additional query features and functions are imple
 |ST_YMIN|❓|
 |STAGE_DIRECTORY_FILE_REGISTRATION_HISTORY|❓|
 |STAGE_STORAGE_USAGE_HISTORY|❓|
-|STARTSWITH|❓|
+|STARTSWITH|✅|
 |STDDEV, STDDEV_SAMP|❓|
 |STDDEV_POP|❓|
 |STRIP_NULL_VALUE|❓|
@@ -826,7 +826,7 @@ The content will be updated as additional query features and functions are imple
 |TRY_TO_TIME|✅|
 |TRY_TO_TIMESTAMP, TRY_TO_TIMESTAMP_*|✅|
 |TYPEOF|❓|
-|UNICODE|❓|
+|UNICODE|✅|
 |UNIFORM|❓|
 |UPPER|✅|
 |UUID_STRING|✅|
