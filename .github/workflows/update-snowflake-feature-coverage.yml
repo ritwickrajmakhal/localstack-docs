@@ -40,11 +40,22 @@ jobs:
           mv coverage-features.md src/content/docs/snowflake/features/index.md
           mv coverage-functions.md src/content/docs/snowflake/sql-functions.md
       
+      - name: Check for changes
+        id: check-for-changes
+        working-directory: localstack-docs
+        run: |
+          git add .
+          if git diff --staged --quiet; then
+            echo "diff-count=0" >> $GITHUB_OUTPUT
+          else
+            echo "diff-count=1" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
         if: ${{ success() && steps.check-for-changes.outputs.diff-count != '0' && steps.check-for-changes.outputs.diff-count != '' }}
         with:
-          path: src
+          path: localstack-docs
           title: "Update function coverage documentation"
           body: "Automated update of snowflake feature coverage docs"
           branch: "snowflake-feature-coverage-updates"
@@ -52,4 +63,4 @@ jobs:
           committer: "LocalStack Bot <localstack-bot@users.noreply.github.com>"
           commit-message: "automated update of snowflake feature coverage docs"
           token: ${{ secrets.PRO_ACCESS_TOKEN }}
-          reviewers: hovaesco, harshcasper
+          reviewers: hovaesco, quetzalliwrites
