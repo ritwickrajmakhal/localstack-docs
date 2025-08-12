@@ -1,74 +1,64 @@
 import React, { useState, useMemo } from 'react';
 
 interface Application {
-  title: string;
+  name: string;
   description: string;
-  url: string;
+  githubUrl: string;
   teaser: string;
   services: string[];
-  platform: string[];
-  deployment: string[];
-  tags: string[];
-  complexity: string[];
-  pro: boolean;
-  cloudPods: boolean;
+  integrations: string[];
+  useCases: string[];
 }
 
 interface FilterState {
   services: string[];
-  platforms: string[];
-  deployments: string[];
-  complexities: string[];
-  showProOnly: boolean;
+  useCases: string[];
+  integrations: string[];
 }
 
 interface ApplicationsShowcaseProps {
   applications: Application[];
   services: Record<string, string>;
-  platforms: Record<string, string>;
-  deployments: Record<string, string>;
-  complexities: { data: Record<string, string>; order: string[] };
+  integrations: Record<string, string>;
 }
 
 const ApplicationCard: React.FC<{ 
   app: Application; 
   services: Record<string, string>;
-  platforms: Record<string, string>;
-  deployments: Record<string, string>;
-}> = ({ app, services, platforms, deployments }) => {
+  integrations: Record<string, string>;
+}> = ({ app, services, integrations }) => {
   return (
     <a 
-      href={app.url} 
+      href={app.githubUrl} 
       target="_blank" 
       rel="noopener noreferrer" 
       className="app-card"
     >
       <div className="card-image">
-        <img src={app.teaser} alt={app.title} loading="lazy" />
+        <img src={app.teaser} alt={app.name} loading="lazy" />
         <div className="card-badges">
-          {app.pro && <span className="pro-badge">Pro</span>}
-          <span className="complexity-badge">{app.complexity[0]}</span>
+          {/* Removed badges since they're not in the new data structure */}
         </div>
       </div>
       
       <div className="card-content">
-        <h3 className="card-title">{app.title}</h3>
+        <h3 className="card-title">{app.name}</h3>
+        <div className="service-icons">
+          {app.services.slice(0, 10).map((serviceCode) => (
+            <div key={serviceCode} className="service-icon" title={services[serviceCode] || serviceCode}>
+              <img
+                src={`/images/aws/${serviceCode}.svg`}
+                alt={services[serviceCode] || serviceCode}
+              />
+            </div>
+          ))}
+          {app.services.length > 10 && (
+            <div className="service-more">+{app.services.length - 10}</div>
+          )}
+        </div>
         <p className="card-description">{app.description}</p>
         
         <div className="card-footer">
-          <div className="service-icons">
-            {app.services.slice(0, 10).map((serviceCode) => (
-              <div key={serviceCode} className="service-icon" title={services[serviceCode] || serviceCode}>
-                <img
-                  src={`/images/aws/${serviceCode}.svg`}
-                  alt={services[serviceCode] || serviceCode}
-                />
-              </div>
-            ))}
-            {app.services.length > 10 && (
-              <div className="service-more">+{app.services.length - 10}</div>
-            )}
-          </div>
           
           <span className="card-link">
             View Project →
@@ -82,20 +72,16 @@ const ApplicationCard: React.FC<{
 export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
   applications,
   services,
-  platforms,
-  deployments,
-  complexities,
+  integrations,
 }) => {
   const [filters, setFilters] = useState<FilterState>({
     services: [],
-    platforms: [],
-    deployments: [],
-    complexities: [],
-    showProOnly: false,
+    useCases: [],
+    integrations: [],
   });
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'title' | 'complexity'>('title');
+  const [sortBy, setSortBy] = useState<'name'>('name');
 
   // Get unique values for filters
   const uniqueServices = useMemo(() => {
@@ -103,20 +89,15 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
     return Array.from(allServices).sort((a, b) => (services[a] || a).localeCompare(services[b] || b));
   }, [applications, services]);
 
-  const uniquePlatforms = useMemo(() => {
-    const allPlatforms = new Set(applications.flatMap(app => app.platform));
-    return Array.from(allPlatforms).sort((a, b) => (platforms[a] || a).localeCompare(platforms[b] || b));
-  }, [applications, platforms]);
+  const uniqueUseCases = useMemo(() => {
+    const allUseCases = new Set(applications.flatMap(app => app.useCases));
+    return Array.from(allUseCases).sort();
+  }, [applications]);
 
-  const uniqueDeployments = useMemo(() => {
-    const allDeployments = new Set(applications.flatMap(app => app.deployment));
-    return Array.from(allDeployments).sort((a, b) => (deployments[a] || a).localeCompare(deployments[b] || b));
-  }, [applications, deployments]);
-
-  const uniqueComplexities = useMemo(() => {
-    const allComplexities = new Set(applications.flatMap(app => app.complexity));
-    return complexities.order.filter(complexity => allComplexities.has(complexity));
-  }, [applications, complexities.order]);
+  const uniqueIntegrations = useMemo(() => {
+    const allIntegrations = new Set(applications.flatMap(app => app.integrations));
+    return Array.from(allIntegrations).sort((a, b) => (integrations[a] || a).localeCompare(integrations[b] || b));
+  }, [applications, integrations]);
 
   // Filter and sort applications
   const filteredApplications = useMemo(() => {
@@ -125,40 +106,35 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
       if (searchTerm) {
         const searchLower = searchTerm.toLowerCase();
         const matchesSearch = 
-          app.title.toLowerCase().includes(searchLower) ||
+          app.name.toLowerCase().includes(searchLower) ||
           app.description.toLowerCase().includes(searchLower) ||
-          app.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
+          app.useCases.some(useCase => useCase.toLowerCase().includes(searchLower)) ||
           app.services.some(service => (services[service] || service).toLowerCase().includes(searchLower)) ||
-          app.platform.some(platform => (platforms[platform] || platform).toLowerCase().includes(searchLower));
+          app.integrations.some(integration => (integrations[integration] || integration).toLowerCase().includes(searchLower));
         if (!matchesSearch) return false;
       }
 
       // Other filters
       if (filters.services.length > 0 && !filters.services.some(service => app.services.includes(service))) return false;
-      if (filters.platforms.length > 0 && !filters.platforms.some(platform => app.platform.includes(platform))) return false;
-      if (filters.deployments.length > 0 && !filters.deployments.some(deployment => app.deployment.includes(deployment))) return false;
-      if (filters.complexities.length > 0 && !filters.complexities.some(complexity => app.complexity.includes(complexity))) return false;
-      if (filters.showProOnly && !app.pro) return false;
+      if (filters.useCases.length > 0 && !filters.useCases.some(useCase => app.useCases.includes(useCase))) return false;
+      if (filters.integrations.length > 0 && !filters.integrations.some(integration => app.integrations.includes(integration))) return false;
 
       return true;
     });
 
     // Sort applications
     return filtered.sort((a, b) => {
-      if (sortBy === 'title') {
-        return a.title.localeCompare(b.title);
-      } else {
-        const complexityOrder = { basic: 0, intermediate: 1, advanced: 2 };
-        const aComplexity = complexityOrder[a.complexity[0] as keyof typeof complexityOrder] ?? 1;
-        const bComplexity = complexityOrder[b.complexity[0] as keyof typeof complexityOrder] ?? 1;
-        return aComplexity - bComplexity;
-      }
+      return a.name.localeCompare(b.name);
     });
-  }, [applications, filters, searchTerm, sortBy, services, platforms]);
+  }, [applications, filters, searchTerm, sortBy, services, integrations]);
+
+  const isSingleResult = filteredApplications.length === 1;
+  const gridStyle = useMemo<React.CSSProperties>(() => ({
+    justifyContent: isSingleResult ? 'start' : 'stretch',
+    gridTemplateColumns: isSingleResult ? 'repeat(1, minmax(360px, 520px))' : undefined,
+  }), [isSingleResult]);
 
   const toggleFilter = (filterType: keyof FilterState, item: string) => {
-    if (filterType === 'showProOnly') return;
-    
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(item)
@@ -170,19 +146,15 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
   const clearAllFilters = () => {
     setFilters({
       services: [],
-      platforms: [],
-      deployments: [],
-      complexities: [],
-      showProOnly: false,
+      useCases: [],
+      integrations: [],
     });
     setSearchTerm('');
   };
 
   const hasActiveFilters = filters.services.length > 0 || 
-    filters.platforms.length > 0 || 
-    filters.deployments.length > 0 || 
-    filters.complexities.length > 0 || 
-    filters.showProOnly || 
+    filters.useCases.length > 0 || 
+    filters.integrations.length > 0 || 
     searchTerm.length > 0;
 
   return (
@@ -192,24 +164,25 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
         .applications-showcase {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 1rem;
+          padding: 0 1.25rem;
         }
 
         /* Top Bar */
         .top-bar {
-          margin-bottom: 1.5rem;
-          padding: 1rem;
-          background: var(--sl-color-bg-sidebar);
-          border: 1px solid var(--sl-color-gray-6);
+          margin: 0 0 0.75rem 0;
+          padding: 0 0 0.25rem 0;
+          background: transparent;
+          border: 0;
           border-radius: 0.5rem;
         }
 
         .top-bar-row {
-          display: flex;
-          gap: 1rem;
-          align-items: flex-start;
-          flex-wrap: wrap;
-          margin-bottom: 1rem;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(180px, 260px)) auto;
+          gap: 0.75rem 0.75rem;
+          align-items: stretch; /* ensure all cells share identical row height */
+          grid-auto-rows: 40px; /* compact controls */
+          margin: 0;
         }
 
         .top-bar-row:last-child {
@@ -218,20 +191,29 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
 
         .search-container {
           position: relative;
-          flex: 1;
-          min-width: 300px;
+          min-width: 0;
+          width: 100%;
+          max-width: 300px; /* reduce visual length */
+          display: flex;
+          align-items: center;
+          height: 100%;
+          grid-column: 1 / -1; /* span full width on next row */
+          justify-self: start;
         }
 
         .search-input {
           width: 100%;
-          padding: 0.75rem;
-          border: 1px solid var(--sl-color-gray-5);
-          border-radius: 0.375rem;
+          padding: 0.625rem 2.25rem 0.625rem 0.875rem;
+          border: 1px solid #999CAD;
+          border-radius: 0.5rem;
           background: var(--sl-color-bg);
           color: var(--sl-color-white);
-          font-size: 0.875rem;
-          margin-top: 0;
+          font-size: 0.9rem;
+          height: 100%;
+          line-height: 1.2;
         }
+
+        
 
         .search-input:focus {
           outline: none;
@@ -260,14 +242,15 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
         }
 
         .filter-select {
-          padding: 0.75rem;
-          border: 1px solid var(--sl-color-gray-5);
-          border-radius: 0.375rem;
+          padding: 0.625rem 0.875rem;
+          border: 1px solid #999CAD;
+          border-radius: 0.5rem;
           background: var(--sl-color-bg);
           color: var(--sl-color-white);
-          font-size: 0.875rem;
-          min-width: 140px;
-          margin-top: 0;
+          font-size: 0.95rem;
+          min-width: 0;
+          width: 100%;
+          height: 100%;
         }
 
         .filter-select:focus {
@@ -288,7 +271,7 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
 
         .sort-select {
           padding: 0.75rem;
-          border: 1px solid var(--sl-color-gray-5);
+          border: 1px solid #999CAD;
           border-radius: 0.375rem;
           background: var(--sl-color-bg);
           color: var(--sl-color-white);
@@ -297,12 +280,13 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
         }
 
         .clear-filters {
-          background: var(--sl-color-accent);
-          color: white;
+          background: transparent;
+          color: var(--sl-color-accent);
           border: none;
-          padding: 0.75rem 1rem;
-          border-radius: 0.375rem;
-          font-size: 0.875rem;
+          padding: 0 0.25rem;
+          border-radius: 0.5rem;
+          font-size: 0.85rem;
+          height: 100%;
           cursor: pointer;
           white-space: nowrap;
         }
@@ -311,23 +295,20 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
           background: var(--sl-color-accent-high);
         }
 
-        .results-info {
-          margin-bottom: 1rem;
-          color: var(--sl-color-gray-2);
-          font-size: 0.875rem;
-        }
+        .results-info { display: none; }
 
         /* Applications Grid */
         .applications-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 1.5rem;
+          gap: 1.25rem;
+          margin-top: 1.5rem; /* extra breathing room below filters */
         }
 
         /* Application Cards */
         .app-card {
           background: var(--sl-color-bg-sidebar);
-          border: 1px solid var(--sl-color-gray-6);
+          border: 1px solid #999CAD;
           border-radius: 0.75rem;
           overflow: hidden;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -342,20 +323,31 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
 
         .app-card:hover {
           transform: translateY(-2px);
+          border-color: var(--sl-color-accent);
           box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         .card-image {
           position: relative;
           width: 100%;
-          height: 180px;
+          min-height: 160px;
+          max-height: 220px;
           overflow: hidden;
+          background: #FFFFFF;
+          border-radius: 0.5rem 0.5rem 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .card-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          max-height: 200px;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          image-rendering: high-quality;
+          image-rendering: -webkit-optimize-contrast;
         }
 
         .card-badges {
@@ -411,10 +403,11 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
 
         .card-footer {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: center;
           gap: 1rem;
           margin-top: auto;
+          width: 100%;
         }
 
         .service-icons {
@@ -423,6 +416,7 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
           align-items: center;
           flex-wrap: wrap;
           flex: 1;
+          margin: 0 0 0.75rem 0;
         }
 
         .service-icon {
@@ -462,10 +456,11 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
           color: var(--sl-color-white);
           font-weight: 500;
           font-size: 0.875rem;
-          padding: 0.5rem 0.75rem;
+          padding: 0.5rem 0.75rem 0.5rem 0;
           border-radius: 0.375rem;
           transition: all 0.2s ease;
           white-space: nowrap;
+          margin-left: 0;
         }
 
         .app-card:hover .card-link {
@@ -503,24 +498,29 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+          .top-bar-row {
+            grid-template-columns: 1fr 1fr auto;
+          }
+        }
+
         @media (max-width: 768px) {
           .applications-showcase {
             padding: 0 0.75rem;
           }
 
           .top-bar-row {
-            flex-direction: column;
-            align-items: stretch;
+            grid-template-columns: 1fr;
           }
 
           .search-container {
             min-width: auto;
-            flex: none;
           }
 
           .filter-select,
           .sort-select {
             min-width: auto;
+            width: 100%;
           }
 
           .applications-grid {
@@ -541,7 +541,7 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
       
       <div className="applications-showcase">
         <div className="top-bar">
-          <div className="top-bar-row">
+          <div className="top-bar-row" role="region" aria-label="Sample apps filters">
             <div className="search-container">
               <input
                 type="text"
@@ -559,7 +559,10 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
             
             <select 
               value={filters.services[0] || ''} 
-              onChange={(e) => e.target.value ? toggleFilter('services', e.target.value) : null}
+              onChange={(e) => setFilters(prev => ({ 
+                ...prev, 
+                services: e.target.value ? [e.target.value] : []
+              }))}
               className="filter-select"
             >
               <option value="">Services</option>
@@ -571,84 +574,56 @@ export const ApplicationsShowcase: React.FC<ApplicationsShowcaseProps> = ({
             </select>
 
             <select 
-              value={filters.platforms[0] || ''} 
-              onChange={(e) => e.target.value ? toggleFilter('platforms', e.target.value) : null}
+              value={filters.useCases[0] || ''} 
+              onChange={(e) => setFilters(prev => ({ 
+                ...prev, 
+                useCases: e.target.value ? [e.target.value] : []
+              }))}
               className="filter-select"
             >
-              <option value="">Languages</option>
-              {uniquePlatforms.map((platform) => (
-                <option key={platform} value={platform}>
-                  {platforms[platform] || platform}
+              <option value="">Use Cases</option>
+              {uniqueUseCases.map((useCase) => (
+                <option key={useCase} value={useCase}>
+                  {useCase}
                 </option>
               ))}
             </select>
 
             <select 
-              value={filters.deployments[0] || ''} 
-              onChange={(e) => e.target.value ? toggleFilter('deployments', e.target.value) : null}
+              value={filters.integrations[0] || ''} 
+              onChange={(e) => setFilters(prev => ({ 
+                ...prev, 
+                integrations: e.target.value ? [e.target.value] : []
+              }))}
               className="filter-select"
             >
-              <option value="">Deployment</option>
-              {uniqueDeployments.map((deployment) => (
-                <option key={deployment} value={deployment}>
-                  {deployments[deployment] || deployment}
+              <option value="">Integrations</option>
+              {uniqueIntegrations.map((integration) => (
+                <option key={integration} value={integration}>
+                  {integrations[integration] || integration}
                 </option>
               ))}
             </select>
-
-            <select 
-              value={filters.complexities[0] || ''} 
-              onChange={(e) => e.target.value ? toggleFilter('complexities', e.target.value) : null}
-              className="filter-select"
-            >
-              <option value="">Complexity</option>
-              {uniqueComplexities.map((complexity) => (
-                <option key={complexity} value={complexity}>
-                  {complexities.data[complexity] || complexity}
-                </option>
-              ))}
-            </select>
-
-            <label className="pro-toggle">
-              <input
-                type="checkbox"
-                checked={filters.showProOnly}
-                onChange={(e) => setFilters(prev => ({ ...prev, showProOnly: e.target.checked }))}
-              />
-              Pro Only
-            </label>
 
             {hasActiveFilters && (
-              <button onClick={clearAllFilters} className="clear-filters">
-                Clear
+              <button onClick={clearAllFilters} className="clear-filters" aria-label="Clear all filters">
+                Clear filters
               </button>
             )}
           </div>
 
-          <div className="top-bar-row">
-            <select 
-              value={sortBy} 
-              onChange={(e) => setSortBy(e.target.value as 'title' | 'complexity')}
-              className="sort-select"
-            >
-              <option value="title">A-Z</option>
-              <option value="complexity">By Complexity</option>
-            </select>
-          </div>
+          {/* Removed sorting options since we only sort by name now */}
         </div>
 
-        <div className="results-info">
-          {filteredApplications.length} application{filteredApplications.length !== 1 ? 's' : ''}
-        </div>
+        {/* results count removed per request */}
 
-        <div className="applications-grid">
+        <div className="applications-grid" style={gridStyle}>
           {filteredApplications.map((app, index) => (
             <ApplicationCard
-              key={`${app.title}-${index}`}
+              key={`${app.name}-${index}`}
               app={app}
               services={services}
-              platforms={platforms}
-              deployments={deployments}
+              integrations={integrations}
             />
           ))}
           
