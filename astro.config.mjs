@@ -329,28 +329,8 @@ export default defineConfig({
                   collapsed: true,
                 },
                 {
-                  label: 'Testing Utils',
-                  slug: 'aws/tooling/testing-utils',
-                },
-                {
-                  label: 'LocalSurf',
-                  slug: 'aws/tooling/localsurf',
-                },
-                {
-                  label: 'AWS Replicator',
-                  slug: 'aws/tooling/aws-replicator',
-                },
-                {
-                  label: 'Event Studio',
-                  slug: 'aws/tooling/event-studio',
-                },
-                {
-                  label: 'DNS Server',
-                  slug: 'aws/tooling/dns-server',
-                },
-                {
-                  label: 'LocalStack Docker Extension',
-                  slug: 'aws/tooling/localstack-docker-extension',
+                  label: 'LocalStack Toolkit VS Code',
+                  slug: 'aws/tooling/vscode-extension',
                 },
                 {
                   label: 'Lambda Tools',
@@ -358,6 +338,30 @@ export default defineConfig({
                     directory: '/aws/tooling/lambda-tools',
                   },
                   collapsed: true,
+                },
+                {
+                  label: 'Event Studio',
+                  slug: 'aws/tooling/event-studio',
+                },
+                {
+                  label: 'AWS Replicator',
+                  slug: 'aws/tooling/aws-replicator',
+                },
+                {
+                  label: 'DNS Server',
+                  slug: 'aws/tooling/dns-server',
+                },
+                {
+                  label: 'Testing Utils',
+                  slug: 'aws/tooling/testing-utils',
+                },
+                {
+                  label: 'LocalStack Docker Extension',
+                  slug: 'aws/tooling/localstack-docker-extension',
+                },
+                {
+                  label: 'LocalSurf',
+                  slug: 'aws/tooling/localsurf',
                 },
               ],
             },
